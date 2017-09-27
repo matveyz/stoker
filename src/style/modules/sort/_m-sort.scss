@@ -1,0 +1,55 @@
+.sort {
+  display: inline-block;
+  @extend %radius-4px;
+  box-shadow: 0 20px 40px -5px rgba(0, 0, 0, 0.15);
+  &-wrapper {
+    margin-top: -70px;
+    margin-bottom: 90px;
+    @include font-size(0);
+    text-align: center;
+    &.nomargin {
+      margin: 0;
+    }
+  }
+  a {
+    text-decoration: none;
+  }
+  &-btn {
+    color: $color-white;
+    @include btn-standart;
+    @include font(regular);
+    @include font-size(18);
+    padding: 0 35px;
+    background-color: $color-gray;
+    &:first-of-type {
+      border-radius: 4px 0 0 4px;
+    }
+    &:not(:last-of-type) {
+      border-right: 1px solid $color-white;
+    }
+    &:last-of-type {
+      border-radius: 0 4px 4px 0;
+    }
+  }
+
+  &-white {
+    margin-bottom: 0;
+    .sort {
+      &-btn {
+        color: $color-text-main;
+        background-color: $color-white;
+        &:hover {
+          background-color: $color-teal;
+          color: $color-white;
+        }
+      }
+    }
+  }
+
+  &-black {
+
+  }
+
+}
+
+@import "m-responsive";

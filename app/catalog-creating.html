@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Stocker</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<main id="catalog-creating" class="catalog-creating">
+  <header>
+    <catalog-creating-menu @change-step="changeView"></catalog-creating-menu>
+  </header>
+  <transition name="fade">
+    <component :is="currentView" @next-step="changeView" @prev-step="changeView">
+      <instruction></instruction>
+    </component>
+  </transition>
+</main>
+<footer class="footer" id="footer">
+  <send-msg v-bind:send-msg="sendMsg"></send-msg>
+  <modal_send-msg v-if="modal.show"></modal_send-msg>
+  <div class="container container-lg-max">
+    <div class="row">
+      <div class="footer-inner">
+        <div class="col-md-9">
+          <div class="row">
+            <div class="col-md-12 hidden-xs">
+              <div class="footer-menu">
+  <ul>
+    <li class="footer-menu-item"><a href="/app/about-us.html">О нас</a></li>
+    <li class="footer-menu-item"><a href="/app/partners.html">Партнерам</a></li>
+    <li class="footer-menu-item"><a href="/app/news-category.html">Новости</a></li>
+    <li class="footer-menu-item"><a href="/app/faq.html">Техподдержка</a></li>
+    <li class="footer-menu-item"><a href="/app/contacts.html">Контакты</a></li>
+  </ul>
+</div>
+            </div>
+            <div class="col-md-12 hidden-xs">
+              <div class="footer-text">
+  <p>При использовании материалов сайта Stocker.ua, гиперссылка на первоисточник в пределах первого абзаца обязательна</p>
+
+  <p>STOCKER ® является официально зарегистрированной торговой маркой.</p>
+  <p>Структура и дизайн данного Сайта (функционал и внешний вид) являются собственностью компании Stocker и не подлежат копированию, использованию и распространению.</p>
+
+  <p>Stocker.ua<br>
+  Больше платить не надо!</p>
+
+  <p>© 2017 Все права защищены.</p>
+
+</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-xs-12">
+          <div class="footer-social">
+  <a href="#instagram"><svg class="icon"><use xlink:href="svg/svg.svg#icon-insta"></use></svg></a>
+  <a href="#twitter"><svg class="icon"><use xlink:href="svg/svg.svg#icon-twitter"></use></svg></a>
+  <a href="#facebook"><svg class="icon"><use xlink:href="svg/svg.svg#icon-facebook"></use></svg></a>
+  <a href="#vk"><svg class="icon"><use xlink:href="svg/svg.svg#icon-vkontakte"></use></svg></a>
+  <a href="#google"><svg class="icon"><use xlink:href="svg/svg.svg#icon-google"></use></svg></a>
+  <a href=""><svg class="icon"><use xlink:href="svg/svg.svg#icon-skype"></use></svg></a>
+  <a href="#telegram"><svg class="icon"><use xlink:href="svg/svg.svg#icon-viber-footer"></use></svg></a>
+  <a href=""><svg class="icon"><use xlink:href="svg/svg.svg#icon-telegram-footer"></use></svg></a>
+</div>
+        </div>
+        <div class="col-xs-12">
+          <div class="footer-bottom">
+  <svg class="icon icon-logo-full"><use xlink:href="svg/svg.svg#icon-logo-full"></use></svg>
+  
+  <div class="footer-bottom-madeBy">
+    Разработка <a href="http://lungor.com.ua">Lungor</a>
+  </div>
+  <div class="footer-bottom-designBy">
+    Дело рук <svg class="icon"><use xlink:href="svg/svg.svg#icon-designer-logo"></use></svg>
+  </div>
+</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a href="#0" class="back-top"><svg class="icon icon-arrow-up"><use xlink:href="svg/svg.svg#icon-arrow"></use></svg> </a>
+
+
+
+
+
+</body>
+<script
+    src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"></script>
+
+<script
+    src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/owl.carousel.min.js"
+    crossorigin="anonymous"></script>
+<script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"
+    crossorigin="anonymous"></script>
+
+
+<script src="js/main.js"></script>
+</html>

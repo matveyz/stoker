@@ -1,0 +1,84 @@
+<div class="tabs partners-main" data-tabs-container="partners-tab">
+  @@include('../../modules/sort/sort.html', {
+    "extraClass" : "extended",
+    "nameFirst" : "По рейтингу",
+    "nameOther" : ["<svg class='icon icon-arrow-down'><use xlink:href='svg/svg.svg#icon-arrow'></use></svg>По категориям"],
+    "extend" : true,
+    "tabsName" : "partners-tab"
+  })
+  <div class="partners-main-block is-active">
+
+    <div class="row">
+      @@for (var i = 0; i < 16; i++) {
+      <div class="col-md-3 col-sm-4 col-xs-6">
+        <div class="partners-main-item">
+          <a href="/app/partner.html"></a>
+          <span></span><img src="img/partner-`+(i+1)+`.png" alt="partner-`+(i+1)+`">
+          @@include('../../modules/rating.html')
+        </div>
+      </div>
+      }
+      <div class="show-more-block is-hidden">
+        @@for (var i = 0; i < 4; i++) {
+        <div class="col-md-3 col-sm-4 col-xs-6">
+          <div class="partners-main-item">
+            <a href="/app/partner.html"></a>
+            <span></span><img src="img/partner-`+(i+1)+`.png" alt="partner-`+(i+1)+`">
+            @@include('../../modules/rating.html')
+          </div>
+        </div>
+        }
+      </div>
+      <div class="show-more-block is-hidden">
+        @@for (var i = 0; i < 4; i++) {
+        <div class="col-md-3 col-sm-4 col-xs-6">
+          <div class="partners-main-item">
+            <a href="/app/partner.html"></a>
+            <span></span><img src="img/partner-`+(i+1)+`.png" alt="partner-`+(i+1)+`">
+            @@include('../../modules/rating.html')
+          </div>
+        </div>
+        }
+      </div>
+    </div>
+  </div>
+  <!--<div class="partners-main-block">
+    <div class="row">
+      @@for (var i = 0; i < 16; i++) {
+      <div class="col-md-3 col-sm-4 col-xs-6">
+        <div class="partners-main-item">
+          <a href="/app/partner.html"></a>
+          <span></span><img src="img/partner-`+(i+1)+`.png" alt="partner-`+(i+1)+`">
+          @@include('../../modules/rating.html')
+        </div>
+      </div>
+      }
+      <div class="show-more-block is-hidden">
+        @@for (var i = 0; i < 4; i++) {
+        <div class="col-md-3 col-sm-4 col-xs-6">
+          <div class="partners-main-item">
+            <a href="/app/partner.html"></a>
+            <span></span><img src="img/partner-`+(i+1)+`.png" alt="partner-`+(i+1)+`">
+            @@include('../../modules/rating.html')
+          </div>
+        </div>
+        }
+      </div>
+      <div class="show-more-block is-hidden">
+        @@for (var i = 0; i < 4; i++) {
+        <div class="col-md-3 col-sm-4 col-xs-6">
+          <div class="partners-main-item">
+            <a href="/app/partner.html"></a>
+            <span></span><img src="img/partner-`+(i+1)+`.png" alt="partner-`+(i+1)+`">
+            @@include('../../modules/rating.html')
+          </div>
+        </div>
+        }
+      </div>
+    </div>
+  </div>-->
+  <div class="show-more-btn">
+    <img class="ring is-hidden" src="svg/ring.svg">
+    <button class="show-more-btn-inner btn-primary">Показать еще</button>
+  </div>
+</div>

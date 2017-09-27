@@ -1,0 +1,189 @@
+.discounts {
+  margin-top: rem($main-text-size*2);
+  &-item {
+    margin-bottom: rem($main-text-size*5);
+    position: relative;
+    min-height: 295px;
+    z-index: 0;
+    cursor: pointer;
+
+    &_zoom {
+      @include animate(0.25);
+      width: 100%;
+      top: 0;
+      left: 0;
+      background-color: $color-white;
+      position: absolute;
+      height: 100%;
+      padding: 0 25px;
+      @extend %radius-4px;
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.09);
+      border: 1px solid #ddd;
+      border-bottom: 5px solid #f9791a;
+    }
+    button {
+      @include font-size(14);
+      @include font(semibold);
+    }
+    &-info {
+      margin-left: 10px;
+      color: $color-darkGray;
+      &-extra {
+        @extend .vis-hidden, .is-transp;
+        @include animate(0.25);
+        margin-top: 10px;
+        span {
+          margin-right: rem($main-text-size);
+        }
+        .icon {
+          @include svg-full-color($color-darkGray);
+          vertical-align: text-bottom;
+          &-eye {
+            @include size(22);
+          }
+          &-heart {
+            @include size(20);
+          }
+        }
+      }
+      &-name {
+        padding-top: 15px;
+        clear: both;
+        @include font-size($main-text-size*1.5);
+        text-transform: uppercase;
+        font-family: $font-semiBold;
+      }
+      &-more {
+        @extend .vis-hidden, .is-transp;
+        @include animate(0.25);
+        position: absolute;
+        bottom: 45px;
+        button {
+          &:hover {
+            box-shadow: 0 0 15px 0 $color-teal;
+            color: $color-white;
+          }
+        }
+      }
+      &-desc {
+        @extend .vis-hidden, .is-transp;
+        @include font-size(14);
+        @include animate(0.25);
+        position: absolute;
+        bottom: 130px;
+      }
+    }
+    &-inner {
+      width: 100%;
+      position: absolute;
+      height: 100%;
+      padding: 0 25px;
+      img {
+        margin-top: -18px;
+        max-height: 332px;
+        //box-shadow: 0 30px 30px -30px #000000;\
+      }
+    }
+    &-img {
+      position: relative;
+      &:before {
+        width: 233px;
+        position: absolute;
+        content: '';
+        right: 5px;
+        height: 20px;
+        bottom: 4px;
+        left: 0;
+        border-radius: 50% / 20px;
+        box-shadow: rgba(0, 0, 0, .3) 0 5px 7px;
+        clip: rect(20px, auto, 50px, 0);
+      }
+    }
+    &.times-up {
+      cursor: auto;
+      .icon-watch {
+        &-wrapper {
+          position: absolute;
+          z-index: $z-index-content+1;
+          right: -4px;
+          top: -4px;
+        }
+        position: absolute;
+        z-index: $z-index-content+1;
+        @include size(26);
+        top: 17%;
+        right: 20%;
+        &-expire {
+          fill: $color-red;
+          @include size(100);
+          position: relative;
+        }
+      }
+      &:before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        @extend %radius-4px;
+        background-color: rgba(255, 255, 255, 0.8);
+        z-index: $z-index-content+1;
+      }
+      .discounts-item-img {
+        &:after {
+          //for override bg:linear-grad. on xs-min
+          background: rgba(255, 255, 255, 0.8);
+          height: 18px;
+          top: -18px;
+          width: 233px;
+          position: absolute;
+          content: '';
+          left: 0;
+        }
+      }
+      [class^="col-"] {
+        position: static;
+      }
+      .countdown {
+        position: absolute;
+        z-index: $z-index-content+1;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        &-title {
+          margin: 0 0 15px 0;
+          &-header {
+            @include font(bold);
+            @include font-size(25);
+            text-transform: uppercase;
+          }
+          &-desc {
+            @include font(medium);
+            @include font-size(18);
+          }
+        }
+        button {
+          opacity: 0;
+          visibility: hidden;
+          @include animate(0.25);
+          margin-top: 20px;
+        }
+      }
+      .discount-status {
+        opacity: 0;
+        visibility: hidden;
+      }
+      &:hover {
+        .countdown {
+          button {
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+//@import "responsive";

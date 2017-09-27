@@ -1,0 +1,42 @@
+.old-browser {
+  @include media(max, sm) {
+    .main-svg {
+      svg {
+        width: 100px;
+      }
+    }
+    .top-content {
+      min-height: calc(100vh - 122px);
+    }
+    .main-content {
+      padding: 20px 0;
+    }
+    &-text {
+      text-align: center;
+      padding-bottom: 20px;
+    }
+  }
+  @include media(max, xs) {
+    .top-content {
+      min-height: calc(100vh - 127px);
+      @include media(max, 622) {
+        min-height: calc(100vh - 177px);
+        @include media(max, 423) {
+          min-height: calc(100vh - 243px);
+        }
+      }
+    }
+    .text-header-high {
+      @include font-size(28);
+    }
+    &-items {
+      text-align: center;
+      a {
+        padding-bottom: 10px;
+        margin-left: 20px;
+        text-align: left;
+        width: 175px;
+      }
+    }
+  }
+}

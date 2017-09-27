@@ -1,0 +1,103 @@
+.load-photo {
+  display: inline-block;
+  padding: 0;
+  margin-left: 1.22em;
+  input {
+    display: none;
+  }
+  &-img {
+    padding: 20px;
+    border-right: 1px solid $color-grayBorder;
+    > img {
+      width: 70px;
+
+    }
+  }
+  &-text {
+    width: calc(100% - 111px);
+    text-align: center;
+    letter-spacing: 1px;
+    &-header {
+      color: $color-teal;
+      text-transform: uppercase;
+      @include font-size(20);
+      border-bottom: 1px dashed;
+    }
+    &-main {
+      margin-top: 20px;
+      color: $color-text-comments;
+      display: block;
+    }
+  }
+}
+
+//bem
+.load-photo {
+  display: block;
+  padding: 0;
+  input {
+    display: none;
+  }
+  &_full {
+    background-color: $color-lightGray;
+    border: 1px solid #d1d0d0;
+    border-radius: 4px;
+  }
+
+  &__img {
+    padding: 40px;
+    > img {
+      width: 180px;
+    }
+    &_full {
+      border-right: 1px solid $color-grayBorder;
+      > img {
+        width: 70px;
+      }
+    }
+  }
+  &__text {
+    width: calc(100% - 261px);
+    text-align: center;
+    letter-spacing: 1px;
+    @include font-size(22);
+    padding: 10px 15px;
+    line-height: 1;
+    color: $color-midGray;
+    border: 1px dashed $color-grayBorder;
+    border-radius: 4px;
+    background-color: $color-lightGray;
+    @include animate(0.25);
+
+    &_full{
+      width: calc(100% - 111px);
+      border: none;
+      border-radius: 0;
+      background-color: transparent;
+      padding: inherit;
+    }
+  }
+  &__header {
+    color: $color-teal;
+    text-transform: uppercase;
+    @include font-size(20);
+    border-bottom: 1px dashed;
+    &_lg {
+      margin-top: 61px;
+      display: inline-block;
+    }
+  }
+  &__main {
+    margin-top: 20px;
+    color: $color-text-comments;
+    display: block;
+    &_lg {
+      margin: 20px auto 62px;
+    }
+  }
+
+  &__text-extra {
+    margin-top: 15px;
+    text-align: center;
+  }
+}

@@ -1,0 +1,17 @@
+.read-more {
+  &-text {
+    margin: 0;
+    @include animate(0.3);
+    max-height: 0;
+    overflow: hidden;
+  }
+}
+
+.is-active {
+  &.read-more {
+    &-text {
+      margin: rem(1) 0;
+      max-height: 1500px;
+    }
+  }
+}

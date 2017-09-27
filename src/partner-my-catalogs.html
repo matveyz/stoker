@@ -1,0 +1,56 @@
+@@include('templates/template-header.html')
+
+
+<main id="partner-my-catalogs" role="main" class="main" xmlns="http://www.w3.org/1999/xhtml" xmlns:v-on="http://www.w3.org/1999/xhtml">
+  <section class="top-content">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          @@include('templates/modules/breadcrumbs.html', {
+          "name" : ["Мои каталоги"],
+          "link" : [""]
+          })
+        </div>
+        <div class="col-lg-12">
+          @@include('templates/modules/center-header-block.html', {
+          "extraClass" : "",
+          "inner" : ["Личный кабинет"]
+          })
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="main-content">
+    <div class="container">
+      <div class="row">
+        <div class="my-lists-tabs">
+          <div class="col-md-12">
+
+            @@include('templates/modules/sort/sort.html', {
+            "extraClass" : "sort-white",
+            "nameFirst" : "Мои каталоги",
+            "nameOther" : ["Настройки"],
+            "tabsName" : "",
+            "hrefFirst" : "/app/partner-my-catalogs.html",
+            "href" : ["/app/partner-settings.html"],
+            "active" : [""]
+            })
+            <div class="text-center">
+              Вы можете написать сообщение о проблеме личного кабинета,
+              <br>
+              и Вам ответит сотрудник технического отдела.
+            </div>
+            <div class="line-divide"></div>
+
+          </div>
+        </div>
+        <partner-my-catalogs>
+
+        </partner-my-catalogs>
+      </div>
+    </div>
+  </section>
+</main>
+
+
+@@include('templates/template-footer.html')

@@ -1,0 +1,20 @@
+.social-icons {
+  text-align: center;
+  @include clearfix();
+  padding: 35px 0;
+  &-item {
+    margin: 0 15px;
+    line-height: 0;
+    padding: 14px;
+    border-radius: 50%;
+  }
+  svg {
+    @include size(18);
+    fill: $color-text-main;
+  }
+  @include media(max, xs) {
+    &-item {
+      margin: 0 5px;
+    }
+  }
+}

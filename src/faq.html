@@ -1,0 +1,81 @@
+@@include('templates/template-header.html')
+
+
+<main role="main" class="main">
+  <section class="top-content">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          @@include('templates/modules/breadcrumbs.html', {
+          "name" : ["Вопрос-Ответ"],
+          "link" : [""]
+          })
+        </div>
+        <div class="col-lg-12">
+          @@include('templates/modules/center-header-block.html', {
+          "extraClass" : "",
+          "inner" : ["Вопрос-ответ"]
+          })
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="main-content">
+    <div class="container">
+      <div class="row">
+        <div class="tabs pull-left" data-tabs-container="faq-sort">
+          <div class="col-md-12">
+
+            @@include('templates/modules/sort/sort.html', {
+            "extraClass" : "sort-white",
+            "nameFirst" : "Пользователям",
+            "nameOther" : ["Партнерам"],
+            "tabsName" : "faq-sort"
+            })
+          </div>
+          <div class="col-md-11 center">
+            <div class="accordion">
+              @@include("templates/modules/accordion.html", {
+        "title" : "Как создать свой личный кабинет?",
+        "text" :["Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."]})
+
+        @@include('templates/modules/accordion.html', {
+        "title" : "Не могу войти в личный кабинет",
+        "text" :["Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."]})
+
+        @@include('templates/modules/accordion.html', {
+        "title" : "Что такое \"Избранные\"?",
+        "text" :["Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."]})
+
+        @@include('templates/modules/accordion.html', {
+        "title" : "Как настроить рассылку?",
+        "text" :["Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."]})
+
+        @@include('templates/modules/accordion.html', {
+        "title" : "Зачем мне нужен пароль?",
+        "text" :["Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."]})
+
+        @@include('templates/modules/accordion.html', {
+        "title" : "Что значит \"Акция завершена\" в \"Избранных\"?",
+        "text" :["Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."]})
+
+        @@include('templates/modules/accordion.html', {
+        "title" : "Как мне поделиться списком?",
+        "text" :[
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+
+        "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+
+        "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem."
+        ]
+        })
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+
+@@include('templates/template-footer.html')

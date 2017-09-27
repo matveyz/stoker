@@ -1,0 +1,248 @@
+//rem func
+
+@function rem($pixels, $context: $main-text-size) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+
+  @return $pixels / $context * 1rem;
+}
+
+@mixin font-size($size) {
+  font-size: #{$size}px;
+  font-size: rem($size);
+}
+
+@mixin size($size) {
+  width: #{$size}px;
+  height: #{$size}px;
+}
+
+@mixin vert-center {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@mixin svg-full-color($color) {
+  fill: $color;
+  stroke: $color;
+}
+
+//rem mixin fallback
+@function strip-unit($num) {
+  @return $num / ($num * 0 + 1);
+}
+
+//clearfix
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+.clearfix {
+  @include clearfix();
+}
+
+@mixin font($style:regular) {
+  @if ($style==regular) {
+    font-family: $font-main;
+  }
+  @if ($style==medium) {
+    font-family: $font-medium;
+  }
+  @if ($style==semibold) {
+    font-family: $font-semiBold;
+  }
+  @if ($style==bold) {
+    font-family: $font-bold;
+  }
+  @if ($style==extrabold) {
+    font-family: $font-bold;
+  }
+  @if ($style==black) {
+    font-family: $font-black;
+  }
+  @if ($style==light) {
+    font-family: $font-light;
+  }
+  @if ($style==extralight) {
+    font-family: $font-extralight;
+  }
+  @if ($style==thin) {
+    font-family: $font-thin;
+  }
+
+}
+
+@mixin media($minmax, $canvas) {
+  $temp: "";
+  @if ($minmax==max) {
+    @if $canvas == xs {
+      $temp: $screen-xs-max
+    } @else if $canvas == sm {
+      $temp: $screen-sm-max
+    } @else if $canvas == md {
+      $temp: $screen-md-max
+    } @else if $canvas == lg {
+      $temp: $screen-lg-max
+    } @else {
+      $temp: #{$canvas}px
+    }
+    @media (max-width: $temp) {
+      @content;
+    }
+  } @else if ($minmax == min) {
+    @if $canvas == sm {
+      $temp: $screen-sm-min
+    } @else if $canvas == md {
+      $temp: $screen-md-min
+    } @else if $canvas == lg {
+      $temp: $screen-lg-min
+    } @else if $canvas == xl {
+      $temp: $screen-xl-min
+    } @else {
+      $temp: n#{$canvas}px
+    }
+    @media (min-width: $temp) {
+      @content;
+    }
+  }
+}
+
+@mixin btn-make($color,$text-size: false, $in:true, $round:true, $uppercase:true, $border-size:true, $hover:true) {
+  @if $round == true {
+    @extend %radius-25px;
+  }
+  @if $text-size != false {
+    @include font-size($text-size);
+  }
+  @if $uppercase == true {
+    text-transform: uppercase;
+  }
+  @if $in == true {
+    background: $color;
+    @if $hover == true {
+      &:hover {
+        box-shadow: 0 0 15px 0 $color;
+      }
+    }
+  } @else {
+    @if $border-size == true {
+      border: 2px solid $color;
+    } @else {
+      border: #{$border-size}px solid $color;
+    }
+    @if $hover == true {
+      &:hover {
+        background: $color;
+        box-shadow: 0 0 15px 0 $color;
+      }
+    }
+  }
+}
+@mixin dropdown-make($color,$text-size: false, $in:true, $round:true, $uppercase:true, $border-size:true, $hover:true) {
+  @if $round == true {
+    @extend %radius-25px;
+  } @else if ($round == false){
+  } @else {
+    border-radius: #{$round}px;
+  }
+  @if $text-size != false {
+    @include font-size($text-size);
+  }
+  @if $uppercase == true {
+    text-transform: uppercase;
+  }
+  @if $in == true {
+    background: $color;
+    @if $hover == true {
+      &:hover {
+        box-shadow: 0 0 15px 0 $color;
+      }
+    }
+  } @else {
+    @if $border-size == true {
+      border: 2px solid $color;
+    } @else {
+      border: #{$border-size}px solid $color;
+    }
+    @if $hover == true {
+      &:hover {
+        background: $color;
+        box-shadow: 0 0 15px 0 $color;
+      }
+    }
+  }
+}
+
+@mixin btn-standart {
+  height: 50px;
+  vertical-align: middle;
+  display: table-cell;
+}
+
+@mixin animate($s, $delay:false, $params:null) {
+  $delays: "";
+  $temp: "";
+  $transition: "";
+  @if $delay {
+    $delays: $delay+s;
+  }
+  @if $params==null {
+    transition: all #{$s}s ease-in-out #{$delays};
+  } @else {
+    @for $i from 1 through length($params) {
+      $temp: (nth($params, $i) #{$s}s ease-in-out #{$delays});
+      @if ($transition != "") {
+        $transition: $transition, $temp;
+      } @else {
+        $transition: $temp;
+      }
+      transition: $transition;
+    }
+  }
+}
+
+@mixin off-canvas-maker($side:left) {
+  @include media(max, sm) {
+    width: 260px;
+    height: 100vh;
+    z-index: $z-index-modals+1;
+    @include animate(0.5);
+    position: fixed;
+    top: 0;
+    @if $side == right {
+      right: 0;
+      transform: translateX(100%);
+    } @else {
+      left: 0;
+      transform: translateX(-100%);
+    }
+    &.is-active {
+      transform: translateX(0);
+    }
+  }
+}
+
+@mixin forHide($visibility, $opacity) {
+  @if $visibility == true {
+    visibility: visible !important;
+  } @else {
+    visibility: hidden;
+  }
+  @if $opacity == true {
+    opacity: 1;
+  } @else {
+    opacity: 0;
+  }
+}

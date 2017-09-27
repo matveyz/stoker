@@ -1,0 +1,39 @@
+<div class="sort-wrapper">
+  <div class="sort @@extraClass">
+    <svg class="icon icon-arrow-down visible-sm visible-xs">
+      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="svg/svg.svg#icon-arrow"></use>
+    </svg>
+    @@if (tabsName== "") {
+      @@if(active[0] == "") {
+        <a href="@@hrefFirst" class="sort-btn is-active">@@nameFirst</a>
+      }
+      @@if(active[0] != "") {
+        <a href="@@hrefFirst" class="sort-btn">@@nameFirst</a>
+      }
+    }
+    @@if(tabsName!= "" && nameFirst) {
+      <button data-tab="@@tabsName-1" class="tabs-item sort-btn is-active">@@nameFirst</button>
+    }
+    @@if (extraClass !== 'extended') {
+      @@for (var i = 0; i < nameOther.length; i++) {
+        @@if (tabsName== "") {
+          <a href="`+href[i]+`" class="sort-btn `+active[i]+`">`+nameOther[i]+`</a>
+        }
+        @@if(tabsName!= "") {
+          <button data-tab="@@tabsName-`+(i+2)+`" class="tabs-item sort-btn">
+            `+nameOther[i]+`
+          </button>
+        }
+      }
+    }
+    @@if (extraClass === 'extended') {
+      @@for (var i = 0; i < nameOther.length; i++) {
+        <button data-tab="@@tabsName-`+(i+2)+`" class="tabs-item sort-btn extended">`+nameOther[i]+`</button>
+        @@include('sort-extend.html', {
+        "number" : "`+(i+2)+`",
+        "tabsName" : "@@tabsName"
+        })
+      }
+    }
+  </div>
+</div>

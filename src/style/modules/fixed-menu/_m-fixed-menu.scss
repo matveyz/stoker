@@ -1,0 +1,117 @@
+.fixed-menu {
+  &-wrapper {
+    z-index: $z-index-menu + 1;
+    height: 50px;
+    position: fixed;
+  }
+  position: fixed;
+  height: 50px;
+  transform: translateY(0);
+  top: 0;
+  width: 100%;
+  background: #fff;
+  z-index:$z-index-menu + 3;
+  box-shadow: 0 10px 30px 5px rgba(#000, 0.3);
+  @include animate(0.25);
+  * {
+    line-height:1;
+  }
+  &-off-logo {
+    float: left;
+    padding: 12px 20px;
+    svg {
+      @include svg-full-color($color-text-main);
+      @include size(24);
+    }
+    .logo-menu {
+      padding-left: 15px;
+      float: right;
+      line-height: 28px;
+    }
+  }
+  &-filter {
+    max-height: 50px;
+    width: 143px;
+    float: left;
+    @include animate(0.3);
+    &-inner {
+      @include animate(0.3);
+      width: 143px;
+      background-color: $color-teal;
+    }
+    &-btn {
+      opacity: 1;
+      color: $color-white;
+      svg {
+        @include size(10);
+        @include svg-full-color($color-white);
+        stroke-width: 1.5;
+        margin-left: 5px;
+        padding-left: 4px;
+      }
+    }
+    .filter {
+      opacity: 0;
+      @include animate(0.5, false, opacity);
+      position: relative;
+      width:100vw;
+      top: -300px;
+      z-index:$z-index-menu + 2;
+    }
+  }
+  &-search {
+    @include animate(0.3);
+    margin-left: 207px;
+    margin-right: 458px;
+    .search {
+      &-inner {
+        margin-right: 48.5px;
+      }
+      &-btn {
+        border-radius: 0;
+        padding: 17px 16px;
+        svg {
+          @include svg-full-color($color-white);
+          vertical-align: bottom;
+          padding: 0;
+          margin:0;
+        }
+      }
+      &-text {
+        display: none;
+      }
+    }
+  }
+  &-bookmarks {
+    width: 185px;
+    float: right;
+    text-align: center;
+    .bookmarks {
+      padding: 12px 0;
+    }
+    background-color: $color-darkGray;
+  }
+  &-user {
+    width: 192px;
+    float: right;
+    text-align: center;
+    border-right:1px solid rgba(0,0,0,0.15);
+    .user {
+      padding:11px 0;
+      float: none;
+    }
+  }
+  &-lang {
+    width: 81px;
+    cursor: pointer;
+    position: relative;
+    float: right;
+    .languages {
+      @extend %btn;
+    }
+    .languages-item {
+      line-height: 50px;
+    }
+  }
+}
+//@import "responsive";

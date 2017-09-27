@@ -1,0 +1,12 @@
+.send-msg {
+  @media (max-width: $screen-xs-max) {
+    text-align: center;
+    &-btn {
+      @include font-size(12);
+    }
+    &-text {
+      margin-bottom: 20px;
+      @include font-size($main-text-size);
+    }
+  }
+}

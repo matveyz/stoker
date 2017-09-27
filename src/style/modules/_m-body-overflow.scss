@@ -1,0 +1,17 @@
+.body-overflow {
+  display: none;
+  @include media(max, sm) {
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: $z-index-modals;
+    background: rgba(#000, 0.3);
+    position: fixed;
+    outline: none !important;
+    -webkit-backface-visibility: hidden;
+  }
+  &.is-active {
+    display: block;
+  }
+}

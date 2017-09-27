@@ -1,0 +1,17 @@
+.news {
+  &-slide {
+    @media (max-width:$screen-sm-max) {
+      &-wrapper:before {
+        background-position: right center;
+        background-size: inherit;
+        opacity: 0.3;
+      }
+      &-title {
+        @include font-size(18);
+      }
+      &-desc {
+        @include font-size(14);
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+.search {
+  &-block {
+    position: relative;
+    margin-bottom: 20px;
+    input {
+      width: 100%;
+      padding-left: 55px;
+      &:focus {
+        + .icon-search {
+          fill: $color-text-main;
+        }
+      }
+    }
+    .icon-search {
+      left: 0;
+      fill: $color-text-comments;
+      margin-left: 20px;
+      @include size(20);
+      @include vert-center;
+      position: absolute;
+    }
+  }
+  &-products-list-block {
+    margin-top: 20px;
+    margin-bottom: 5px;
+    padding: 15px 15px 5px 15px;
+    .btn-search-item {
+      margin-right: 5px;
+      margin-bottom: 10px;
+    }
+    .text-big {
+      vertical-align: middle;
+    }
+    .days-control {
+      vertical-align: middle;
+      display: inline-block;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+}

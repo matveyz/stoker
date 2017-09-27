@@ -1,0 +1,8 @@
+<ul class="filter-type-items-inner">
+  @@for (var i = 0; i < items.length; i++) {
+  <li class="col-md-2 checkbox" data-type="city" data-id="`+(i+1)+`">
+    <input type="checkbox" name="city-@@number-`+(i+1)+`">
+    <label data-for="city-@@number-`+(i+1)+`"><svg class="icon"><use xlink:href="svg/svg.svg#icon-circle"></use></svg><svg class="icon"><use xlink:href="svg/svg.svg#icon-checked"></use></svg>`+items[i]+`</label>
+  </li>
+  }
+</ul>

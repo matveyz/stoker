@@ -1,0 +1,15 @@
+<nav class="user">
+  <ul>
+    <li class="user-item">
+      <button @click="openModal()" class="register-btn"><span class="user-name hidden-md">Войти</span><svg class="icon sign-in">
+          <use xlink:href="svg/svg.svg#icon-sign-in"></use>
+        </svg>
+      </button>
+      <modal>
+        <modal_register-form slot="modal-content">
+          <social-icons slot="social-icons"></social-icons>
+        </modal_register-form>
+      </modal>
+    </li>
+  </ul>
+</nav>

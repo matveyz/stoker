@@ -1,0 +1,23 @@
+.show-more {
+  &-block {
+    overflow: visible;
+    height: auto;
+    > * {
+      @include animate(0.25);
+      opacity:0;
+    }
+    &.is-hidden {
+      overflow: hidden;
+      height: 0;
+      > * {
+
+      }
+    }
+  }
+  &-btn {
+    float: left;
+    width: 100%;
+    @include animate(0.25);
+    text-align: center;
+  }
+}

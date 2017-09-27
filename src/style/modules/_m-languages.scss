@@ -1,0 +1,10 @@
+.languages {
+  text-align: center;
+  @include font-size(18);
+  &-item.is-active {
+    line-height: 28px;
+    @media (max-width: $screen-sm-max) {
+      color: $color-teal;
+    }
+  }
+}

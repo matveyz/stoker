@@ -1,0 +1,32 @@
+<div class="filter-type tabs-item-content tabs " data-tab-content="tab-type@@number-1" data-tabs-container="tab-abc@@number">
+  <ul class="filter-type-abc">
+    @@if (letter[0] == "а") {
+    <li class="filter-type-abc-item is-active tabs-item" data-tab="tab-abc@@number-1">
+      <div>а</div>
+    </li>
+    }
+    @@for (var i = 1; i < letter.length; i++) {
+        <li class="filter-type-abc-item tabs-item" data-tab="tab-abc@@number-`+(i+1)+`">
+          <div>`+letter[i]+`</div>
+        </li>
+    }
+  </ul>
+  @@if (letter[0]) {
+  <div class="filter-type-items is-active tabs-item-content" data-tab-content="tab-abc@@number-1">
+    @@include('filter-type-city-items.html', {
+      "items":["Авдеевка", "Александровка", "Алушта", "Антрацит", "Авдеевка", "Александровка", "Алушта", "Антрацит", "Авдеевка", "Александровка", "Алушта", "Антрацит", "Авдеевка", "Александровка", "Алушта", "Антрацит"],
+      "number1": @@number,
+      "number":1
+    })
+  </div>
+  }
+  @@for (var i = 1; i < letter.length; i++) {
+  <div class="filter-type-items tabs-item-content" data-tab-content="tab-abc@@number-`+(i+1)+`">
+    @@include('filter-type-city-items.html', {
+      "items":["Авдеевка", "Александровка", "Алушта", "Антрацит", "Авдеевка", "Александровка", "Алушта", "Антрацит", "Авдеевка", "Александровка", "Алушта", "Антрацит", "Авдеевка", "Александровка", "Алушта", "Антрацит"],
+      "number1": @@number,
+      "number":"`+(i+1)+`"
+    })
+  </div>
+  }
+</div>

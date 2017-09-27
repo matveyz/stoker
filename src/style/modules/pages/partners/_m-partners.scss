@@ -1,0 +1,62 @@
+.partners-main {
+  .sort {
+    &-btn {
+      .icon {
+        @include animate(0.15);
+        opacity: 0;
+        @include size(12);
+        margin-right: 10px;
+      }
+    }
+  }
+  @include media (max, 490) {
+    &-block {
+      [class^=col-] {
+        width: 100%;
+      }
+    }
+    &-item {
+      margin: 0 auto;
+    }
+  }
+  &-item {
+    position: relative;
+    text-align: center;
+    @include size(270);
+    @include media(max, md) {
+      @include size(220);
+      margin: 0 auto;
+    }
+    @extend %radius-4px;
+    .rating {
+      @include animate(0.25);
+      opacity: 0;
+    }
+    > a {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+    }
+    > span {
+      display: inline-block;
+      height: calc(100% - 60px);
+      vertical-align: middle;
+    }
+    img {
+      vertical-align: middle;
+    }
+    @include animate(0.25);
+    &:hover {
+      box-shadow: 0 3px 40px 0 rgba(0, 0, 0, 0.3);
+      background-color: $color-white;
+      .rating {
+        opacity: 1;
+      }
+    }
+  }
+  .show-more-btn {
+    margin-top: 20px;
+  }
+}

@@ -1,0 +1,5 @@
+.date {
+  font-family: $font-semiBold;
+  color: $color-gray;
+  @include font-size(14);
+}

@@ -1,0 +1,22 @@
+.discount {
+  &-status {
+    @include media(max,xs) {
+      position: absolute;
+      top:-325px;
+      right: 0;
+      &-icon {
+        margin-right: 5px;
+        width: 35px;
+        height: 35px;
+      }
+      svg {
+        &.icon-star {
+          @include size(18);
+        }
+        &.icon-hot {
+          @include size(20);
+        }
+      }
+    }
+  }
+}

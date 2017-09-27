@@ -1,0 +1,271 @@
+<div class="comments">
+    <div class="comments-header text-header-bigger">
+        Комментарии
+    </div>
+    <div class="comments-form">
+        <div class="write-comment-center">
+            <div class="comments-form-interact">
+                <div id="comments">
+                    <add-comment v-bind:add-comment="addComment"></add-comment>
+                    <modal_add-comment v-if="modal.show"></modal_add-comment>
+                </div>
+                <div class="comments-form-users-only">
+                    <div>*</div>
+                    Для того, чтоб оставить комментарий, необходимо <a data-mfp-src="#register-form" href="#">войти</a>
+                    или <a data-mfp-src="#register-form" href="#" class="force-register">зарегистрироваться</a> в системе
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="nth-number-comments">
+        <p>10 комментариев</p>
+    </div>
+    <ul class="comments-list">
+        <li class="comments-item">
+            <div class="comments-item-body">
+                <div class="comments-item-img">
+                    <svg class="good-comment">
+                        <use xlink:href="svg/svg.svg#icon-good"></use>
+                    </svg>
+                    <img src="img/comment-img-1.jpg" alt="comment-img-1">
+                </div>
+                <div class="comments-item-right">
+                    <div class="comments-item-info">
+
+                        <div class="comments-item-right"></div>
+                        <div class="comments-item-info-username">
+                            Andrey Nikishaev
+                        </div>
+                        <div class="comments-item-info-timedate">
+              <span>
+                <svg class="icon icon-clock">
+                  <use xlink:href="svg/svg.svg#icon-clock"></use>
+                </svg>
+                <span>11:03</span>
+              </span>
+                            <span>
+                25.05.2016
+              </span>
+                        </div>
+                    </div>
+                    <div class="comments-item-message">
+                        Исходя из этого, мы пришли к выводу, что каждый произвольно выбранный предикативно абсорбирующий объект
+                        рациональной мистической индукции можно дискретно детерминировать с аппликацией ситуационной парадигмы
+                        коммуникативно-функ­ционального типа при наличии детекторно-архаичес­кого дистрибутивного образа в
+                        Гилбертовом
+                        конвергеционном пространстве.
+                    </div>
+                    <div class="comments-item-interact">
+                        <div class="comments-item-interact-replyshare">
+                            <a class="comments-item-interact-reply">Ответить</a>
+                            <a class="comments-item-interact-share">
+                                <svg class="icon icon-share">
+                                    <use xlink:href="svg/svg.svg#icon-share"></use>
+                                </svg>
+                                <span>Поделиться</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+
+        <li class="comments-item">
+                    <div class="comments-item-body">
+                        <div class="comments-item-img2">
+                            <svg class="bad-comment">
+                                <use xlink:href="svg/svg.svg#icon-bad"></use>
+                            </svg>
+                            <img src="img/comment-img-2.jpg" alt="comment-img-1">
+                        </div>
+                        <div class="comments-item-right">
+                            <div class="comments-item-info">
+
+                                <div class="comments-item-right"></div>
+                                <div class="comments-item-info-username">
+                                    Vova Nikishaev
+                                </div>
+                                <div class="comments-item-info-timedate">
+                      <span>
+                        <svg class="icon icon-clock">
+                          <use xlink:href="svg/svg.svg#icon-clock"></use>
+                        </svg>
+                        <span>11:03</span>
+                      </span>
+                                    <span>
+                        25.05.2016
+                      </span>
+                                </div>
+                            </div>
+                            <div class="comments-item-message">
+                                Причем здесь спорт и борода? Что такое мот - гугл говорит,
+                                что какой то российский репер - типо два раба и клаптык земли…
+                            </div>
+                            <div class="comments-item-interact">
+                                <div class="comments-item-interact-replyshare">
+                                    <a class="comments-item-interact-reply">Ответить</a>
+                                    <a class="comments-item-interact-share">
+                                        <svg class="icon icon-share">
+                                            <use xlink:href="svg/svg.svg#icon-share"></use>
+                                        </svg>
+                                        <span>Поделиться</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+        <li class="comments-item">
+            <div class="comments-item-body">
+                <div class="comments-item-img">
+                    <svg class="good-comment">
+                        <use xlink:href="svg/svg.svg#icon-good"></use>
+                    </svg>
+                    <img src="img/comment-img-3.jpg" alt="comment-img-3">
+                </div>
+                <div class="comments-item-right">
+                    <div class="comments-item-info">
+
+                        <div class="comments-item-right"></div>
+                        <div class="comments-item-info-username">
+                            Nazara Lukashenko
+                        </div>
+                        <div class="comments-item-info-timedate">
+              <span>
+                <svg class="icon icon-clock">
+                  <use xlink:href="svg/svg.svg#icon-clock"></use>
+                </svg>
+                <span>11:03</span>
+              </span>
+                            <span>
+                25.05.2016
+              </span>
+                        </div>
+                    </div>
+                    <div class="comments-item-message">
+                        Очень спорный вывод :) Особенно учитывая факт что ребята которые его начинали писать с первых строк кода
+                        уехали в Эстонию...
+                    </div>
+                    <div class="comments-item-interact">
+                        <div class="comments-item-interact-replyshare">
+                            <a class="comments-item-interact-reply">Ответить</a>
+                            <a class="comments-item-interact-share">
+                                <svg class="icon icon-share">
+                                    <use xlink:href="svg/svg.svg#icon-share"></use>
+                                </svg>
+                                <span>Поделиться</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <div class="show-more-block is-hidden">
+            <li class="comments-item">
+                <div class="comments-item-body">
+                    <div class="comments-item-img">
+                    <svg class="good-comment">
+                        <use xlink:href="svg/svg.svg#icon-good"></use>
+                    </svg>
+                        <img src="img/comment-img-3.jpg" alt="comment-img-3">
+                    </div>
+                    <div class="comments-item-right">
+                        <div class="comments-item-info">
+
+                            <div class="comments-item-right"></div>
+                            <div class="comments-item-info-username">
+                                Nazara Lukashenko
+                            </div>
+                            <div class="comments-item-info-timedate">
+              <span>
+                <svg class="icon icon-clock">
+                  <use xlink:href="svg/svg.svg#icon-clock"></use>
+                </svg>
+                <span>11:03</span>
+              </span>
+                                <span>
+                25.05.2016
+              </span>
+                            </div>
+                        </div>
+                        <div class="comments-item-message">
+                            Очень спорный вывод :) Особенно учитывая факт что ребята которые его начинали писать с первых строк кода
+                            уехали в Эстонию...
+                        </div>
+                        <div class="comments-item-interact">
+                            <div class="comments-item-interact-replyshare">
+                                <a class="comments-item-interact-reply">Ответить</a>
+                                <a class="comments-item-interact-share">
+                                    <svg class="icon icon-share">
+                                        <use xlink:href="svg/svg.svg#icon-share"></use>
+                                    </svg>
+                                    <span>Поделиться</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </div>
+        <div class="show-more-block is-hidden">
+            <li class="comments-item">
+                <div class="comments-item-body">
+                    <div class="comments-item-img2">
+                    <svg class="bad-comment">
+                        <use xlink:href="svg/svg.svg#icon-bad"></use>
+                    </svg>
+                        <img src="img/comment-img-3.jpg" alt="comment-img-3">
+                    </div>
+                    <div class="comments-item-right">
+                        <div class="comments-item-info">
+
+                            <div class="comments-item-right"></div>
+                            <div class="comments-item-info-username">
+                                Nazara Lukashenko
+                            </div>
+                            <div class="comments-item-info-timedate">
+              <span>
+                <svg class="icon icon-clock">
+                  <use xlink:href="svg/svg.svg#icon-clock"></use>
+                </svg>
+                <span>11:03</span>
+              </span>
+                                <span>
+                25.05.2016
+              </span>
+                            </div>
+                        </div>
+                        <div class="comments-item-message">
+                            Очень спорный вывод :) Особенно учитывая факт что ребята которые его начинали писать с первых строк кода
+                            уехали в Эстонию...
+                        </div>
+                        <div class="comments-item-interact">
+                            <div class="comments-item-interact-replyshare">
+                                <a class="comments-item-interact-reply">Ответить</a>
+                                <a class="comments-item-interact-share">
+                                    <svg class="icon icon-share">
+                                        <use xlink:href="svg/svg.svg#icon-share"></use>
+                                    </svg>
+                                    <span>Поделиться</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </div>
+    </ul>
+
+    <div class="comments-list-other show-more-btn">
+        <img class="ring is-hidden" src="svg/ring.svg">
+
+        <a class="show-more-btn-inner">
+            <svg class="icon icon-arrow-down">
+                <use xlink:href="svg/svg.svg#icon-arrow"></use>
+            </svg>
+            <span>Другие комментарии</span>
+        </a>
+
+    </div>
+</div>

@@ -1,0 +1,335 @@
+.comments {
+
+  letter-spacing: 0.75px;
+  &-header {
+    text-align: center;
+    text-transform: uppercase;
+    padding: 40px 0;
+    @include media(max, xs) {
+      padding-left: 0.12em;
+    }
+  }
+  &-number {
+    text-transform: uppercase;
+    @include font-size(14);
+    @include font(medium);
+    float: right;
+  }
+  &-form {
+    padding: 0 0 25px 25px;
+    &-message {
+      max-width: 100%;
+      width: 735px;
+      height: 140px;
+      border: 1px solid $color-text-main;
+      @extend %radius-4px;
+      resize: none;
+      @include font-size(14);
+      padding: 15px;
+    }
+    &-interact {
+      @include clearfix();
+      margin-top: 10px;
+      margin-bottom: 25px;
+      button {
+        float: none;
+        display: inline-block;
+        vertical-align: middle;
+        @include font(bold);
+        @include font-size(14);
+      }
+    }
+    &-users-only {
+      margin-top: 0.8em;
+      @include font-size(12);
+      float: none;
+      display: inline-block;
+      vertical-align: middle;
+      max-width: 365px;
+      color: #898989;
+      div {
+        height: 30px; //..
+        float: left;
+      }
+      a {
+        text-decoration: none;
+        color: #41bee2;
+      }
+      @include media(max, xs) {
+        width: 335.2px;
+        margin-left: -4.15em;
+      }
+    }
+  }
+
+  &-item {
+    margin-top: 5px;
+    .icon {
+      fill: $color-text-comments;
+    }
+    &-img {
+      float: left;
+      border-radius: 50%;
+      @include size(60);
+      overflow: hidden;
+      border: solid 2px #7ed321;
+      padding: 0.24em 0;
+      img {
+        @include size(48);
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+      }
+    }
+    &-img2 {
+      float: left;
+      border-radius: 50%;
+      @include size(60);
+      overflow: hidden;
+      border: solid 2px #ff5749;
+      padding: 0.24em 0;
+      img {
+        @include size(48);
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+      }
+    }
+    &-right {
+      margin-left: 85px;
+      @include media(max, xs) {
+        margin-left: 70px;
+      }
+    }
+    &-body {
+      @include clearfix();
+      @extend %radius-4px;
+      background-color: $color-lightGray;
+      padding: 25px;
+      @include media(max, xs) {
+        padding: 10px;
+      }
+    }
+    &-info {
+      @include clearfix();
+      height: 20px;
+      &-username {
+        float: left;
+        @include font(bold);
+        @include media(max, xs) {
+          width: 50px;
+          margin-top: 0.4em;
+          text-align: left;
+          margin-left: 0.8em;
+        }
+      }
+      &-reply {
+        color: $color-text-comments;
+        .icon {
+          margin: 0 5px;
+          @include size(12);
+          margin-bottom: -1px;
+        }
+      }
+      &-timedate {
+        @include font-size(14);
+        float: right;
+        color: $color-text-comments;
+        > span {
+          font-size: 14px;
+          letter-spacing: 0.5px;
+          color: #9b9b9b;
+          &:last-of-type {
+            vertical-align: bottom;
+            padding-left: 20px;
+          }
+          @include media(max, xs) {
+            font-size: 10px;
+          }
+        }
+        .icon {
+          vertical-align: middle;
+          transform: scaleY(-1) rotate(-180deg);
+          @include size(12);
+          letter-spacing: 0.5px;
+          stroke: #9b9b9b;
+          + span {
+            vertical-align: middle;
+          }
+        }
+        @include  media(max, xs) {
+          width: 100px;
+          margin-top: 0.4em;
+          margin-right: -1.5em;
+        }
+      }
+    }
+    &-message {
+      margin-top: 15px;
+      margin-bottom: 15px;
+      text-align: left;
+      font-size: 14px;
+      line-height: 1.5;
+      letter-spacing: 0.5px;
+      color: #5e6364;
+      @include media(max, xs) {
+        width: 250px;
+        margin-top: 4.5em;
+        margin-left: -5.5em;
+        font-size: 12px;
+      }
+    }
+    &-interact {
+      a {
+        color: $color-text-comments;
+        @include animate(0.25);
+        .icon {
+          @include animate(0.25);
+        }
+        &:hover {
+          color: $color-text-main;
+          .icon {
+            fill: $color-text-main;
+          }
+        }
+      }
+      &-votes {
+        float: left;
+        @include font-size(14);
+        @include font(bold);
+        .inline-divide {
+          float: left;
+          height: 18px;
+        }
+        span {
+          vertical-align: middle;
+          font-size: 14px;
+          letter-spacing: 0.5px;
+          color: #9b9b9b;
+        }
+        .icon {
+          float: left;
+          vertical-align: middle;
+          @include size(13);
+          &-like {
+            margin-right: 8px;
+          }
+          &-dislike {
+            margin-left: 8px;
+            margin-top: 4px;
+          }
+        }
+        &-number {
+          margin-left: 10px;
+        }
+      }
+      &-replyshare {
+        float: right;
+        @include font-size(14);
+        color: $color-text-comments;
+        .icon {
+          @include size(14);
+          vertical-align: middle;
+        }
+        a {
+          font-size: 14px;
+          letter-spacing: 0.5px;
+          color: #49c7e7;
+        }
+        svg {
+          fill: #49c7e7;
+        }
+        @include media(max, xs) {
+          float: none;
+          margin-left: -9.9em;
+        }
+      }
+      &-reply {
+        vertical-align: middle;
+        margin-right: 25px;
+      }
+      &-share {
+        span {
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+  &-reply {
+    .comments-item {
+      margin-left: 105px;
+    }
+  }
+
+  &-list-other {
+    padding: 30px 0;
+    text-align: center;
+    text-transform: uppercase;
+    @include font(semibold);
+    @include font-size(14);
+    a {
+      color: $color-teal;
+      text-decoration: none;
+      @include animate(0.25);
+      &:hover, &:focus {
+        text-decoration: underline;
+      }
+    }
+    span {
+      vertical-align: middle;
+    }
+    .icon {
+      @include size(14);
+      vertical-align: middle;
+      fill: $color-teal;
+    }
+  }
+}
+
+.write-comment-center {
+  padding-right: 1.6em;
+}
+
+.nth-number-comments {
+  width: 100%;
+  padding-right: 1.8em;
+  p {
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 0.8px;
+    text-align: center;
+    color: #d1d0d0;
+  }
+}
+
+.good-comment {
+  fill: #7ed321;
+  stroke: white;
+  width: 18px;
+  height: 18px;
+  background: transparent;
+  position: absolute;
+  margin-left: 2.2em;
+  margin-top: -0.5em;
+}
+
+.bad-comment {
+  fill: #ff5749;
+  stroke: white;
+  width: 18px;
+  height: 18px;
+  background: transparent;
+  position: absolute;
+  margin-left: 2.2em;
+  margin-top: -0.5em;
+}
+
+.button-add-comment {
+  padding: 0 3.5em;
+  margin-top: -1.2em;
+  @include media(max, xs) {
+    white-space: nowrap !important;
+    padding: 0 3em;
+    margin-left: -1.7em;
+  }
+}

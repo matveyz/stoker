@@ -1,0 +1,38 @@
+.discount {
+  &-status {
+    margin-top: -23px;
+    &-icon {
+      border-radius: 50%;
+      margin-right: 10px;
+      width: 47px;
+      height: 47px;
+      background-color: $color-red;
+      float: left;
+      text-align: center;
+      &:before {
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        height: 100%;
+      }
+      &:hover {
+        background-color: $color-teal;
+      }
+    }
+    svg {
+      vertical-align: middle;
+      @include animate(0.3);
+      cursor: pointer;
+      &.icon {
+        &-star {
+          @include size(25);
+        }
+        &-hot {
+          @include size(29);
+        }
+      }
+    }
+  }
+}
+
+//@import "responsive";

@@ -1,0 +1,36 @@
+.become-partner {
+  .header-block {
+    text-align: center;
+  }
+  &-block {
+    @extend %betweenBlocksPadding;
+    background-color: $color-lightTeal;
+    .about-partner-1 {
+      > svg {
+        height: 460px;
+        width: 100%;
+      }
+    }
+    &-text {
+      ul {
+        li {
+          position: relative;
+          margin-left: 55px;
+          margin-bottom: 15px;
+          &:last-of-type {
+            margin-bottom: 0;
+          }
+        }
+        span {
+          @include font(extrabold);
+          @include font-size(32);
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          color: $color-green;
+          left: -60px;
+        }
+      }
+    }
+  }
+}

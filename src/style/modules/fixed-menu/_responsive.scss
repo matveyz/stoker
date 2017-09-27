@@ -1,0 +1,214 @@
+.fixed-menu {
+  @include media(max, md) {
+    @include media (min, md) {
+      &-search {
+        margin-right: 221px;
+      }
+      .fixed-menu {
+        &-bookmarks {
+          width: 80px;
+          .bookmarks {
+            padding: 15px 0;
+            &-number {
+              padding: 0;
+              @include font-size(20);
+            }
+            svg {
+              @include size(20);
+            }
+          }
+        }
+
+        &-user {
+          width: 60px;
+          .user {
+            svg {
+              padding: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+  @include media(max, sm) {
+    height: 40px;
+    svg {
+    }
+    &.is-nav-up {
+      transform: translateY(0);
+      opacity: 1;
+      overflow: visible;
+    }
+    &-off-logo {
+      cursor: pointer;
+      padding: 7px 20px;
+      svg {
+        @include size(24);
+      }
+    }
+    &-mobile {
+      &-wrapper {
+        background-color: $color-white;
+        @include clearfix();
+        @include animate(0.5);
+        width: 100vw;
+        position: relative;
+        max-height: 0;
+        overflow: hidden;
+      }
+      &-filter {
+        float: left;
+      }
+      &-search {
+        margin-left: 44px;
+        .search {
+          &-inner {
+            margin: 0;
+          }
+          &-input {
+            width: 100%;
+            font-size: 1rem;
+            height: 44px;
+            line-height: 44px;
+            padding: 0 10px;
+            background-color: $color-white;
+          }
+        }
+      }
+      &-searchbtn {
+        float: right;
+        padding: 10px 18px;
+        border-left: 1px solid rgba(0, 0, 0, 0.1);
+        svg {
+          vertical-align: middle;
+          @include svg-full-color($color-red);
+          @include size(19);
+        }
+      }
+    }
+    &-filter {
+      &-inner {
+        width: 44px;
+        max-height: 44px;
+        .filter-item {
+          button {
+            max-height: 44px;
+          }
+        }
+        @include animate(0.3);
+        background-color: $color-teal;
+
+        .filter {
+          @include animate(0.3, false, opacity);
+          opacity: 0;
+          top: -200px;
+          position: relative;
+          width: 100vw;
+          height: 0;
+          &:not(.is-active) {
+            > ul {
+              width: 44px;
+            }
+          }
+          > ul {
+            display: inline-block;
+          }
+          &-item {
+            button {
+              @include font-size($main-text-size);
+              font-family: $font-light;
+              padding: 14px;
+              background-color: black !important;
+            }
+            svg {
+              display: none;
+            }
+          }
+          &-type {
+            top: 44px;
+            &-abc {
+              display: none;
+            }
+            &-items {
+              &-inner {
+                padding: 20px 15px;
+                li {
+                  padding: 0;
+                  margin-bottom: 10px;
+                }
+              }
+              label {
+                position: static;
+                svg {
+                  margin: 0;
+                  float: right;
+                  position: static;
+                  &:last-of-type {
+                    position: absolute;
+                    right: 0;
+                    left: auto;
+                    width: 9px;
+                    top: 0;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      &-btn {
+        @include animate(0.1);
+        width: 44px;
+        height: 44px;
+        opacity: 1;
+        padding: 10px;
+        background-color: black !important;
+        svg {
+          @include size(22);
+          font-weight: normal;
+          padding: 0;
+          margin-left: 0;
+        }
+      }
+    }
+    &-bookmarks {
+      width: 160px;
+      .bookmarks {
+        padding: 10px;
+        &-number {
+          padding: 0;
+          @include font-size(20);
+        }
+        svg {
+          @include size(20);
+        }
+      }
+      @media (max-width: 400px) {
+        width: 135PX;
+      }
+    }
+    &-user {
+      .user {
+        padding: 8px 20px;
+        svg {
+          margin-left: 10px;
+          padding: 0;
+          @include size(24);
+        }
+      }
+      @media (max-width: 474px) {
+        width: auto;
+        .user {
+          &-name {
+            display: none;
+          }
+          svg {
+            margin-left: 0;
+            padding: 0;
+          }
+        }
+      }
+    }
+  }
+}
+

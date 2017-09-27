@@ -1,0 +1,30 @@
+<div data-tabs-container="search-sort" class="tabs search-results-main">
+  @@include('../../modules/sort/sort.html', {
+    "extraClass" : "",
+    "nameFirst" : "Соритировка",
+    "nameOther" : ["Вид"],
+    "tabsName" : "search-sort"
+  })
+  <div data-tab-content="search-sort-1" class="tabs-item-content search-results-main-block is-active">
+      @@for (var i = 0; i < 3; i++) {
+      @@include('../../modules/product.html')
+      }
+  </div>
+  <div data-tab-content="search-sort-2" class="tabs-item-content search-results-main-block">
+    <div class="row">
+      @@for (var i = 0; i < 4; i++) {
+      @@include('../../modules/discounts.html')
+      }
+      <div class="show-more-block is-hidden">
+        @@for (var i = 0; i < 2; i++) {
+        @@include('../../modules/discounts.html')
+        }
+      </div>
+      <div class="show-more-block is-hidden">
+        @@for (var i = 0; i < 2; i++) {
+        @@include('../../modules/discounts.html')
+        }
+      </div>
+    </div>
+  </div>
+</div>

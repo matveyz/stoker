@@ -1,0 +1,19 @@
+.rating {
+  &-item {
+    svg {
+      @include size(22);
+      stroke: $color-text-main;
+      fill: none;
+    }
+    &:not(.checked) {
+      svg {
+        stroke-width: 4%;
+      }
+    }
+    &.checked {
+      svg {
+        fill: $color-text-main;
+      }
+    }
+  }
+}

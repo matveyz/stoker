@@ -1,0 +1,84 @@
+.catalog-creating {
+  &-menu {
+    font-size: 0;
+    svg {
+      vertical-align: middle;
+      display: inline-block;
+    }
+    > * {
+      @include font-size(18);
+      padding: 0 30px;
+      line-height: 50px;
+      display: inline-block;
+      color: $color-text-comments;
+    }
+    .menu-arrow {
+      position: relative;
+      padding: 0 30px;
+      margin-right: 24px;
+      //@include animate(0.2);
+        &:hover {
+          color: $color-teal;
+        }
+      &.active, &:active {
+        color: $color-white;
+        background-color: $color-teal;
+        &:after {
+          background-color: $color-teal;
+          border-right-color: $color-white;
+          border-top-color: $color-white;
+        }
+        &:before {
+          border-top: 25px solid $color-teal;
+          border-bottom: 25px solid $color-teal;
+        }
+
+      }
+      &:not(:first-of-type):before {
+        content: '';
+        position: absolute;
+        left: -24px;
+        top: 0;
+        bottom: 0;
+        margin: auto 0;
+        border-left: 25px solid transparent;
+      }
+      &:after {
+        content: '';
+        position: absolute;
+        right: -18px;
+        top: 0;
+        bottom: 0;
+        margin: auto 0;
+        border-top-right-radius: 4px;
+        transform: rotate(45deg);
+        width: 36px;
+        height: 36px;
+        display: inline-block;
+        border-right: 1px solid $color-text-comments;
+        border-top: 1px solid $color-text-comments;
+      }
+    }
+    .languages {
+      display: inline-block;
+      &-wrapper {
+        width: 81px;
+        float: right;
+        position: relative;
+      }
+    }
+  }
+
+  &-control {
+    margin-top: 20px;
+  }
+}
+
+section {
+  padding: 90px 0;
+}
+
+
+.text-description {
+  @include font-size(22);
+}

@@ -1,0 +1,28 @@
+.article {
+  @include media(max, xs) {
+    &-extra {
+      text-align: center;
+      .date {
+        float: none;
+      }
+      .back-to-all-news {
+        float: none;
+        margin-bottom: 10px;
+      }
+      .date {
+      }
+      .share {
+        margin-top: 10px;
+        .icon {
+          @include size(28);
+          margin-top: -10px;
+        }
+      }
+    }
+    &-img {
+      img {
+        max-width: 100vw;
+      }
+    }
+  }
+}

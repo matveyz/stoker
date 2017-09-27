@@ -1,0 +1,58 @@
+@@include('templates/template-header.html')
+
+
+<main id="settings" role="main" class="main" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:v-on="http://www.w3.org/1999/xhtml">
+  <section class="top-content">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          @@include('templates/modules/breadcrumbs.html', {
+          "name" : ["Настройки"],
+          "link" : [""]
+          })
+        </div>
+        <div class="col-lg-12">
+          @@include('templates/modules/center-header-block.html', {
+          "extraClass" : "",
+          "inner" : ["Личный кабинет"]
+          })
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="main-content">
+    <div class="container">
+      <div class="row">
+        <div class="my-lists-tabs">
+          <div class="col-md-12">
+
+            @@include('templates/modules/sort/sort.html', {
+            "extraClass" : "sort-white",
+            "nameFirst" : "Мои каталоги",
+            "nameOther" : ["Баланс", "Настройки", "Техподдержка"],
+            "tabsName" : "",
+            "hrefFirst" : "/app/my-lists.html",
+            "href" : ["/app/favorites.html", "/app/settings.html", "/app/faq.html"],
+            "active" : ["-", "is-active", ""]
+            })
+            <div class="text-center">
+              Вы можете отредактировать свой профиль в системе, указать информацию о компании,
+              <br>
+              изменить пароль доступа к порталу, а также управлять подпиской
+            </div>
+          </div>
+          <div class="col-lg-11 center settings-wrapper clearfix">
+            @@include('templates/pages/private-cabinet/settings.html')
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <send-msg v-bind:send-msg="getRSS"></send-msg>
+  <modal_send-msg-get-rss v-if="modal.show"></modal_send-msg-get-rss>
+</main>
+
+
+@@include('templates/template-footer.html')
+

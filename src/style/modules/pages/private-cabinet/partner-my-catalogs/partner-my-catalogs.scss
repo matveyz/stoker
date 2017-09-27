@@ -1,0 +1,119 @@
+.partner-catalog {
+  background-color: $color-creamy-light;
+  border-radius: 4px;
+  margin-bottom: 0;
+  margin-top: 25px;
+  .my-lists-item {
+    padding-top: 0;
+    padding-bottom: 0;
+    height: 110px;
+    overflow: visible;
+    @include font-size(21);
+    @include animate(0.25);
+    &:hover {
+      box-shadow: 0 20px 30px 0 rgba(0, 0, 0, .3);
+      background-color: #fff;
+      z-index: $z-index-content+2;
+    }
+    .icon {
+      fill: $color-text-main;
+    }
+    > * {
+      position: relative;
+      @include vert-center();
+    }
+    *.deactivated {
+      opacity: 0.2;
+    }
+  }
+  &-img {
+    @include animate(0.25);
+    position: relative;
+    height: 126px;
+    width: 89px;
+    margin-left: -25px;
+    &:after {
+      content: '';
+      border-radius: 50%/15px;
+      box-shadow: rgba(0, 0, 0, .5) 0 5px 7px;
+      clip: rect(20px, auto, 50px, 0);
+      position: relative;
+      display: block;
+      width: 89px;
+      height: 20px;
+      bottom: 25px;
+    }
+  }
+  &-date {
+    float: left;
+    @include font(bold);
+    margin-left: 40px;
+  }
+  &-status {
+    float: left;
+    margin-left: 40px;
+  }
+  .pull-right {
+    position: relative;
+  }
+  &-statistics {
+    @include font-size(14);
+    > span {
+      vertical-align: middle;
+      margin-right: 35px;
+    }
+    .icon {
+      vertical-align: middle;
+      margin-right: 10px;
+      @include size(18);
+    }
+  }
+  &-extra {
+    height: 110px;
+    width: 80%;
+    margin-right: -40px;
+    display: block;
+    padding-left: 40px;
+    background-color: $color-gray;
+    > * {
+      @include font(medium);
+      @include font-size(16);
+      text-transform: uppercase;
+      color: $color-white;
+      position: relative;
+      @include vert-center();
+      display: block;
+      height: 20px;
+      float: left;
+      margin: 0 40px;
+      &:hover {
+        color: $color-teal;
+      }
+    }
+  }
+  &-activate {
+    max-width: 105px;
+  }
+  &-less {
+    /*height: 110px;
+    padding: 0 40px;*/
+    .icon.icon-cross {
+      @include size(20);
+      fill: $color-red;
+    }
+  }
+  &-more {
+    border-left: 1px solid #e6e6e6;
+    padding: 0 30px;
+    height: 110px;
+    font-size: 0;
+    vertical-align: middle;
+    margin-right: -40px;
+    .icon {
+      &:not(:first-of-type) {
+        margin-left: 10px;
+      }
+      @include size(8);
+    }
+  }
+}

@@ -1,0 +1,22 @@
+.partner {
+  &-extra {
+    text-align: center;
+    .rating {
+      display: inline-block;
+      transform: translateY(50%);
+    }
+    @include media(max, xs) {
+      > * {
+        float: none !important;
+      }
+      .rating {
+        margin: 10px 0;
+        transform: none;
+      }
+    }
+  }
+  &-main {
+    padding-bottom: 30px;
+    text-align: left;
+  }
+}

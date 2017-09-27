@@ -1,0 +1,14 @@
+.content-attention {
+  .text {
+    padding: 20px 25px;
+    clear: both;
+  }
+  .header-block {
+    padding: 0;
+  }
+  text-align: center;
+  margin: 50px 0;
+  @media (max-width: $screen-md-max) {
+    margin-top: 30px;
+  }
+}

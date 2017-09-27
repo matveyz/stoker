@@ -1,0 +1,22 @@
+.bookmarks {
+  svg {
+    line-height: 50px;
+    @include size(26);
+    @include svg-full-color($color-white);
+    stroke-width: 0.5px;
+    vertical-align: middle;
+  }
+  &-number {
+    line-height: 50px;
+    color: $color-teal;
+    font-family:$font-bold;
+    @include font-size(21);
+    padding:0 10px;
+    vertical-align: middle;
+  }
+  &-text {
+    color: $color-white;
+    @include font-size(14);
+    vertical-align: middle;
+  }
+}

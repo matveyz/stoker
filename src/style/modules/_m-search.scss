@@ -1,0 +1,41 @@
+.search {
+  &-inner {
+    position: relative;
+    margin-right: 143px;
+    svg {
+      position: absolute;
+      @include size(18);
+      margin-top: -9px;
+      left: 18px;
+      top: 50%;
+      @include svg-full-color($color-red);
+    }
+  }
+  &-input {
+    padding: 0 20px 0 50px;
+    border: 0;
+    @include font-size(13);
+    color: $color-blue;
+    @include media(min, sm){
+      height: 50px;
+      width: calc(100% + 5px);
+      margin-left: -4px;
+    }
+    &::placeholder {
+      color: grey;
+    }
+  }
+  &-text {
+    @include font-size(18);
+  }
+  &-btn {
+    font-size: 0; // DONT REMOVE INLINE BLOCK 4 PX BUG!!!
+    color: $color-white;
+    float: right;
+    svg {
+      @include size(16);
+      margin-left: 9px;
+      padding-left: 6px;
+    }
+  }
+}

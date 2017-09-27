@@ -1,0 +1,49 @@
+.multiselect {
+  position: relative;
+  &__content {
+    position: absolute;
+    list-style: none;
+    display: block;
+    background: #fff;
+    width: 100%;
+    max-height: 240px;
+    overflow: auto;
+    padding: 0;
+    margin: 0;
+    border: 1px solid $color-grayBorder;
+    border-radius: 0 0 4px 4px;
+    z-index: 50;
+  }
+
+  .multiselect--above .multiselect__content {
+    bottom: 100%;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom: none;
+    border-top: 1px solid #E8E8E8;
+  }
+
+  .multiselect__content::webkit-scrollbar {
+    display: none;
+  }
+  &__element {
+  }
+  &__option {
+    display: inline-block;
+    padding: 15px 40px;
+    text-align: left;
+    width: 100%;
+    @include font-size(20);
+    &:hover {
+      color: $color-teal;
+    }
+    &--highlight {
+      background-color: $color-teal;
+      &:hover {
+        color: $color-text-main;
+      }
+    }
+  }
+}

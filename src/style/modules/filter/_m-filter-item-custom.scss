@@ -1,0 +1,32 @@
+.filter-item-custom {
+  label {
+    position: relative;
+    display: block;
+    text-align: left;
+    span {
+      vertical-align: middle;
+    }
+  }
+  .icon {
+    vertical-align: middle;
+    &:first-of-type {
+    }
+    &:last-of-type {
+      @include animate(0.1);
+      opacity: 0;
+      position: absolute;
+    }
+  }
+  input {
+    display: none;
+    &:checked {
+      + label {
+        .icon {
+          &:last-of-type {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}

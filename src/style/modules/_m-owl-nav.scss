@@ -1,0 +1,49 @@
+.owl-nav {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  svg {
+    @include size($main-text-size*1.5);
+  }
+  > * {
+    padding: 15px 5px;
+    background-color: $color-darkGray;
+    @include animate(0.25);
+    &:hover, &:focus {
+      background-color: $color-gray;
+    }
+  }
+  .owl-prev {
+    float: left;
+    border-radius: 0 4px 4px 0;
+  }
+  .owl-next {
+    float: right;
+    border-radius: 4px 0 0 4px;
+  }
+}
+
+.partners-slider-nav {
+  width: calc(100vw - 15px);
+  transform: translateY(-100px);
+  > * {
+    cursor: pointer;
+    position: absolute;
+    padding: 15px 5px;
+    background-color: $color-darkGray;
+    svg {
+      @include size($main-text-size*1.5);
+    }
+    @include animate(0.25);
+    &:hover, &:focus {
+      background-color: $color-gray;
+    }
+  }
+  .owl-prev {
+    border-radius: 0 4px 4px 0;
+  }
+  .owl-next {
+    right: 0;
+    border-radius: 4px 0 0 4px;
+  }
+}

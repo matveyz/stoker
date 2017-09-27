@@ -1,0 +1,51 @@
+.icon {
+  width: 1rem;
+  height: 1rem;
+  display: inline-block;
+  stroke-width: 0;
+  @include svg-full-color($color-white);
+  &-arrow {
+    &-right {
+      stroke-width: 0.5;
+    }
+    &-down {
+      stroke-width: 0.5;
+      transform: rotate(90deg);
+    }
+    &-up {
+      stroke-width: 0.5;
+      transform: rotate(-90deg);
+    }
+    &-left {
+      stroke-width: 0.5;
+      transform: rotate(180deg);
+    }
+  }
+
+  &-dislike {
+    transform: scaleY(-1);
+  }
+  &-xls{
+    stroke-width: 3;
+    fill: none;
+  }
+  &-cart-mini{
+    width: 25px;
+    height: 25px;
+    stroke-width: 3px;
+    fill: none!important;
+  }
+  &-bookmark-circle {
+    stroke-width: 2px;
+    fill: none!important;
+  }
+
+  &-dropdown {
+    stroke-width: 2px;
+    fill: none!important;
+    width: 0.6rem;
+    height: 0.6rem;
+  }
+
+
+}

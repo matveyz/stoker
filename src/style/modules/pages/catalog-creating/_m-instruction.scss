@@ -1,0 +1,46 @@
+.instruction {
+  &-list {
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      //top: 0;
+      left: 37.5px;
+      height: 100%;
+      width: 5px;
+      margin-left: -2.5px;
+      background: url("#{$img-path}/gray-disk.png") repeat-y;
+    }
+    &-block {
+      position: relative;
+      margin-bottom: 40px;
+      .icon {
+        &-disk {
+          @include size(75);
+          fill: $color-text-disabled;
+        }
+        &-number {
+          @include font(extrabold);
+          @include font-size(32);
+          position: absolute;
+          left: 30px;
+          top: 20px;
+          color: $color-white;
+          line-height: 1;
+        }
+      }
+      .text {
+        width: calc(100% - 71px);
+        padding-left: 45px;
+      }
+    }
+  }
+  &-after {
+    .line-divide {
+      margin-bottom: 20px;
+    }
+    .text-small {
+      margin-bottom: 75px;
+    }
+  }
+}

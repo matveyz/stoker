@@ -1,0 +1,43 @@
+/* Load basic styles/utilities */
+@import "lib/normalize/normalize";
+@import "lib/grid/grid";
+
+@import "base/vars";
+@import "base/mixins";
+@import "base/fonts";
+@import "base/icons";
+@import "base/base";
+
+/* Load layouts */
+
+@import "layout/l-header";
+@import "layout/l-footer";
+@import "layout/l-main";
+@import "layout/l-secondary";
+@import "layout/l-header-content";
+@import "layout/l-line-devide";
+
+//TODO объеденить папки и сделать везде мейн файл которые уже собирать тут
+
+/* Load utilities */
+@import "utilities/u-indents";
+@import "utilities/u-buttons";
+@import "utilities/u-dropdowns";
+@import "utilities/u-tooltips";
+@import "utilities/u-main";
+@import "utilities/u-text";
+@import "utilities/u-forms";
+
+//libs
+@import "lib/owl.carousel/owl.carousel";
+@import "lib/owl.carousel/owl.theme.default.min";
+//@import "lib/magnific-popup/main";
+@import "lib/vue-multiselect";
+@import "lib/vue-datepicker";
+
+//modules/pages
+
+@import "modules/**/*.scss";
+
+/* Load states */
+@import "states/*.scss";

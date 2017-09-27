@@ -1,0 +1,17 @@
+.header-content {
+  padding: 90px 0;
+  &_thin {
+    padding: 90px 0 20px 0;
+  }
+  &_creamy{
+    background-color: $color-creamy;
+  }
+
+  @include media(max, xs) {
+    & {
+      &:first-of-type {
+        padding: 20px 0 30px 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,404 @@
+.how {
+  &-it-works {
+    .header-block {
+      text-align: center;
+    }
+  }
+
+  &-inner {
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      height: calc(100% - 50px);
+      width: 5px;
+      margin-left: -2.5px;
+      background: url("#{$img-path}/red-disk.png") repeat-y;
+    }
+    .icon {
+      &-circle {
+        stroke: $color-red;
+        position: absolute;
+        fill: none;
+        @include size(20);
+        stroke-width: 15%;
+        margin-left: -10px;
+        left: 50%;
+        &-top {
+          top: -25px;
+        }
+        &-bot {
+          bottom: 25px;
+        }
+      }
+    }
+  }
+
+  &-top {
+    @include clearfix();
+    @extend %betweenBlocksPadding;
+    text-align: center;
+    .big-button {
+      color: $color-white;
+      @include font-size(24);
+      @include font(bold);
+      text-transform: uppercase;
+      width: 530px;
+      max-width: 100%;
+      display: block;
+    }
+    &-left {
+      float: right;
+      border-radius: 50px 0 0 50px;
+    }
+    &-right {
+      border-radius: 0 50px 50px 0;
+    }
+  }
+
+  &-main {
+    .icon {
+      &-disk {
+        @include size(75);
+        fill: $color-red;
+        position: absolute;
+        left: 50%;
+        margin-left: -36.5px;
+        svg {
+          fill: $color-red;
+        }
+      }
+      &-number {
+        @include font(extrabold);
+        @include font-size(32);
+        color: $color-white;
+        line-height: 1;
+        margin-left: -8px;
+        position: absolute;
+        left: 50%;
+        top: 20px;
+      }
+    }
+    &-block {
+      position: relative;
+      margin-bottom: 70px;
+      @include clearfix();
+      &-photo {
+        @include animate(0.3, false, opacity);
+        opacity: 0;
+        height: 0;
+        overflow: hidden;
+        svg {
+          max-width: 100%;
+          width: 450px;
+          height: 270px;
+          &.extra-svg {
+            height: 400px;
+          }
+        }
+      }
+      &-text {
+        opacity: 0;
+        @include animate(0.3, false, opacity);
+        height: 0;
+        overflow: hidden;
+        width: 75%;
+        .text-header {
+          &:first-of-type {
+            height: 75px;
+            //width: calc(100% - 110px);
+            position: relative;
+            span {
+              transform: translateY(-50%);
+              top: 50%;
+              position: absolute;
+            }
+          }
+          + .text {
+            margin-top: 0;
+          }
+        }
+      }
+      &.even {
+        .how-main-block {
+          &-text {
+            padding-right: 50px;
+            float: right;
+            text-align: right;
+            .text-header {
+              &:first-of-type {
+                span {
+                  right: 0;
+                }
+              }
+            }
+          }
+          &-photo {
+            padding-left: 50px;
+            float: left;
+          }
+        }
+      }
+      &.odd {
+        .how-main-block {
+          &-photo {
+            padding-right: 50px;
+            float: right;
+          }
+          &-text {
+            padding-left: 50px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* --------------------------------
+
+Modules - reusable parts of our design
+
+-------------------------------- */
+
+.cd-container { /* this class is used to give a max-width to the element it is applied to, and center it horizontally when it reaches that max-width */
+  width: 90%;
+  max-width: $screen-lg-min; // breakpoints inside partials > _layout.scss
+  margin: 0 auto;
+
+  &::after { /* clearfix */
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+/* --------------------------------
+
+Main components
+
+-------------------------------- */
+
+.cd-container {
+  position: relative;
+  padding: 2em 0;
+  margin: {
+    top: 2em;
+    bottom: 2em;
+  }
+
+  @mixin element-color($color) {
+    background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='10' height='10'><g fill='#{$color}/><circle  'cx='5' cy='5' r='5' /></g></svg>") repeat-y;
+  }
+  &::before {
+    /* this is the vertical line */
+    content: '';
+    position: absolute;
+    top: 0;
+    height: 100%;
+    @include element-color($color-red);
+  }
+
+  @include media(min, lg) {
+    margin: {
+      top: 3em;
+      bottom: 3em;
+    }
+
+    &::before {
+      left: 50%;
+      margin-left: -4px;
+    }
+  }
+}
+/*DEPRECATED _ DELETE*/
+.cd-timeline-block {
+  position: relative;
+  margin: 2em 0;
+  @include clearfix;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @include media(min, lg) {
+    margin: 4em 0;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.cd-timeline-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+
+  img {
+    display: block;
+    width: 24px;
+    height: 24px;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    margin-left: -12px;
+    margin-top: -12px;
+  }
+
+  @include media(min, lg) {
+    width: 60px;
+    height: 60px;
+    left: 50%;
+    margin-left: -30px;
+
+    /* Force Hardware Acceleration in WebKit */
+    -webkit-transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+
+    .cssanimations &.is-hidden {
+      visibility: hidden;
+    }
+
+    .cssanimations &.bounce-in {
+      visibility: visible;
+    }
+  }
+}
+
+.cd-timeline-content {
+  position: relative;
+  margin-left: 60px;
+  padding: 1em;
+  @include clearfix();
+
+  .cd-read-more, .cd-date {
+    display: inline-block;
+  }
+
+  .cd-read-more {
+    float: right;
+    padding: .8em 1em;
+  }
+
+  .cd-date {
+    float: left;
+    padding: .8em 0;
+    opacity: .7;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 16px;
+    right: 100%;
+    height: 0;
+    width: 0;
+    border: 7px solid transparent;
+  }
+
+  @include media(min, lg) {
+    margin-left: 0;
+    padding: 1.6em;
+    width: 45%;
+
+    &::before {
+      top: 24px;
+      left: 100%;
+      border-color: transparent;
+    }
+
+    .cd-read-more {
+      float: left;
+    }
+
+    .cd-date {
+      position: absolute;
+      width: 100%;
+      left: 122%;
+      top: 6px;
+      @include font-size(16);
+    }
+
+    .cd-timeline-block:nth-child(even) & {
+      float: right;
+
+      &::before {
+        top: 24px;
+        left: auto;
+        right: 100%;
+        border-color: transparent;
+      }
+
+      .cd-read-more {
+        float: right;
+      }
+
+      .cd-date {
+        left: auto;
+        right: 122%;
+        text-align: right;
+      }
+    }
+
+    .cssanimations &.is-hidden {
+      visibility: hidden;
+    }
+
+    .cssanimations &.bounce-in {
+      visibility: visible;
+    }
+  }
+}
+
+@include media(min, lg) {
+  /* inverse bounce effect on even content blocks */
+  .cssanimations .cd-timeline-block:nth-child(even) .cd-timeline-content.bounce-in {
+  }
+}
+
+/*
+@include keyframes(cd-bounce-2) {
+  0% {
+    opacity: 0;
+    @include transform(translateX(-100px));
+  }
+
+  60% {
+    opacity: 1;
+    @include transform(translateX(20px));
+  }
+
+  100% {
+    @include transform(translateX(0));
+  }
+}
+
+@include keyframes(cd-bounce-2-inverse) {
+  0% {
+    opacity: 0;
+    @include transform(translateX(100px));
+  }
+
+  60% {
+    opacity: 1;
+    @include transform(translateX(-20px));
+  }
+
+  100% {
+    @include transform(translateX(0));
+  }
+}*/
+

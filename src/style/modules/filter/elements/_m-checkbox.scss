@@ -1,0 +1,22 @@
+.checkbox {
+  &__input{}
+  &__label{
+    position: relative;
+  }
+  &__icon {
+    margin-right: 5px;
+    position: absolute;
+    stroke: $color-text-disabled;
+    top: 20%;
+    left: -20px;
+    &:first-of-type {
+      stroke-width: 10%;
+    }
+    &:last-of-type {
+      stroke-width: 0;
+      fill: $color-red;
+      left: -17px;
+      margin-top: -2px;
+    }
+  }
+}

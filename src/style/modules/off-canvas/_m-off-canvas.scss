@@ -1,0 +1,18 @@
+.off-canvas {
+  @include animate(0.4);
+  position: absolute;
+  &-main {
+    .top-menu {
+      &-item {
+        a {
+          @include font();
+          text-transform: capitalize;
+        }
+      }
+    }
+
+  }
+}
+
+//@import "../m-menu-icon";
+//@import "responsive";

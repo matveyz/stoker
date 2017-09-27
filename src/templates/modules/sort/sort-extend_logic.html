@@ -1,0 +1,15 @@
+@@for (var i = 0; i < items.length; i++) {
+<li class="filter-item-custom col-md-4 col-sm-12"><input type="checkbox" name="" id="partner-`+(i+1)+`">
+  <label for="partner-`+(i+1)+`">
+            <span>
+              <svg class="icon">
+                <use xlink:href="svg/svg.svg#icon-circle"></use>
+              </svg>
+              <svg class="icon">
+                <use xlink:href="svg/svg.svg#icon-checked"></use>
+              </svg>
+            </span>
+            <span>`+items[i]+`</span>
+  </label>
+</li>
+}

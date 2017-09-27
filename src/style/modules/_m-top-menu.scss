@@ -1,0 +1,38 @@
+.top-menu {
+  margin-left: 15px;
+  margin-top: 5px;
+  margin-bottom: 3em;
+  &-item {
+    @extend %pull-left;
+    a {
+      @include font(medium);
+      @include font-size(20);
+      color: $color-text-main;
+      text-decoration: none;
+      text-transform: uppercase;
+      margin-right: rem(40);
+      @include media(max, md) {
+        margin-right: rem(32);
+      }
+      &:hover {
+        color: $color-teal;
+      }
+    }
+  }
+}
+
+.mobile-site-v {
+  text-align: center;
+  margin-top: 1em;
+  width: 100%;
+  background-color: $color-lighterGray;
+  padding: 1.5em 0;
+  margin-top: 2.5em;
+  a {
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    text-align: center;
+    color: #373b3c;
+    text-decoration: none;
+  }
+}

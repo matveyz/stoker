@@ -1,0 +1,20 @@
+.breadcrumbs {
+  &-wrapper {
+    @extend %betweenBlocksPadding;
+  }
+  li {
+    @extend %pull-left;
+    * {
+      color: $color-teal;
+      @include font(medium);
+      @include font-size(18);
+    }
+  }
+  &-slash {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  a {
+    @extend %no-a;
+  }
+}

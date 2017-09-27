@@ -1,0 +1,44 @@
+.accordion {
+  .icon {
+    @include animate(0.25);
+  }
+  &-title {
+    @include animate(0.5);
+  }
+  &-content {
+    @include animate(0.5);
+  }
+  &-item {
+    @include animate(0.3);
+    &:hover {
+      background-color: $color-white;
+      border-left-color: $color-white;
+      .accordion-title {
+        color: $color-teal;
+        .icon {
+          fill: $color-teal;
+        }
+      }
+    }
+
+    &.is-active {
+      background-color: $color-white;
+      border-left-color: $color-teal;
+      .accordion {
+        &-title {
+          color: $color-teal;
+          .icon {
+            fill: $color-teal;
+            transform: rotate(-90deg);
+          }
+        }
+        &-content {
+          opacity: 1;
+          visibility: visible;
+          max-height: 900px;
+        }
+      }
+    }
+  }
+
+}

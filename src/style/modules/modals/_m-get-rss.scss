@@ -1,0 +1,133 @@
+.get-rss-form {
+  &.modal {
+    width: calc(100% - 30px);
+    max-width: 920px;
+  }
+  .modal {
+    &-title {
+      padding-bottom: 40px;
+      padding-left: 0.6em;
+      padding-top: 1em;
+      font-size: 50px;
+      font-weight: 300;
+      letter-spacing: 1px;
+    }
+    &-body {
+      &-block {
+
+        .text {
+          &-high {
+            padding-bottom: 20px;
+          }
+          &-big {
+            color: $color-text-comments;
+            padding-bottom: 15px;
+          }
+        }
+        .form-control {
+          background-color: $color-white;
+        }
+        .checkbox {
+          position: relative;
+          &:not(:last-of-type) {
+            margin-bottom: 5px;
+          }
+          input {
+            &:checked {
+              + label .icon {
+                &:first-of-type {
+                  stroke-dasharray: 2800 1000;
+                  stroke-dashoffset: -50;
+                }
+              }
+            }
+          }
+          .icon {
+            &:first-of-type {
+              @include animate(0, 0.05);
+              margin-right: 10px;
+              @include size(20);
+              stroke-width: 10%;
+              stroke: $color-teal;
+              fill: none;
+              position: relative;
+              top: -1px;
+              vertical-align: middle;
+            }
+            &:last-of-type {
+              @include size(18);
+              left: 4px;
+              position: absolute;
+              fill: $color-teal;
+            }
+          }
+          span {
+            display: inline-block;
+            width: 75%;
+            vertical-align: text-top;
+          }
+        }
+        .form-control-time {
+          width: 120px;
+        }
+        .days-control {
+          padding: 10px 15px;
+          background-color: $color-white;
+          .checkbox {
+            display: inline-block;
+            .icon {
+              &:last-of-type {
+                bottom: 4px;
+              }
+            }
+            &:not(:last-of-type) {
+              padding-right: 20px;
+            }
+            span {
+              display: block;
+              padding-bottom: 10px;
+              @include font(medium);
+              color: $color-text-comments;
+            }
+          }
+        }
+      }
+      .modal-btn {
+        margin-top: 15px;
+      }
+    }
+  }
+  &.partner-get-rss {
+    .modal-body-block {
+      padding: 0;
+      background-color: inherit;
+    }
+  }
+}
+
+
+.input-for-rss-email {
+  margin-bottom: 1.5em;
+  padding-left: 2.1em;
+  input {
+    border: solid 1px #d1d0d0;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    padding: 1em;
+    width: 330px;
+    background-color: $color-white;
+  }
+}
+
+.input-for-rss-email-city {
+  input {
+    border: solid 1px #d1d0d0;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    padding: 1em;
+    width: 100%;
+    background-color: $color-white;
+  }
+}

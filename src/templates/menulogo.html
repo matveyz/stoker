@@ -1,0 +1,31 @@
+<div class="container-fluid hidden-sm hidden-xs">
+  <div class="row">
+    <div class="col-md-10">
+      @@include('modules/top-menu.html')
+    </div>
+    <div class="col-md-1">
+      @@include('modules/user.html')
+    </div>
+    <div class="col-md-1">
+      @@include('modules/languages.html')
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 no-padding">
+      <a href="/app">
+        <!--<svg class="icon icon-logo-full-slogan logo">
+          <use xlink:href="svg/svg.svg#icon-logo-full-slogan"></use>
+        </svg>-->
+        <span class="icon icon-logo-full-slogan logo">
+          @@include("../svg/extra/icon-logo-full-slogan.svg")
+        </span>
+      </a>
+      <div class="main-img"></div>
+    </div>
+    <div class="col-md-12 hidden-sm hidden-xs">
+      @@include('modules/main-menu.html')
+    </div>
+  </div>
+</div>

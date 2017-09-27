@@ -1,0 +1,131 @@
+.contacts {
+  &-top {
+    text-align: center;
+  }
+
+  &-phones {
+    svg {
+      position: absolute;
+      left: -90px;
+      top: 50%;
+      transform: translateY(-50%);
+      @include size(75);
+    }
+  }
+  &-phone {
+    @extend %betweenBlocksPadding;
+    max-width: 400px;
+    margin: 0 auto;
+    position: relative;
+
+  }
+  @include media(max, sm) {
+    &-phones {
+      svg {
+        left: 60px;
+        @media (max-width: 420px) {
+          left: 0;
+        }
+      }
+    }
+    &-phone {
+      padding-left: 150px;
+      @media (max-width: 420px) {
+        padding-left: 90px;
+      }
+    }
+  }
+
+}
+
+.social-contact {
+  background-color: #f3f0e9;
+  .header-of-social {
+    text-align: center;
+    p:first-child {
+      text-transform: uppercase;
+      font-weight: 300;
+      color: #373b3c;
+      font-size: 30px;
+    }
+    p:last-child {
+      color: #373b3c;
+      font-size: 16px;
+    }
+  }
+
+
+  .main-socials {
+    margin-top: 2em;
+    .icon {
+      margin-bottom: 2.5em;
+      &-instagram {
+        svg {
+          width: 50px;
+          height: 50px;
+          object-fit: contain;
+          background-image: radial-gradient(circle at 15% 100%, #ffb140, #ff5445 26%, #fc2b82 60%, #8e40b7);
+          fill: white;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          border-radius: 50%;
+        }
+      }
+      &-facebook {
+        svg {
+          width: 50px;
+          height: 50px;
+          object-fit: contain;
+          fill: #5376c2 !important;
+        }
+      }
+      &-vkontakte {
+        svg {
+          width: 49.6px;
+          height: 49.6px;
+          object-fit: contain;
+          fill: #609edf;
+        }
+      }
+      &-google {
+        svg {
+          width: 50px;
+          height: 50px;
+          object-fit: contain;
+          fill: #fc5f50;
+        }
+      }
+      &-twitter {
+        svg {
+          width: 50px;
+          height: 50px;
+          object-fit: contain;
+          fill: #1cb7eb;
+        }
+      }
+      &-info {
+        padding-top: 0.2em;
+        margin-left: -1.3em;
+        a {
+          text-decoration: none;
+          text-transform: uppercase;
+          font-size: 14px;
+          font-weight: 600;
+          letter-spacing: 0.5px;
+          color: #49c7e7;
+          padding-bottom: 1em;
+        }
+        span {
+          font-size: 12px;
+          letter-spacing: 0.2px;
+          color: #9eacaf;
+          .bold {
+            font-size: 14px;
+            letter-spacing: 0.3px;
+            color: #4c5051;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+.product-counter {
+
+  &-btn {
+    display: inline-block;
+    @include font-size(34);
+    @include font(thin);
+    @include animate(.25);
+    cursor: pointer;
+    line-height: 18px;
+    vertical-align: sub;
+    &:hover {
+      color: $color-teal;
+      .expired &{
+        color: $color-darkGray;
+      }
+    }
+  }
+  &__minus {
+  }
+  &__plus {
+  }
+  &__input {
+    @include animate(.25);
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    border: 2px solid #e0e0e0;
+    @extend %radius-4px;
+  }
+
+  &:hover {
+    .product-counter__input {
+      border: 2px solid $color-teal;
+    }
+    .expired & {
+
+      .product-counter__input {
+        border: 2px solid #e0e0e0;
+      }
+    }
+  }
+
+}

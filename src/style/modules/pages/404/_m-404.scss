@@ -1,0 +1,34 @@
+.error404 {
+  text-align: center;
+  svg {
+    width: 100%;
+  }
+  .text {
+    &-big {
+      padding: 20px 0;
+    }
+  }
+  a {
+    display: inline-block;
+    color: $color-text-main;
+    @include font(bold);
+  }
+
+  @include media(min, sm) {
+    padding: 100px 0;
+    svg {
+      height: 250px;
+    }
+    .text {
+      &-header-big {
+        padding-top: 60px;
+      }
+      &-big {
+        padding: 40px 0;
+      }
+    }
+  }
+  .btn-primary {
+    line-height: 46px;
+  }
+}

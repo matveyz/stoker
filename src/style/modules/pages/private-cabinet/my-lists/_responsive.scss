@@ -1,0 +1,70 @@
+.my-lists {
+  @include media(max, md) {
+    &-item {
+      &-date {
+        width: 35%;
+      }
+      &-amount {
+        margin-left: 10%;
+        width: 15%;
+      }
+      &-price {
+        width: 40%;
+      }
+    }
+  }
+  @include media(max, sm) {
+    &-item {
+      &-date {
+        @include font-size(20);
+        width: 40%;
+      }
+      /*&-amount {
+        margin-left: 5%;
+        width: 15%;
+      }*/
+      &-price {
+        @include font-size(20);
+        width: 40%;
+      }
+    }
+  }
+  @include media(max, xs) {
+    &-item {
+      padding: 20px;
+      &-date {
+        @include font-size(16);
+        width: 35%;
+      }
+      &-amount {
+        width: 25%;
+        margin-left: 5%;
+        vertical-align: inherit;
+      }
+      &-price {
+        @include font-size(16);
+        width: 35%;
+      }
+    }
+    @include media(max, 499) {
+      &-item {
+        padding: 10px 15px;
+        &-date {
+          display: block;
+          width: 100%;
+        }
+        &-amount {
+          margin: 5px 0;
+          display: block;
+          width: 100%;
+        }
+        &-price {
+          transform: translate(0);
+          display: block;
+          width: 100%;
+          text-align: left;
+        }
+      }
+    }
+  }
+}

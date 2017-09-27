@@ -1,0 +1,123 @@
+.sort ~ [class*='-block'] {
+  @include animate(0.25, false, opacity);
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  &.is-active {
+    opacity: 1;
+    height: auto;
+    overflow: inherit;
+  }
+}
+
+.sort-extend {
+  @include animate(0.25);
+  opacity: 0;
+  visibility: hidden;
+  &.is-active {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.partners-main, .sort-black {
+  .sort-btn {
+    &.is-active {
+      background-color: darken($color-text-main, 5%);
+    }
+    &:hover {
+      background-color: darken($color-text-main, 5%);
+      box-shadow: 0 0 15px 0 darken($color-text-main, 5%);
+    }
+  }
+}
+
+.sort-btn {
+  @include animate(0.25);
+  &.is-active {
+    background-color: $color-teal;
+    .icon {
+      opacity: 1;
+    }
+  }
+  &:hover {
+    background-color: $color-teal;
+    box-shadow: 0 0 15px 0 $color-teal;
+  }
+}
+
+.sort-white {
+  .sort-btn {
+    &.is-active {
+      color: $color-white;
+    }
+  }
+}
+
+.favorites .single-filter {
+  .sort-btn {
+    &:hover {
+      background-color: $color-gray;
+      box-shadow: 0 0 15px 0 $color-gray;
+    }
+    .icon {
+      @include animate(0.25);
+    }
+    &.is-active {
+      background-color: $color-gray;
+      .icon {
+        transform: rotate(-90deg);
+      }
+    }
+  }
+}
+
+@include media(max, sm) {
+  .favorites .single-filter {
+    .sort {
+      > .icon {
+        transform: rotate(0deg);
+      }
+      &.is-open {
+        > .icon {
+          transform: rotate(180deg);
+        }
+      }
+      &-extend {
+        &.is-active {
+          transform: translateX(0);
+        }
+      }
+    }
+  }
+  .sort {
+    > .icon {
+      @include animate(0.25);
+      z-index: $z-index-content;
+    }
+    &.is-open {
+      > .icon {
+        transform: rotate(-90deg);
+      }
+      .sort-btn {
+        opacity: 1;
+        z-index: $z-index-content;
+        visibility: visible;
+        &.is-active {
+          border-radius: 4px 4px 0 0;
+        }
+      }
+    }
+
+    &-btn {
+      @include animate(0.4, false, opacity);
+      opacity: 0;
+      visibility: hidden;
+      &.is-active {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+
+  }
+}

@@ -1,0 +1,931 @@
+@@include('templates/template-header.html')
+
+
+<main role="main" class="main">
+  <section class="top-content">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          @@include('templates/modules/breadcrumbs.html', {
+          "name" : ["Баланс"],
+          "link" : [""]
+          })
+        </div>
+        <div class="col-lg-12">
+          @@include('templates/modules/center-header-block.html', {
+          "extraClass" : "",
+          "inner" : ["Личный кабинет"]
+          })
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="main-content">
+    <div class="container">
+      <div class="row">
+        <div class="favorites">
+          <div class="col-md-12">
+            @@include('templates/modules/sort/sort.html', {
+            "extraClass" : "sort-white",
+            "nameFirst" : "Мои каталоги",
+            "nameOther" : ["Баланс", "Настройки", "Техподдержка"],
+            "tabsName" : "",
+            "hrefFirst" : "/app/my-lists.html",
+            "href" : ["/app/favorites.html", "/app/settings.html", "/app/faq.html"],
+            "active" : ["is-active", "", ""]
+            })
+            <div class="tabs single-filter" data-tabs-container="single-filter" data-toggle-tabs>
+              @@include('templates/modules/sort/sort-single.html', {
+              "extraClass" : "extended",
+              "name" : "<span>Фильтр по компаниям</span><svg class='icon icon-arrow-down hidden-sm hidden-xs'><use xlink:href='svg/svg.svg#icon-arrow'></use></svg>",
+              "tabsName" : "single-filter",
+              "items" : ["Novus","АТБ-Маркет","Пакко Холдинг","Billa","Метро Украина","Еко","Велика Кишеня","Ашан","Евротек"]
+              })
+            </div>
+          </div>
+          <div class="col-lg-12">
+            <section class="personal_area">
+              <div class="container">
+                <div class="row">
+                  <div class="col-xs-12 text-center">
+                    <div class="tab-content">
+                      <div role="tabpanel" class="tab-pane active" id="personal_area_2"><!--VA  TAB 2 VA-->
+                        <div class="personal_area_text_1">
+                          Вы можете просмотреть баланс на Вашем счету, пополниь счет и просмотреть историю трансакций.
+                        </div>
+
+                        <div class="box_balans">
+                          <div class="text_balans">
+                                    <span>
+                                        20.60
+                                    </span>
+                            Ваш баланс в грн
+                          </div>
+                          <a class="btn_1 various" href="#balans">
+                            пополнить баланс
+                          </a>
+                        </div>
+
+                        <div class="text-left mart_30">
+                          <div class="txt_his">
+                            Историяa действий по счету
+                          </div>
+                          <a class="sort" href="#">
+                            Сортировка по дате
+                          </a>
+                        </div>
+
+                        <div class="table-responsive">
+                          <table class="table">
+                            <thead>
+                            <tr>
+                              <th>
+                                Дата
+                              </th>
+                              <th>
+                                Вид трансакции
+                              </th>
+                              <th>
+                                Сумма зачисления
+                              </th>
+                              <th>
+                                Остаток
+                              </th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                              <td>
+                                23.05.16
+                              </td>
+                              <td>
+                                Оплата переходов
+                              </td>
+                              <td>
+                                - 1000.50
+                              </td>
+                              <td>
+                                20.50
+                              </td>
+                            </tr>
+
+                            <tr>
+                              <td>
+                                23.05.16
+                              </td>
+                              <td>
+                                Оплата переходов
+                              </td>
+                              <td>
+                                - 1000.50
+                              </td>
+                              <td>
+                                20.50
+                              </td>
+                            </tr>
+
+                            <tr>
+                              <td>
+                                23.05.16
+                              </td>
+                              <td>
+                                Оплата переходов
+                              </td>
+                              <td>
+                                - 1000.50
+                              </td>
+                              <td>
+                                20.50
+                              </td>
+                            </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div><!--VA  END TAB 2 VA-->
+
+                      <div role="tabpanel" class="tab-pane" id="personal_area_3"><!--VA  END TAB 3 VA-->
+                        <div class="personal_area_text_1">
+                          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        </div>
+                        <div class="row">
+                          <div class="col-xs-12 col-sm-12 col-md-9 text-left">
+                            <div class="personal_area_text_1">
+                              Тариф <span>“УСПЕШНЫЕ ПРОДАЖИ”</span> действует до 06.10.2017г.
+                            </div>
+                          </div>
+                          <div class="col-xs-12 col-sm-12 col-md-3 text-right">
+                            <div class="balance">
+                              Баланс: <span id="">1 358</span> грн.
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-xs-12 col-sm-12 col-md-3">
+                            <div class="box_tarif color_1">
+                              <img class="img-responsive" src="img/icon_tarif_1.png" alt="icon_tarif_1" />
+                              <div class="box_tarif_text_1">
+                                ЛЕГКИЙ СТАРТ
+                              </div>
+                              <ul class="list_text">
+                                <li class="active">
+                                  публикация до 20 акций
+                                </li>
+                                <li class="active">
+                                  расширенная статистика
+                                </li>
+                                <li class="active">
+                                  отдельная страница компании
+                                </li>
+                                <li>
+                                  размещение ссылки на свой ресурс
+                                </li>
+                                <li>
+                                  размещение в блоке премиум-компаний
+                                </li>
+                                <li>
+                                  выделение акций
+                                </li>
+                              </ul>
+
+                              <div class="box_tarif_text_2">
+                                <strong>10х</strong> больше просмотров и переходов
+                              </div>
+
+                              <div class="box_tarif_text_3">
+                                1 грн/мес.
+                              </div>
+
+                              <div class="box_tarif_text_4">
+                                При оплате на
+                                <select class="selectpicker" data-width="fit">
+                                  <option>1</option>
+                                  <option>2</option>
+                                  <option>3</option>
+                                  <option>4</option>
+                                  <option>5</option>
+                                  <option>6</option>
+                                  <option>7</option>
+                                  <option>8</option>
+                                  <option>9</option>
+                                  <option>10</option>
+                                  <option>11</option>
+                                  <option>12</option>
+                                </select>
+                                <span>
+                                                мес.
+                                            </span>
+                              </div>
+
+                              <a class="btn_1" href="#">
+                                Выбрать
+                              </a>
+                            </div>
+                          </div>
+
+                          <div class="col-xs-12 col-sm-12 col-md-3">
+                            <div class="box_tarif color_2">
+                              <img class="img-responsive" src="img/icon_tarif_2.png" alt="icon_tarif_2" />
+                              <div class="box_tarif_text_1">
+                                УСПЕШНЫЕ ПРОДАЖИ
+                              </div>
+                              <ul class="list_text">
+                                <li class="active">
+                                  публикация до 20 акций
+                                </li>
+                                <li class="active">
+                                  расширенная статистика
+                                </li>
+                                <li class="active">
+                                  отдельная страница компании
+                                </li>
+                                <li class="active">
+                                  размещение ссылки на свой ресурс
+                                </li>
+                                <li>
+                                  размещение в блоке премиум-компаний
+                                </li>
+                                <li>
+                                  выделение акций
+                                </li>
+                              </ul>
+
+                              <div class="box_tarif_text_2">
+                                <strong>10х</strong> больше просмотров и переходов
+                              </div>
+
+                              <div class="box_tarif_text_3 line-th">
+                                <span>349 грн/мес.</span> 1 грн/мес.
+                              </div>
+
+                              <div class="box_tarif_text_4">
+                                При оплате на
+                                <select class="selectpicker" data-width="fit">
+                                  <option>1</option>
+                                  <option>2</option>
+                                  <option>3</option>
+                                  <option>4</option>
+                                  <option>5</option>
+                                  <option>6</option>
+                                  <option>7</option>
+                                  <option>8</option>
+                                  <option>9</option>
+                                  <option>10</option>
+                                  <option>11</option>
+                                  <option>12</option>
+                                </select>
+                                <span>
+                                                мес.
+                                            </span>
+                              </div>
+
+                              <a class="btn_1" href="#">
+                                Выбрать
+                              </a>
+                            </div>
+                          </div>
+
+                          <div class="col-xs-12 col-sm-12 col-md-3">
+                            <div class="box_tarif color_3">
+                              <img class="img-responsive" src="img/icon_tarif_3.png" alt="icon_tarif_3" />
+                              <div class="box_tarif_text_1">
+                                ПРЕМИУМ-ПАРТНЕР
+                              </div>
+                              <ul class="list_text">
+                                <li class="active">
+                                  неограниченное кол-во акций
+                                </li>
+                                <li class="active">
+                                  расширенная статистика
+                                </li>
+                                <li class="active">
+                                  отдельная страница компании
+                                </li>
+                                <li class="active">
+                                  размещение ссылки на свой ресурс
+                                </li>
+                                <li class="active">
+                                  размещение в блоке премиум-компаний
+                                </li>
+                                <li class="active">
+                                  выделение акций
+                                </li>
+                              </ul>
+
+                              <div class="box_tarif_text_2">
+                                <strong>30х</strong> больше просмотров и переходов
+                              </div>
+
+                              <div class="box_tarif_text_3">
+                                999 грн/мес.<span class="sale">-33%</span>
+                              </div>
+
+                              <div class="box_tarif_text_4">
+                                При оплате на
+                                <select class="selectpicker" data-width="fit">
+                                  <option>1</option>
+                                  <option>2</option>
+                                  <option>3</option>
+                                  <option>4</option>
+                                  <option>5</option>
+                                  <option>6</option>
+                                  <option>7</option>
+                                  <option>8</option>
+                                  <option>9</option>
+                                  <option>10</option>
+                                  <option>11</option>
+                                  <option>12</option>
+                                </select>
+                                <span>
+                                                мес.
+                                            </span>
+                              </div>
+
+                              <a class="btn_1" href="#">
+                                Выбрать
+                              </a>
+                            </div>
+                          </div>
+
+                          <div class="col-xs-12 col-sm-12 col-md-3">
+                            <div class="box_tarif color_4">
+                              <img class="img-responsive" src="img/icon_tarif_4.png" alt="icon_tarif_4" />
+                              <div class="box_tarif_text_1">
+                                СВОЙ ДЛЯ СВОИХ
+                              </div>
+                              <ul class="list_text">
+                                <li>
+                                  Придумайте свой личный тариф!
+                                </li>
+                                <li>
+                                  У Вас уже есть действующая партнерская программа?
+                                </li>
+                                <li>
+                                  Мы предоставляем Вам возмсжность предложить свои условия. Для этого просто <a href="#">напишете нам</a>.
+                                </li>
+                                <li>
+                                  Мы обязательно договоримся! :)
+                                </li>
+                              </ul>
+
+                              <div class="box_tarif_text_2">
+
+                              </div>
+
+                              <div class="box_tarif_text_3">
+                                0 грн/мес.
+                              </div>
+
+                              <div class="box_tarif_text_4">
+                                При оплате на
+                                <select class="selectpicker" data-width="fit">
+                                  <option>1</option>
+                                  <option>2</option>
+                                  <option>3</option>
+                                  <option>4</option>
+                                  <option>5</option>
+                                  <option>6</option>
+                                  <option>7</option>
+                                  <option>8</option>
+                                  <option>9</option>
+                                  <option>10</option>
+                                  <option>11</option>
+                                  <option>12</option>
+                                </select>
+                                <span>
+                                                мес.
+                                            </span>
+                              </div>
+
+                              <a class="btn_1" href="#">
+                                Выбрать
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="col-xs-12 text-left">
+                            <div class="box_tarif_text_5">
+                              Дополнительные услуги
+                            </div>
+
+                            <div class="box_zag">
+                              <div>Выбрать</div>
+                              <div>Услуга</div>
+                              <div>Стоимость</div>
+                            </div>
+
+                            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                              <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingOne">
+                                  <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    <div class="circle">
+                                      &nbsp;
+                                    </div>
+                                    <img class="img-responsive" src="img/icon_accord_1.png" alt="icon_accord_1" />
+                                    Индивидуальный дизайн страницы компании
+                                    <div class="price_dop">
+                                      499 грн/мес
+                                    </div>
+                                  </a>
+                                </div>
+                                <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                  <div class="panel-body">
+                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingTwo">
+                                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    <div class="circle">
+                                      &nbsp;
+                                    </div>
+                                    <img class="img-responsive" src="img/icon_accord_2.png" alt="icon_accord_2" />
+                                    Разработка дизайна страницы компании
+                                    <div class="price_dop">
+                                      999 грн
+                                    </div>
+                                  </a>
+                                </div>
+                                <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                  <div class="panel-body">
+                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingThree">
+                                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    <div class="circle">
+                                      &nbsp;
+                                    </div>
+                                    <img class="img-responsive" src="img/icon_accord_3.png" alt="icon_accord_3" />
+                                    Публикация статьи в разделе новостей
+                                    <div class="price_dop">
+                                      499 грн
+                                    </div>
+                                  </a>
+                                </div>
+                                <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                                  <div class="panel-body">
+                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="pay_price">
+                              Итого к оплате:
+                              <span>250 грн</span>
+                            </div>
+                            <div class="text-right">
+                              <a class="btn_2" href="#">
+                                Оплатить
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div><!--VA  END TAB 3 VA-->
+
+                      <div role="tabpanel" class="tab-pane" id="personal_area_4"><!--VA  TAB 4 VA-->
+
+                      </div><!--VA  END TAB 4 VA-->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <div id="balans" style="display:none">
+              <div class="form_balans">
+                <div class="txt_form_1">
+                  пополнить баланс
+                </div>
+                <a class="txt_form_2" href="#">
+                  Выберите удобную Вам платежную систему
+                </a>
+                <a class="box_pay privat" href="#">
+                  ПриватБанк
+                </a>
+                <a class="box_pay visa" href="#">
+                  Visa/Mastercard
+                </a>
+                <a class="box_pay web" href="#">
+                  WebMoney
+                </a>
+                <a class="btn_1" href="#">
+                  другие способы оплаты
+                </a>
+              </div>
+            </div>
+
+            <div id="nastroit" style="display:none">
+              <div class="form_nastroit">
+                <div class="txt_form_1">
+                  настроить рассылку
+                </div>
+                <div class="row">
+                  <div class="col-xs-12 col-sm-12 col-md-5">
+                    <div class="txt_form_3">
+                      Уведомлять меня
+                    </div>
+                    <p><input type="checkbox" data-bind="checked: checkbox" name="pr_cat"/><label for="pr_cat"></label>О просмотрах каталогов</p>
+                    <p><input type="checkbox" data-bind="checked: checkbox" name="eved"/><label for="eved"></label>Уведомлять за 5 дней до окончания срока действия каталога</p>
+                    <p><input type="checkbox" data-bind="checked: checkbox" name="perex_cat"/><label for="perex_cat"></label>О переходах в каталоги</p>
+                  </div>
+                  <div class="col-xs-12 col-sm-12 col-md-7">
+                    <div class="txt_form_3">
+                      Дни рассылки
+                    </div>
+                    <div class="box_week">
+                      <div class="weeks">
+                        Пн
+                        <input type="checkbox" data-bind="checked: checkbox" name="mon"/><label for="mon"></label>
+                      </div>
+                      <div class="weeks">
+                        Вт
+                        <input type="checkbox" data-bind="checked: checkbox" name="tue"/><label for="tue"></label>
+                      </div>
+                      <div class="weeks">
+                        Ср
+                        <input type="checkbox" data-bind="checked: checkbox" name="wed"/><label for="wed"></label>
+                      </div>
+                      <div class="weeks">
+                        Чт
+                        <input type="checkbox" data-bind="checked: checkbox" name="thu"/><label for="thu"></label>
+                      </div>
+                      <div class="weeks">
+                        Пт
+                        <input type="checkbox" data-bind="checked: checkbox" name="fri"/><label for="fri"></label>
+                      </div>
+                      <div class="weeks">
+                        Сб
+                        <input type="checkbox" data-bind="checked: checkbox" name="sat"/><label for="sat"></label>
+                      </div>
+                      <div class="weeks">
+                        Вс
+                        <input type="checkbox" data-bind="checked: checkbox" name="sun"/><label for="sun"></label>
+                      </div>
+                    </div>
+                    <div class="txt_form_3">
+                      Время рассылки
+                    </div>
+                    <select class="selectpicker" data-width="fit">
+                      <option>9:00</option>
+                      <option>10:00</option>
+                      <option>11:00</option>
+                      <option>12:00</option>
+                      <option>13:00</option>
+                      <option>14:00</option>
+                      <option>15:00</option>
+                      <option>16:00</option>
+                      <option>17:00</option>
+                      <option>18:00</option>
+                    </select>
+                  </div>
+                </div>
+
+                <a class="btn_1" href="#">
+                  Сохранить
+                </a>
+              </div>
+            </div>
+
+            <div class="open_list" id="open_list_1" style="display:none">
+              <div class="box_list">
+                <div class="txt_list_1">
+                  12 мая 2016
+                </div>
+                <a class="btn_list_1" href="#">
+                  Изменить имя
+                </a>
+                <div class="row">
+                  <div class="col-xs-12 col-sm-12 col-md-6">
+                    <a class="btn_list_2" href="#">
+                      ОТПРАВИТЬ
+                    </a>
+                    <a class="btn_1" href="#">
+                      <span class="glyphicon glyphicon-share-alt"></span>
+                      поделиться
+                    </a>
+                  </div>
+                  <div class="col-xs-12 col-sm-12 col-md-6">
+                    <a class="btn_1" href="#">
+                      редактировать
+                    </a>
+                    <a class="btn_list_3" href="#">
+                      удалить
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <table class="table" style="border-collapse:collapse;">
+                <thead>
+                <tr>
+                  <th>Название</th>
+                  <th>Цена</th>
+                  <th>Количество</th>
+                  <th>Сумма</th>
+                </tr>
+                </thead>
+                <tbody id="accordion" class="accordion-group">
+                <tr class="main_text">
+                  <td colspan="3">Novus</td>
+                  <th data-toggle="collapse" data-target="#demo1" class="accordion-toggle" data-parent="#accordion">
+                    <span class="chevron"></span>
+                  </th>
+                </tr>
+                </tbody>
+                <tbody class="accordian-body collapse in" id="demo1">
+                <tr>
+                  <td><a class="tovar" href="#">Чай Batik</a></td>
+                  <td>25 грн</td>
+                  <td>1</td>
+                  <td class="text-price">25 грн</td>
+                </tr>
+                <tr>
+                  <td><a class="tovar" href="#">Чай Batik</a></td>
+                  <td>25 грн</td>
+                  <td>1</td>
+                  <td class="text-price">25 грн</td>
+                </tr>
+                <tr>
+                  <td><a class="tovar" href="#">Чай Batik</a></td>
+                  <td>25 грн</td>
+                  <td>1</td>
+                  <td class="text-price">25 грн</td>
+                </tr>
+                <tr>
+                  <td><a class="tovar" href="#">Чай Batik</a></td>
+                  <td>25 грн</td>
+                  <td>1</td>
+                  <td class="text-price">25 грн</td>
+                </tr>
+                </tbody>
+
+                <tbody>
+                <tr class="main_text">
+                  <td colspan="3">ВЕЛИКА КИШЕНЯ</td>
+                  <th data-toggle="collapse" data-target="#demo2" class="accordion-toggle" data-parent="#accordion">
+                    <span class="chevron"></span>
+                  </th>
+                </tr>
+                </tbody>
+                <tbody class="accordian-body collapse in" id="demo2">
+                <tr>
+                  <td><a class="tovar" href="#">Чай Batik</a></td>
+                  <td>25 грн</td>
+                  <td>1</td>
+                  <td class="text-price">25 грн</td>
+                </tr>
+                <tr>
+                  <td><a class="tovar" href="#">Чай Batik</a></td>
+                  <td>25 грн</td>
+                  <td>1</td>
+                  <td class="text-price">25 грн</td>
+                </tr>
+                <tr>
+                  <td><a class="tovar" href="#">Чай Batik</a></td>
+                  <td>25 грн</td>
+                  <td>1</td>
+                  <td class="text-price">25 грн</td>
+                </tr>
+                <tr>
+                  <td><a class="tovar" href="#">Чай Batik</a></td>
+                  <td>25 грн</td>
+                  <td>1</td>
+                  <td class="text-price">25 грн</td>
+                </tr>
+                </tbody>
+              </table>
+              <div class="box_list">
+                <div class="col-xs-12 col-sm-12 col-md-6">
+                  <div class="txt_list_2">
+                    21 товар в списке
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-6 text-right">
+                  <div class="result">
+                    Всего:
+                    <span>10 000.99 грн</span>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-12 col-sm-12 col-md-6">
+                    <a class="btn_list_2" href="#">
+                      ОТПРАВИТЬ
+                    </a>
+                    <a class="btn_1" href="#">
+                      <span class="glyphicon glyphicon-share-alt"></span>
+                      поделиться
+                    </a>
+                  </div>
+                  <div class="col-xs-12 col-sm-12 col-md-6">
+                    <a class="btn_1" href="#">
+                      редактировать
+                    </a>
+                    <a class="btn_list_3" href="#">
+                      удалить
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="box_sale">
+                Вы экономите минимум 100 грн!
+              </div>
+            </div>
+
+
+
+            <div class="open_list" id="open_list_2" style="display:none">
+              <div class="box_list">
+                <div class="txt_list_1">
+                  12 мая 2016
+                </div>
+                <a class="btn_list_1" href="#">
+                  Изменить имя
+                </a>
+                <div class="row">
+                  <div class="col-xs-12 col-sm-12 col-md-6">
+                    <a class="btn_1" href="#">
+                      сохранить
+                    </a>
+                    <a class="btn_list_3" href="#">
+                      удалить
+                    </a>
+                  </div>
+                  <div class="col-xs-12 col-sm-12 col-md-6 text-right">
+                    <a class="btn_list_4" href="#">
+                      удалить выбранные
+                      <span class="glyphicon glyphicon-trash"></span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <table class="table" style="border-collapse:collapse;">
+                <thead>
+                <tr>
+                  <th colspan="2">Название</th>
+                  <th>Цена</th>
+                  <th>Количество</th>
+                  <th colspan="2">Сумма</th>
+                </tr>
+                </thead>
+                <tbody id="accordion" class="accordion-group">
+                <tr class="main_text">
+                  <td colspan="4">Novus</td>
+                  <th colspan="2" data-toggle="collapse" data-target="#demo1_2" class="accordion-toggle" data-parent="#accordion">
+                    <span class="chevron"></span>
+                  </th>
+                </tr>
+                </tbody>
+                <tbody class="accordian-body collapse in" id="demo1_2">
+                <tr>
+                  <td class="checkbox-table"><input type="checkbox" data-bind="checked: checkbox" name="num_1"/><label for="num_1"></label></td>
+                  <td><a class="tovar" href="#">Чай Batik</a></td>
+                  <td>25 грн</td>
+                  <td>
+                    <span class="minus">-</span>
+                    <input type="text" value="1" size="5"/>
+                    <span class="plus">+</span>
+                  </td>
+                  <td class="text-price">25 грн</td>
+                  <td class="nopad close-table"><a class="delete" href="#"><span class="glyphicon glyphicon-remove"></span></a></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" data-bind="checked: checkbox" name="num_2"/><label for="num_2"></label></td>
+                  <td><a class="tovar" href="#">Чай Batik</a></td>
+                  <td>25 грн</td>
+                  <td>
+                    <span class="minus">-</span>
+                    <input type="text" value="1" size="5"/>
+                    <span class="plus">+</span>
+                  </td>
+                  <td class="text-price">25 грн</td>
+                  <td class="nopad"><a class="delete" href="#"><span class="glyphicon glyphicon-remove"></span></a></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" data-bind="checked: checkbox" name="num_3"/><label for="num_3"></label></td>
+                  <td><a class="tovar" href="#">Чай Batik</a></td>
+                  <td>25 грн</td>
+                  <td>
+                    <span class="minus">-</span>
+                    <input type="text" value="1" size="5"/>
+                    <span class="plus">+</span>
+                  </td>
+                  <td class="text-price">25 грн</td>
+                  <td class="nopad"><a class="delete" href="#"><span class="glyphicon glyphicon-remove"></span></a></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" data-bind="checked: checkbox" name="num_4"/><label for="num_4"></label></td>
+                  <td><a class="tovar" href="#">Чай Batik</a></td>
+                  <td>25 грн</td>
+                  <td>
+                    <span class="minus">-</span>
+                    <input type="text" value="1" size="5"/>
+                    <span class="plus">+</span>
+                  </td>
+                  <td class="text-price">25 грн</td>
+                  <td class="nopad"><a class="delete" href="#"><span class="glyphicon glyphicon-remove"></span></a></td>
+                </tr>
+                </tbody>
+
+                <tbody>
+                <tr class="main_text">
+                  <td colspan="4">ВЕЛИКА КИШЕНЯ</td>
+                  <th colspan="2" data-toggle="collapse" data-target="#demo2_2" class="accordion-toggle" data-parent="#accordion">
+                    <span class="chevron"></span>
+                  </th>
+                </tr>
+                </tbody>
+                <tbody class="accordian-body collapse in" id="demo2_2">
+                <tr>
+                  <td class="checkbox-table"><input type="checkbox" data-bind="checked: checkbox" name="num_1"/><label for="num_1"></label></td>
+                  <td><a class="tovar" href="#">Чай Batik</a></td>
+                  <td>25 грн</td>
+                  <td>
+                    <span class="minus">-</span>
+                    <input type="text" value="1" size="5"/>
+                    <span class="plus">+</span>
+                  </td>
+                  <td class="text-price">25 грн</td>
+                  <td class="nopad"><a class="delete" href="#"><span class="glyphicon glyphicon-remove"></span></a></td>
+                </tr>
+                <tr>
+                  <td class="checkbox-table"><input type="checkbox" data-bind="checked: checkbox" name="num_1"/><label for="num_1"></label></td>
+                  <td><a class="tovar" href="#">Чай Batik</a></td>
+                  <td>25 грн</td>
+                  <td>
+                    <span class="minus">-</span>
+                    <input type="text" value="1" size="5"/>
+                    <span class="plus">+</span>
+                  </td>
+                  <td class="text-price">25 грн</td>
+                  <td class="nopad"><a class="delete" href="#"><span class="glyphicon glyphicon-remove"></span></a></td>
+                </tr>
+                <tr>
+                  <td class="checkbox-table"><input type="checkbox" data-bind="checked: checkbox" name="num_1"/><label for="num_1"></label></td>
+                  <td><a class="tovar" href="#">Чай Batik</a></td>
+                  <td>25 грн</td>
+                  <td>
+                    <span class="minus">-</span>
+                    <input type="text" value="1" size="5"/>
+                    <span class="plus">+</span>
+                  </td>
+                  <td class="text-price">25 грн</td>
+                  <td class="nopad"><a class="delete" href="#"><span class="glyphicon glyphicon-remove"></span></a></td>
+                </tr>
+                <tr>
+                  <td class="checkbox-table"><input type="checkbox" data-bind="checked: checkbox" name="num_1"/><label for="num_1"></label></td>
+                  <td><a class="tovar" href="#">Чай Batik</a></td>
+                  <td>25 грн</td>
+                  <td>
+                    <span class="minus">-</span>
+                    <input type="text" value="1" size="5"/>
+                    <span class="plus">+</span>
+                  </td>
+                  <td class="text-price">25 грн</td>
+                  <td class="nopad"><a class="delete" href="#"><span class="glyphicon glyphicon-remove"></span></a></td>
+                </tr>
+                </tbody>
+              </table>
+              <div class="box_list">
+                <div class="col-xs-12 col-sm-12 col-md-6">
+                  <div class="txt_list_2">
+                    21 товар в списке
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-6 text-right">
+                  <div class="result">
+                    Всего:
+                    <span>10 000.99 грн</span>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-12 col-sm-12 col-md-6">
+                    <a class="btn_1" href="#">
+                      сохранить
+                    </a>
+                    <a class="btn_list_3" href="#">
+                      удалить
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="box_sale">
+                Вы экономите минимум 100 грн!
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</main>
+
+
+@@include('templates/template-footer.html')

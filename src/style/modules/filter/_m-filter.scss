@@ -1,0 +1,64 @@
+.filter {
+  &-item {
+    @extend %pull-left;
+    &-menu {
+      @include animate(0.5);
+      position: absolute;
+      top: 100%;
+      z-index:$z-index-menu + 1;
+    }
+    button {
+      color: $color-white;
+      &.is-open-btn-rect-primary {
+        svg {
+          @extend .icon-arrow-up;
+        }
+      }
+    }
+    &:first-of-type button {
+      border-right: 1px solid rgba(255, 255, 255, 0.4);
+    }
+    &:last-of-type button {
+      border-left: 1px solid rgba(255, 255, 255, 0.4);
+    }
+    svg {
+      @include animate(0.25);
+      @include size(9);
+      vertical-align: middle;
+      stroke-width: 1.5px;
+      @include svg-full-color($color-white);
+      margin-left:12px;
+    }
+  }
+
+
+  &-reset {
+    color: $color-text-secondary;
+    label {
+      position: relative;
+    }
+    input {
+      display: none;
+    }
+    .icon {
+      stroke: $color-text-secondary;
+      stroke-width: 12%;
+      @include size(19);
+      vertical-align: middle;
+      margin-right: 5px;
+      &-inside {
+        position: absolute;
+        stroke-width: 20%;
+        fill: $color-text-secondary;
+        @include size(7);
+        left: 6px;
+        top: 10px;
+      }
+    }
+    span {
+      vertical-align: middle;
+    }
+  }
+}
+//@import "m-filter-type";
+//@import "responsive";

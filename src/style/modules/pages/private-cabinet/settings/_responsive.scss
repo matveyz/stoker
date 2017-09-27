@@ -1,0 +1,22 @@
+.settings {
+  @include media(max, sm) {
+    .col-md-6 {
+      text-align: center;
+    }
+    .form-control {
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+      &-city {
+        display: block !important;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    &-private {
+      input {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}

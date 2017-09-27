@@ -1,0 +1,42 @@
+.footer-bottom {
+  @include clearfix();
+  color: $color-white;
+  line-height: rem($main-text-size*3);
+  > * {
+    display: inline-block;
+    float: left;
+    margin-right: 15px;
+    vertical-align: bottom;
+  }
+  &-error {
+    @include btn-make(rgba(255, 255, 255, 0.4), false, false, true, false, 1);
+    @extend %btn;
+    @include animate(0.25);
+    color: $color-white;
+    @include font-size(14);
+  }
+  &-madeBy {
+    a {
+      @extend %link;
+      color: $color-teal;
+      text-decoration: none;
+    }
+  }
+  > svg {
+    top: -10px;
+    position: relative;
+    width: 124px;
+    height: 40px;
+    @include svg-full-color($color-white)
+  }
+  &-designBy {
+    @include font-size(12);
+    float: right;
+    color: rgba($color-white, 0.5);
+    svg {
+      padding-left: 5px;
+      width: 80px;
+      vertical-align: text-bottom;
+    }
+  }
+}

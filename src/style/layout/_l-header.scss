@@ -1,0 +1,26 @@
+.main-img {
+  height: 227px;
+  overflow: hidden;
+  background: url("#{$img-path}/main-img.png") no-repeat 50%;
+  margin-top: -5px;
+}
+
+.logo {
+  margin: 0 auto;
+  display: block;
+}
+
+header {
+  margin-top: rem(20);
+  .logo {
+    width: 234px;
+    height: 108px;
+    margin-top: 50px;
+    @include media(max, sm) {
+      margin-bottom: 50px;
+    }
+  }
+}
+
+
+

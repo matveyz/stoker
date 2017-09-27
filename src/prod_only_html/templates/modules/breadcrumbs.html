@@ -1,0 +1,14 @@
+  <div class="breadcrumbs-wrapper">
+  <ul class="breadcrumbs" xmlns:v="http://rdf.data-vocabulary.org/#">
+    <li typeof="v:Breadcrumb">
+      <a href="/" rel="v:url" property="v:title">Главная</a>
+    </li>
+    @@for (var i = 0; i < name.length-1; i++) {
+    <li class="active" typeof="v:Breadcrumb"><a href="/`+link[i]+`.html" rel="v:url" property="v:title"><span class="breadcrumbs-slash">/</span>`+name[i]+`</a></li>
+    }
+    @@for (var i = name.length-1; i < name.length; i++) {
+    <li class="active" typeof="v:Breadcrumb"><span rel="v:url" property="v:title"><span class="breadcrumbs-slash">/</span>`+name[i]+`</span></li>
+    }
+
+  </ul>
+</div>

@@ -1,0 +1,29 @@
+.main-menu {
+  max-width: 1010px;
+  margin: 0 auto;
+  * {
+    line-height:1;
+  }
+  &-inner {
+    border-radius: 4px;
+    background-color: $color-white;
+    box-shadow: 0 10px 30px 5px rgba(0, 0, 0, 0.12);
+    position: relative;
+  }
+  &-filter {
+    float: left;
+    .filter-item {
+      &:first-of-type {
+        border-radius: 4px 0 0 4px;
+        overflow: hidden;
+      }
+    }
+  }
+  &-search {
+    background-color: $color-white;
+    margin-left: 437.4px;
+    .search-btn {
+      border-radius: 0 4px 4px 0;
+    }
+  }
+}

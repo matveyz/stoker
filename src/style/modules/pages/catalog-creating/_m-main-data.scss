@@ -1,0 +1,12 @@
+.main-data-btns{
+  margin-top: 180px;
+  svg {
+    @include svg-full-color($color-text-main);
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    &.icon-arrow-left{
+      transform: translateY(-50%) rotate(180deg);
+    }
+  }
+}

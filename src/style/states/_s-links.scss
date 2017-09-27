@@ -1,0 +1,8 @@
+.link-main {
+  color: $color-teal;
+  text-decoration: none;
+  @include animate(0.25);
+  &:hover, &:focus {
+    text-decoration: underline;
+  }
+}

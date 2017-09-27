@@ -1,0 +1,244 @@
+%btn {
+  padding: 0 30px;
+  @include btn-standart;
+  //line-height: 50px;
+}
+
+//bd:teal, rounded
+a.btn-wrapper {
+  text-decoration: none;
+}
+
+.btn-primary {
+  position: relative;
+  @extend %btn;
+  @include font(bold);
+  @include font-size(14);
+  @include btn-make($color-teal, false, false);
+  @include animate(0.25);
+  .icon {
+    @include animate(0.25);
+    @include svg-full-color($color-text-main);
+  }
+  a {
+    margin: -16px -30px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  &:hover {
+    color: $color-white;
+    .icon {
+      @include animate(0.25);
+      @include svg-full-color($color-white);
+    }
+  }
+}
+
+.btn-bg-primary {
+  @extend %btn;
+  @include btn-make($color-teal);
+  @include animate(0.25);
+  color: $color-white;
+}
+
+//bd:red, rounded
+.btn-secondary {
+  @extend %btn;
+  @include btn-make($color-red, false, false);
+  @include animate(0.25);
+  @include font(bold);
+  &:hover {
+    color: $color-white;
+  }
+}
+
+.btn-bg-secondary {
+  @include font(bold);
+  @include font-size(14);
+  @extend %btn;
+  @include btn-make($color-red);
+  @include animate(0.25);
+  color: $color-white;
+}
+
+
+
+.btn-disabled {
+  @include btn-make($color-grayBorder, false, false);
+  color: $color-grayBorder;
+  .icon {
+    @include animate(0.25);
+    @include svg-full-color($color-grayBorder);
+  }
+
+  &:hover {
+    cursor: not-allowed;
+    color: #a6a6a6;
+    background: none;
+    box-shadow: none;
+    .icon {
+      @include animate(0.25);
+      @include svg-full-color(#a6a6a6);
+    }
+  }
+}
+.btn-empty {
+  position: relative;
+  @extend %btn;
+  @include animate(0.25);
+  @include font(bold);
+  @include font-size(14);
+  @include btn-make($color-grayBorder, false, false, false, false, 0, false);
+
+  &:hover{
+    @include btn-make($color-grayBorder, false, false, false, false, 0, false);
+  }
+}
+
+//bg:teal, rect
+.btn-rect-primary {
+  @extend %btn;
+  @include btn-make($color-teal, 18, true, false, false);
+  @include animate(0.25);
+}
+
+//bg:red, rect
+.btn-rect-secondary {
+  @extend %btn;
+  @include btn-make($color-red, 18, true, false, false);
+  @include animate(0.25);
+}
+
+.btn-search-item {
+  @include font(semibold);
+  vertical-align: middle;
+  display: table-cell;
+  @include btn-make($color-text-comments, 14, false, true, false, true);
+  @include animate(0.25);
+  height: 35px;
+  padding-left: 15px;
+  padding-right: 15px;
+  > span {
+    @include animate(0.25);
+    margin-left: 10px;
+    padding: 2px 5px;
+    margin-right: -5px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  .icon {
+    @include size(10);
+    stroke-width: 0.5px;
+    stroke: $color-text-comments;
+    fill: $color-text-comments;
+  }
+}
+
+.big-button {
+  @include animate(0.25);
+  background: $color-darkGray;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  &:hover {
+    box-shadow: 0 0 15px 0 $color-darkGray;
+  }
+}
+
+.delete {
+  &-multi {
+    span {
+      vertical-align: bottom;
+      text-transform: uppercase;
+      @include font(semibold);
+      @include font-size(14);
+    }
+    .icon {
+      vertical-align: middle;
+      @include size(22);
+      > svg {
+        @include size(22);
+      }
+      g:last-of-type {
+        @include animate(0.25);
+        transform: translate(-4px, -4px);
+        transform-origin: 37px -5px;
+      }
+    }
+    &:hover {
+      svg {
+        g:last-of-type {
+          transform: rotate(17deg);
+        }
+      }
+    }
+  }
+}
+
+.btn-icon {
+  svg {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    & + span {
+      margin-left: 15px;
+    }
+  }
+
+  &_lg {
+    svg {
+      width: 30px;
+      height: 30px;
+      & + span {
+        margin-left: 30px;
+      }
+    }
+  }
+
+  &.btn-empty {
+    svg {
+      width: 50px;
+      height: 50px;
+      left: 0;
+      & + span {
+        margin-left: 35px;
+      }
+    }
+  }
+}
+
+.btn-group {
+  button {
+    border-radius: 0;
+    margin-left: -5px;
+    border-right: 0 solid;
+    svg {
+      position: absolute;
+      top: 50%;
+    }
+
+    &:first-of-type {
+      border-radius: 25px 0 0 25px;
+      svg {
+        left: 20px;
+      }
+    }
+    &:last-of-type {
+      border-radius: 0 25px 25px 0;
+      border-right: 2px solid $color-teal;
+      svg {
+        transform: translateY(-50%);
+        right: 20px;
+      }
+    }
+
+    span {
+      margin-right: 20px;
+    }
+    svg + span {
+      margin-left: 20px;
+      margin-right: 0;
+    }
+  }
+}

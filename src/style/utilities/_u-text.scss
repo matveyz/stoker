@@ -1,0 +1,146 @@
+.read-more {
+  margin: 16px 0;
+  display: inline-block;
+  .xs-only {
+    @include media(min, sm) {
+      display: none;
+    }
+    @include media(max, xs) {
+      color: $color-teal;
+      border-bottom: 1px dashed $color-teal;
+    }
+  }
+  color: $color-teal;
+  border-bottom: 1px dashed $color-teal;
+}
+
+.phone-call {
+  @include font-size(30);
+  color: $color-teal;
+  text-decoration: none;
+  @include media(max, xs) {
+    @include font-size(24);
+  }
+}
+
+.text {
+  ul {
+    list-style: auto;
+    margin: auto;
+  }
+  @include font-size(18);
+  &-highlight {
+    @include font(bold);
+  }
+
+  &-header {
+    @include font-size(24);
+    text-transform: uppercase;
+    @include font(bold);
+    &-big {
+      @include font-size(30);
+      text-transform: uppercase;
+      @include font(bold);
+    }
+    &-bigger {
+      @include font-size(34);
+    }
+    &-small {
+      @include font-size(16);
+      text-transform: uppercase;
+      @include font(bold);
+    }
+    &-high {
+      @include font-size(26);
+      text-transform: uppercase;
+    }
+    &-highest {
+      @include font-size(40);
+      text-transform: uppercase;
+    }
+
+    &-small {
+      @include font-size(14);
+    }
+
+  }
+  &-small {
+    @include font-size(14);
+  }
+  &-big {
+    @include font-size(24);
+  }
+  &-high {
+    @include font-size(27);
+  }
+  &-highest {
+    @include font-size(34);
+  }
+  &-center {
+    text-align: center;
+  }
+
+  @include media(max, xs) {
+    @include font-size(14);
+    &-header {
+      @include font-size(16);
+      &-highest {
+        @include font-size(28);
+      }
+      &-big {
+      }
+      &-high {
+        @include font-size(20);
+      }
+
+      &-small {
+        @include font-size(14);
+      }
+    }
+    &-big {
+      @include font-size(20);
+    }
+    &-high {
+      @include font-size(22);
+    }
+  }
+}
+
+blockquote {
+  @include font-size(22);
+  word-break: break-word;
+  @include font(semibold);
+  text-align: center;
+  margin: 40px auto;
+  position: relative;
+  padding: 40px 55px;
+  border-top: 1px solid $color-text-disabled;
+  border-bottom: 1px solid $color-text-disabled;
+  /*&:after, &:before {
+    content: "";
+    background: url("../svg/extra-icon-quotes.svg") no-repeat;
+    @include size(34);
+    display: block;
+    position: absolute;
+    margin: 20px;
+  }
+  &:before {
+    top: 0;
+    left: 0;
+    transform: rotate(180deg);
+  }
+  &:after {
+    bottom: 0;
+    right: 0;
+    transform: scaleX(-1) rotate(180deg);
+  }*/
+  @include media(max, xs) {
+    @include font-size(16);
+  }
+}
+
+.link {
+  color: $color-blue;
+  text-decoration: none;
+  border-bottom: 1px dashed;
+}

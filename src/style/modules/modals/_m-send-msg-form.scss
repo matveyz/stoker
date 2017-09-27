@@ -1,0 +1,45 @@
+.send-msg-form {
+  max-width: 850px;
+  .modal-desc {
+    padding: 30px 0;
+  }
+  .row {
+    margin: 0 -7px;
+  }
+  div[class^="col-"] {
+    padding: 0 7px;
+  }
+  input {
+    width: 100%;
+  }
+  textarea {
+    width: 100%;
+    margin: 15px 0;
+  }
+  .modal-required-msg {
+    margin-left: 40px;
+  }
+  @media (max-width: $screen-sm-max) {
+    width: calc(100% - 30px);
+    input {
+      margin-bottom: 10px;
+    }
+    textarea {
+      margin-top: 0;
+    }
+    .modal-required-msg {
+      margin: 15px 0;
+      width: 60%;
+      display: block;
+      text-align: center;
+      float: right;
+    }
+    @media (max-width: $screen-xs-max) {
+      .modal-required-msg {
+        width: 100%;
+        float: none;
+      }
+    }
+  }
+
+}

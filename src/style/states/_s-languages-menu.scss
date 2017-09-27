@@ -1,0 +1,32 @@
+.languages {
+  &-menu {
+    @include animate(0.35);
+    visibility: hidden;
+    transform: scaleY(0);
+    transform-origin: 0 0;
+    &-item {
+      @include animate(0.3);
+      opacity: 0;
+    }
+  }
+  &:hover {
+    + .languages-menu {
+      visibility: visible;
+      transform: scaleY(1);
+      .languages-menu-item {
+        @include animate(0.2, 0.25);
+        opacity: 1;
+      }
+    }
+  }
+  &-menu {
+    &:hover {
+      visibility: visible;
+      transform: scaleY(1);
+      .languages-menu-item {
+        @include animate(0.2, 0.25);
+        opacity: 1;
+      }
+    }
+  }
+}

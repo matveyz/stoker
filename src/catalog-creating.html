@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Stocker</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<main id="catalog-creating" class="catalog-creating">
+  <header>
+    <catalog-creating-menu @change-step="changeView"></catalog-creating-menu>
+  </header>
+  <transition name="fade">
+    <component :is="currentView" @next-step="changeView" @prev-step="changeView">
+      <instruction></instruction>
+    </component>
+  </transition>
+</main>
+@@include('templates/template-footer.html')

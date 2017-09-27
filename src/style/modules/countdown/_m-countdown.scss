@@ -1,0 +1,69 @@
+.countdown {
+  @include clearfix();
+  @include animate(0.25);
+  &-dash {
+    float: left;
+    margin-right: 1px;
+    .digit {
+      background-color: $color-darkGray;
+      width: 50px;
+      height: 50px;
+      @extend %radius-4px;
+      color: $color-white;
+      text-align: center;
+      line-height: 50px;
+      @include font-size(21);
+    }
+    &_title {
+      @include font-size(14);
+    }
+  }
+  &-title {
+    @include font-size(14);
+    line-height: 1;
+    margin: 35px 0;
+    text-align: left;
+  }
+  &-pretext {
+    @include font-size(14);
+    margin: 10px 0;
+    text-align: right;
+    float: left;
+    display: inline-block;
+    margin-right: 10px;
+  }
+
+  .times-up {
+    text-align: center;
+  }
+
+  &-title {
+    &_times-up {
+      margin: 0 0 15px 0;
+      text-align: center;
+    }
+
+    &-header {
+      @include font(bold);
+      @include font-size(25);
+      text-transform: uppercase;
+    }
+    &-desc {
+      @include font(medium);
+      @include font-size(18);
+    }
+  }
+
+  button {
+    opacity: 0;
+    visibility: hidden;
+    @include animate(0.25);
+    margin-top: 20px;
+    text-align: center;
+
+  }
+  &:hover button {
+    opacity: 1;
+    visibility: visible;
+  }
+}

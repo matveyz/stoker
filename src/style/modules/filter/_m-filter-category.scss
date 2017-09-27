@@ -1,0 +1,26 @@
+.filter-category {
+  margin-top: 40px;
+  &_theme-teal {
+    background-color: $color-lightGray;
+    svg {
+      &:first-of-type {
+        stroke: $color-teal;
+        fill: none
+      }
+      &:last-of-type {
+        fill: $color-teal;
+      }
+    }
+  }
+
+  &__inner {
+    @include clearfix();
+    padding: 18px 20px;
+    border-radius: $border-radius-default;
+  }
+
+  &__item {
+    min-height: 40px;
+  }
+
+}

@@ -1,0 +1,61 @@
+@@include('templates/template-header.html')
+
+
+<main id="partner-settings" role="main" class="main">
+  <section class="top-content">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          @@include('templates/modules/breadcrumbs.html', {
+          "name" : ["Настройки"],
+          "link" : [""]
+          })
+        </div>
+        <div class="col-lg-12">
+          @@include('templates/modules/center-header-block.html', {
+          "extraClass" : "",
+          "inner" : ["Личный кабинет"]
+          })
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="main-content">
+    <div class="container">
+      <div class="row">
+        <div class="my-lists-tabs">
+          <div class="col-md-12">
+
+            @@include('templates/modules/sort/sort.html', {
+            "extraClass" : "sort-white",
+            "nameFirst" : "Мои каталоги",
+            "nameOther" : ["Настройки"],
+            "tabsName" : "",
+            "hrefFirst" : "/app/partner-my-catalogs.html",
+            "href" : ["/app/partner-settings.html"],
+            "active" : ["is-active"]
+            })
+            <div class="text-center">
+              Вы можете отредактировать свой профиль в системе, указать информацию о компании,
+              <br>
+              изменить пароль доступа к порталу, а также управлять подпиской
+            </div>
+          </div>
+          <div class="col-lg-11 center settings-wrapper clearfix">
+            @@include('templates/pages/private-cabinet/partner-settings.html')
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <send-msg v-bind:send-msg="getRSS"></send-msg>
+  <!--<modal_send-msg-partner-get-rss v-if="modal.show"></modal_send-msg-partner-get-rss>-->
+  <partner-settings-company>
+    <cities-streets-search slot="cities-streets-search"></cities-streets-search>
+  </partner-settings-company>
+
+</main>
+
+
+@@include('templates/template-footer.html')
+

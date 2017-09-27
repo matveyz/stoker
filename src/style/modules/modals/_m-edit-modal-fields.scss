@@ -1,0 +1,11 @@
+.edit-header-title {
+  @include animate(0.25);
+  @include font-size(18);
+  @include font(medium);
+  color: $color-teal;
+  cursor: pointer;
+  margin-left: 28px;
+  &:hover {
+    text-decoration: underline;
+  }
+}

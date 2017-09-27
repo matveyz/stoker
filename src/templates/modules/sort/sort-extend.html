@@ -1,0 +1,24 @@
+<div class="sort-extend tabs-item-content" data-tab-content="@@tabsName-@@number">
+  <form action="">
+    <div class="filter-reset">
+      <input type="reset" id="sort-reset"/>
+      <label for="sort-reset">
+        <svg class="icon">
+          <use xlink:href="svg/svg.svg#icon-circle"></use>
+        </svg>
+        <svg class="icon icon-inside">
+          <use xlink:href="svg/svg.svg#icon-cross"></use>
+        </svg>
+        <span>Сбросить фильтр</span>
+        </label>
+    </div>
+    <div class="line-divide"></div>
+    <div class="row">
+      <ul class="sort-extend-items">
+        @@include('sort-extend_logic.html', {
+        "items": ["Продукты питания", "Бытовая техника и электроника", "Косметика краста и здоровье", "Доставка еды", "Кафе, бары, рестораны", "Автомобили, автотовары, топливо и услуги", "Одежда, обувь и аксессуары", "Подарки", " Товары, услуги для дома и ремонта", "Недвижимость", "Фитнес-клубы и спортивные товары", "Товары для детей", "Финансы", "Охота и рыбалка", "Кино, театры, развлечения", " Интернет, TV и IT-услуги", "Образование и развитие, книги", "Билеты, путешествия и отдых"]
+        })
+      </ul>
+    </div>
+  </form>
+</div>

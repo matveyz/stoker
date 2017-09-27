@@ -1,0 +1,42 @@
+.settings-company {
+  background-color: $color-lightTeal;
+  .form-control {
+    width: 100%;
+  }
+  .load-photo {
+    text-align: center;
+    padding: 60px 0;
+    &-text {
+      &-main {
+        width: 400px;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      &-extra {
+        margin: 10px 0;
+      }
+    }
+  }
+  textarea {
+    height: 465px;
+  }
+  .btn-primary {
+    margin-top: 40px;
+  }
+  .line-divide {
+    margin-top: 40px;
+    margin-bottom: 30px;
+  }
+
+}
+
+select.form-control {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: '';
+  &::-ms-expand {
+    display: none;
+  }
+}

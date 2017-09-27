@@ -1,0 +1,9 @@
+<div class="social-icons">
+  @@for (var i = 0; i < icon.length; i++) {
+  <button class="social-icons-item btn-primary">
+    <svg class="icon">
+      <use xlink:href="svg/svg.svg#icon-`+icon[i]+`"></use>
+    </svg>
+  </button>
+  }
+</div>

@@ -1,0 +1,122 @@
+.my-lists {
+  &-item {
+    &-wrapper {
+      @include animate(0.25);
+      &:hover {
+        .my-lists-item {
+          &_zoom {
+            z-index: $z-index-content;
+            transform: scaleX(1.05);
+            box-shadow: 0 20px 30px 0px rgba(0, 0, 0, .3);
+            background-color: $color-white;
+          }
+          &-date {
+            color: $color-teal;
+          }
+          &-price, &-delete {
+            transform: translateX(-74px);
+            color: $color-teal;
+          }
+          &-delete {
+            visibility: visible;
+            opacity: 1;
+            transition: opacity 0.25s ease-in-out 0.1s, background 0.25s ease-in-out;
+          }
+        }
+      }
+    }
+    z-index:$z-index-content + 1;
+    &_zoom {
+      @include animate(0.25);
+      z-index: 0;
+    }
+    &-delete {
+      z-index: $z-index-content + 1;
+      transition: none;
+      //@include animate(0.25);
+      opacity: 0;
+      visibility: hidden;
+      &:hover {
+        @include animate(0.25);
+        background-color: $color-red;
+        .icon {
+          fill: $color-white;
+        }
+      }
+    }
+    &-price {
+      @include animate(0.25);
+    }
+    @include media(max, sm) {
+      &-delete {
+        transform: translateX(-82px);
+        visibility: hidden;
+      }
+      &-wrapper {
+        &:hover {
+          .my-lists-item {
+            &-delete {
+              visibility: visible;
+              transform: translateX(-82px);
+            }
+          }
+        }
+      }
+    }
+
+    @include media(max, xs) {
+      @include media(min, 500) {
+        &-delete {
+          transform: translateX(-64px);
+          padding: 0 22px;
+          opacity: 1;
+          visibility: visible;
+        }
+        &-price {
+          transform: translateX(-64px);
+        }
+        &-amount {
+          margin-left: -5%;
+        }
+        &-wrapper {
+          &:hover {
+            .my-lists-item {
+              &_zoom {
+                transform: scaleX(1);
+              }
+              &-price {
+                transform: translateX(-64px);
+              }
+              &-delete {
+                transform: translateX(-64px);
+              }
+            }
+          }
+        }
+      }
+      @include media(max, 499) {
+        &-delete {
+          visibility: visible;
+          transform: translateX(-86px);
+          padding: 0 33px;
+          opacity: 1;
+        }
+        &-wrapper {
+          &:hover {
+            .my-lists-item {
+              &_zoom {
+                transform: scaleX(1);
+              }
+              &-price {
+                transform: translateX(0);
+              }
+              &-delete {
+                transform: translateX(-86px);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+.footer-social {
+  @include clearfix();
+  float: right;
+  white-space: nowrap;
+  svg {
+    color: $color-white;
+    @include size($main-text-size*2);
+    margin-right: 10px;
+  }
+}

@@ -1,0 +1,22 @@
+.icon-calendar {
+  @include svg-full-color($color-midGray);
+}
+
+.date-range {
+  margin-top: 20px;
+  &__label {
+    @include font-size(24);
+    display: inline-block;
+  }
+
+  &__field {
+    margin-left: 25px;
+    position: relative;
+    display: inline-block;
+    max-width: 240px;
+  }
+
+  &__input {
+    max-width: 240px;
+  }
+}

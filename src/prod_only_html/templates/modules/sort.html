@@ -1,0 +1,16 @@
+<div class="sort-wrapper">
+  <div class="sort @@extraClass">
+    <button class="sort-btn is-active">@@nameFirst</button>
+    @@if (extraClass !== 'extended') {
+    @@for (var i = 0; i < nameOther.length; i++) {
+    <button class="sort-btn">`+nameOther[i]+`</button>
+    }
+    }
+    @@if (extraClass === 'extended') {
+    @@for (var i = 0; i < nameOther.length; i++) {
+    <button class="sort-btn extended">`+nameOther[i]+`</button>
+    @@include('sort-extend.html')
+    }
+    }
+  </div>
+</div>

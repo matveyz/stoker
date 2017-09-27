@@ -1,0 +1,35 @@
+<div class="filter-type-category filter-type tabs-item-content tabs" data-tab-content="tab-type@@number-2">
+  <form action="">
+    <ul class="filter-type-abc">
+      <div class="filter-reset">
+        <input type="reset" id="filter-category-reset"/>
+        <label for="filter-category-reset">
+          <svg class="icon">
+            <use xlink:href="svg/svg.svg#icon-circle"></use>
+          </svg>
+          <svg class="icon icon-inside">
+            <use xlink:href="svg/svg.svg#icon-cross"></use>
+          </svg>
+          <span>Сбросить фильтр</span>
+        </label>
+      </div>
+    </ul>
+    <div class="filter-type-items is-active">
+      <ul class="filter-type-items-inner">
+        @@for (var i = 0; i < items.length; i++) {
+        <li class="col-md-4 checkbox" data-type="category" data-id="`+(i+1)+`">
+          <input type="checkbox" name="category-@@number-`+(i+1)+`">
+          <label data-for="category-@@number-`+(i+1)+`">
+            <svg class="icon">
+              <use xlink:href="svg/svg.svg#icon-circle"></use>
+            </svg>
+            <svg class="icon">
+              <use xlink:href="svg/svg.svg#icon-checked"></use>
+            </svg>
+            `+items[i]+`</label>
+        </li>
+        }
+      </ul>
+    </div>
+  </form>
+</div>

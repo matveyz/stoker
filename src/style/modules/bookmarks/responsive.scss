@@ -1,0 +1,10 @@
+.bookmarks {
+  @media (max-width: $screen-sm-max) {
+    svg {
+      line-height: 1.2;
+    }
+    &-number {
+      line-height: 1.2;
+    }
+  }
+}

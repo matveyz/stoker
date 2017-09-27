@@ -1,0 +1,47 @@
+.filter-type {
+  background-color: $color-white;
+  &-items {
+    //position: absolute;
+    &-inner {
+      @include clearfix();
+      padding: 20px 25px;
+      li {
+        @include font-size(18);
+        @include font(medium);
+        padding: 0 20px;
+      }
+    }
+    label {
+      position: relative;
+    }
+
+    svg {
+      margin-right: 5px;
+      @include size(12);
+      position: absolute;
+      stroke: $color-text-disabled;
+      top: 25%;
+      left: -20px;
+      &:first-of-type {
+        stroke-width: 10%;
+      }
+      &:last-of-type {
+        stroke-width: 2.5px;
+
+        @include svg-full-color($color-red);
+        position: absolute;
+        left: -18px;
+        @include size(10);
+      }
+    }
+  }
+  &-category {
+    .filter-type-items {
+      &-inner {
+        li {
+          min-height: 42px;
+        }
+      }
+    }
+  }
+}

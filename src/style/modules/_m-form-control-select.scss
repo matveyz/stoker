@@ -1,0 +1,20 @@
+label[for^=form-control-] {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  display: inline-block;
+  &:not(:last-of-type) {
+    margin-bottom: 20px;
+  }
+  select {
+    width: 100%;
+    appearance: none;
+  }
+  > .icon {
+    fill: $color-text-main;
+    top: calc(50% - 5px);
+    right: 10px;
+    @include size(14);
+    position: absolute;
+  }
+}

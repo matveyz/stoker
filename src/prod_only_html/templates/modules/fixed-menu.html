@@ -1,0 +1,67 @@
+<div class="fixed-menu-wrapper">
+  <div class="fixed-menu is-nav-up">
+    <div class="body-overflow"></div>
+
+    <button class="fixed-menu-off-logo">
+      <svg class="icon">
+        <use xlink:href="svg/svg.svg#icon-menu"></use>
+      </svg>
+    </button>
+    @@include('off-canvas.html')
+    <div class="fixed-menu-filter hidden-xs hidden-sm">
+      <div class="fixed-menu-filter-inner">
+        <button class="btn-rect-primary fixed-menu-filter-btn">Фильтр
+          <svg class="icon icon-arrow-right">
+            <use xlink:href="svg/svg.svg#icon-arrow"></use>
+          </svg>
+        </button>
+        @@include('filter/filter.html', {
+        "name": ["Город", "Категория", "Сеть"],
+        "number": 1
+        })
+      </div>
+    </div>
+
+    <div class="fixed-menu-lang hidden-xs hidden-sm">
+      @@include('languages.html')
+    </div>
+
+    <div class="fixed-menu-user">
+      @@include('user_signed-in.html')
+    </div>
+
+    <div class="fixed-menu-bookmarks">
+      @@include('bookmarks.html')
+    </div>
+
+    <button class="fixed-menu-mobile-searchbtn visible-xs visible-sm">
+      <svg class="icon">
+        <use xlink:href="svg/svg.svg#icon-search"></use>
+      </svg>
+    </button>
+
+    <div class="fixed-menu-search hidden-xs hidden-sm">
+      @@include('search.html')
+    </div>
+
+    <div class="fixed-menu-mobile-wrapper visible-xs visible-sm">
+      <div class="fixed-menu-mobile-filter">
+        <div class="fixed-menu-filter-inner">
+          <button class="fixed-menu-filter-btn">
+            <svg class="icon">
+              <use xlink:href="svg/svg.svg#icon-filter"></use>
+            </svg>
+          </button>
+          @@include('filter/filter.html', {
+          "name": ["Город", "Категория", "Сеть"],
+          "number": 1
+          })
+        </div>
+      </div>
+      <div class="fixed-menu-mobile-search">
+        @@include('search.html')
+      </div>
+    </div>
+  </div>
+</div>
+

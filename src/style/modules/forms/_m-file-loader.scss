@@ -1,0 +1,45 @@
+.file-loader {
+  margin-top: $margin-top-form-block;
+  display: block;
+  background-color: $color-lighterGray;
+  padding: 42px;
+  border-radius: 4px;
+
+  &__btn {
+    width: 30%;
+    display: inline-block;
+  }
+  &__main-text {
+    @include font-size(18);
+    text-align: center;
+    width: 69%;
+    display: inline-block;
+  }
+  &__small-text {
+    @include font-size(14);
+    text-align: center;
+    margin-top: 25px;
+  }
+
+  &__link {
+    @include font-size(20);
+    color: $color-teal;
+    text-decoration: none;
+    border-bottom: 1px dashed;
+  }
+}
+.btn-file {
+  position: relative;
+  &__text {
+    margin-left: 30px;
+    @include font-size(14);
+    @include font(bold);
+  }
+  &__icon{
+    position: absolute;
+    @include size(30);
+    top:50%;
+    left:20px;
+    transform: translateY(-50%);
+  }
+}

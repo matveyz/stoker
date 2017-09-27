@@ -1,0 +1,31 @@
+.news {
+  @extend %betweenBlocksPadding; //TODO сделать универсальніе классы для отступов, h1, разобраться с h1...
+  &-header {
+    @include clearfix();
+    line-height: rem($main-text-size*3);
+    padding-left: 35px;
+    padding-right: 35px;
+    @extend %betweenBlocksPadding;
+    &-title {
+      float: left;
+    }
+    &-more {
+      float: right;
+      @include font(semibold);
+      text-transform: uppercase;
+      @include font-size(14);
+      a {
+        color: $color-teal;
+        text-decoration: none;
+        @include animate(0.25);
+        &:hover, &:focus {
+          text-decoration: underline;
+        }
+        svg {
+          @include svg-full-color($color-teal);
+          @include size(12);
+        }
+      }
+    }
+  }
+}

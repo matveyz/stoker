@@ -1,0 +1,123 @@
+@include media(max, xs) {
+  .about-us {
+    padding-bottom: 0;
+    .header {
+      padding-bottom: 0;
+    }
+    .text {
+      p {
+        &:not(:last-child) {
+          padding-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+@include media(max, sm) {
+  .how {
+    @include media(max, xs) {
+      &-top {
+        padding-left: 10px;
+        padding-right: 10px;
+        .big-button {
+          padding-top: 20px;
+          @include font(semibold);
+          padding-bottom: 20px;
+          @include font-size(14);
+        }
+        &:last-of-type {
+          padding-top: 0;
+          padding-bottom: 0;
+        }
+      }
+    }
+    &-inner {
+      &:before {
+        top: 120px;
+        left: 30px;
+        height:calc(100% - 200px);
+      }
+      .icon-circle {
+        @include size(14);
+        margin-left: -6px;
+        left: 30px;
+        &-top {
+          top: 102px;
+        }
+        &-bot {
+          bottom: 65px;
+        }
+      }
+    }
+    &-main {
+      &-block {
+        margin-bottom: 30px;
+        > [class^="col-"] {
+          position: static;
+        }
+        &-text {
+          width: auto;
+          padding-left: 60px !important;
+          padding-right: 20px!important;
+          text-align: left !important;
+          .text-header {
+            &:first-of-type {
+              top: 0;
+              left: 100px;
+              height: 45px;
+              width: calc(100% - 110px);
+              position: absolute;
+              span {
+                transform: translateY(-50%);
+                top: 50%;
+                position: absolute;
+              }
+              /*&:after {
+                content:"";
+                display: inline-block;
+                height: 100%;
+                vertical-align: middle;
+              }*/
+            }
+          }
+        }
+        &-photo {
+          padding-left: 60px !important;
+          padding-right: 20px!important;
+          max-width: 100%;
+          svg {
+            margin-top: 60px;
+            height: auto !important;
+          }
+        }
+      }
+      .icon {
+        &-disk {
+          @include size(50);
+          left: 30px;
+          margin-left: -10px;
+        }
+        &-number {
+          left: 30px;
+          top: 10px;
+          @include font-size(22);
+          margin-left: 8px;
+        }
+      }
+    }
+  }
+
+  .become-partner {
+    &-block {
+      &-text {
+        ul {
+          li {
+            margin-bottom: 40px;
+          }
+        }
+      }
+    }
+  }
+}
+

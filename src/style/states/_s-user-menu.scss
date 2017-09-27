@@ -1,0 +1,35 @@
+.user {
+  &-menu {
+    @include animate(0.35, 0.1);
+    visibility: hidden;
+    transform: scaleY(0);
+    transform-origin: 0 0;
+    &-item {
+      @include animate(0.2);
+      opacity: 0;
+    }
+  }
+
+  &:hover {
+    + .user-menu {
+      visibility: visible;
+      transform: scaleY(1);
+      @include animate(0.35);
+      .user-menu-item {
+        @include animate(0.2, 0.25);
+        opacity: 1;
+      }
+    }
+  }
+  &-menu {
+    &:hover {
+      visibility: visible;
+      transform: scaleY(1);
+      @include animate(0.35);
+      .user-menu-item {
+        @include animate(0.2, 0.25);
+        opacity: 1;
+      }
+    }
+  }
+}

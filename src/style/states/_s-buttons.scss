@@ -1,0 +1,35 @@
+.show-more-btn-inner {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: #49c7e7;
+  &.is-hidden {
+    display: none;
+  }
+}
+
+.btn-search-item {
+  > span:hover {
+    background: $color-red;
+  }
+  &:hover {
+    background-color: $color-teal;
+    border-color: $color-teal;
+    box-shadow: 0 0 15px 0 $color-teal;
+    color: $color-white;
+    .icon {
+      fill: $color-white;
+      stroke: $color-white;
+    }
+  }
+  .is-active {
+    background-color: $color-text-main;
+    box-shadow: 0 0 15px 0 $color-text-main;
+    border-color: $color-text-main;
+    .icon {
+      fill: $color-white;
+      stroke: $color-white;
+    }
+  }
+}
+

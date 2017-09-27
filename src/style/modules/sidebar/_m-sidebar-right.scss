@@ -1,0 +1,10 @@
+.sidebar {
+  &-right {
+    //margin-left: 20px;
+    background-color: $color-creamy;
+    max-width: 310px;
+    float: right;
+    padding: 0 1.3em;
+    @extend %radius-4px;
+  }
+}

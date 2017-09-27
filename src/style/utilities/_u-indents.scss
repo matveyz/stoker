@@ -1,0 +1,64 @@
+.no-padding-left {
+  padding-left: 0 !important;
+}
+
+.no-padding-right {
+  padding-right: 0 !important;
+}
+
+.no-padding {
+  padding: 0 !important;
+}
+
+@media (max-width: $screen-sm-max) {
+  .no-padding-left-sm {
+    padding-left: 0 !important;
+  }
+  .no-padding-right-sm {
+    padding-right: 0 !important;
+  }
+  .no-padding-sm {
+    padding: 0 !important;
+  }
+}
+
+@media (max-width: $screen-xs-max) {
+  .no-padding-left-xs {
+    padding-left: 0 !important;
+  }
+  .no-padding-right-xs {
+    padding-right: 0 !important;
+  }
+  .no-padding-xs {
+    padding: 0 !important;
+  }
+}
+
+@media (max-width: $screen-md-max) {
+  .no-padding-left-md {
+    padding-left: 0 !important;
+  }
+  .no-padding-right-md {
+    padding-right: 0 !important;
+  }
+  .no-padding-md {
+    padding: 0 !important;
+  }
+}
+
+.container-lg-max {
+  max-width: 1170px;
+}
+
+.center {
+  clear: both;
+  margin: 0 auto;
+  float: none !important;
+}
+
+.vcenter {
+  float: none;
+  vertical-align: middle;
+  display: inline-block;
+  margin-right: -4px;
+}

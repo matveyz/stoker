@@ -1,0 +1,10 @@
+.modal-header {
+
+  &__title {
+    @include font-size(32);
+    &_semibold {
+      @include font(semibold);
+      @include font-size(40);
+    }
+  }
+}

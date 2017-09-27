@@ -1,0 +1,75 @@
+.off-canvas {
+  /*SM-*/
+  @include media(max,sm){
+    @include off-canvas-maker();
+    &-header {
+      padding: 10px;
+      color: $color-white;
+      background-color: $color-white;
+      svg {
+        margin-right: 15px;
+        @include size(19);
+        stroke-width: 1px;
+        vertical-align: middle;
+      }
+      span {
+        vertical-align: middle;
+      }
+    }
+    &-main {
+      background-color: $color-white;
+      height: calc(100% - 40px);
+      overflow: auto;
+      padding: 10px 32px;
+      margin-bottom: -50px;
+      .top-menu {
+        min-height: 200px;
+        height: calc(100% - 60px);
+        overflow: auto;
+        &-item {
+          float: none;
+          margin-top: 25px;
+        }
+      }
+      .languages {
+        margin-top: 15px;
+      }
+    }
+    //+
+  }
+
+  /*MD+*/
+
+  @include media(min, md) {
+    box-shadow: 0 20px 30px 0 rgba(#000, .3);
+    width: 270px;
+    top: 50px;
+    background-color: $color-white;
+    &-header {
+      display: none;
+    }
+    &-main {
+      padding-top: 1.5em;
+      .top-menu {
+        margin: 0;
+        @include clearfix();
+        &-item {
+          width: 100%;
+          a {
+            padding-top: 10px;
+            padding-left: 45px;
+            width:100%;
+            margin: 0;
+            display: inline-block;
+          }
+          &:not(:last-of-type) {
+            padding-bottom: 20px;
+          }
+        }
+      }
+    }
+    .languages {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,44 @@
+<div class="sort-wrapper">
+  <div class="sort @@extraClass">
+    <svg class="icon icon-arrow-down visible-sm visible-xs">
+      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="svg/svg.svg#icon-arrow"></use>
+    </svg>
+    <button data-tab="@@tabsName-1" class="tabs-item sort-btn extended">@@name</button>
+    <div class="sort-extend tabs-item-content" data-tab-content="@@tabsName-1">
+      <form action="">
+        <div class="filter-reset">
+          <input type="reset" id="sort-reset"/>
+          <label for="sort-reset">
+            <svg class="icon">
+              <use xlink:href="svg/svg.svg#icon-circle"></use>
+            </svg>
+            <svg class="icon icon-inside">
+              <use xlink:href="svg/svg.svg#icon-cross"></use>
+            </svg>
+            <span>Сбросить фильтр</span>
+          </label>
+        </div>
+        <div class="line-divide"></div>
+        <div class="row">
+          <ul class="sort-extend-items">
+            @@for (var i = 0; i < items.length; i++) {
+            <li class="filter-item-custom col-md-4"><input type="checkbox" name="" id="@@tabsName-`+(i+1)+`">
+              <label for="@@tabsName-`+(i+1)+`">
+            <span>
+              <svg class="icon">
+                <use xlink:href="svg/svg.svg#icon-circle"></use>
+              </svg>
+              <svg class="icon">
+                <use xlink:href="svg/svg.svg#icon-checked"></use>
+              </svg>
+            </span>
+                <span>`+items[i]+`</span>
+              </label>
+            </li>
+            }
+          </ul>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

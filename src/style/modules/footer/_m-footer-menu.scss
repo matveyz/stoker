@@ -1,0 +1,17 @@
+.footer-menu {
+  @include clearfix();
+  &-item {
+    @extend %pull-left;
+    margin-right: 40px;
+    a {
+      //@extend %link;
+      @extend %no-a;
+      color: $color-white;
+      font-family: $font-semiBold;
+      @include font-size(18);
+      &:hover {
+        color: $color-teal;
+      }
+    }
+  }
+}

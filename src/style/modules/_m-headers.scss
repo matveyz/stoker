@@ -1,0 +1,72 @@
+.header-block { //TODO
+  text-transform: uppercase;
+  @include font-size($main-text-size*3);
+  @media (max-width: $screen-xs-max) {
+    @include font-size($main-text-size*2);
+  }
+  @extend %betweenBlocksPadding;
+
+  &_catalog {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-transform: inherit;
+    padding-bottom: 25px;
+
+    @include font-size($main-text-size);
+    @media (max-width: $screen-xs-max) {
+      @include font-size($main-text-size);
+    }
+    & > div {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+
+  &__title {
+    text-transform: uppercase;
+    text-align: left;
+    margin-left: -4px;
+    @include font-size($main-text-size*3.75);
+    @media (max-width: $screen-xs-max) {
+      @include font-size($main-text-size*2);
+    }
+  }
+  &__pre-text {
+    text-transform: none;
+    @include font-size(22);
+    color: $color-darkGray;
+  }
+  &__company-info {
+    text-transform: none;
+    color: $color-grayBorder;
+    @include font-size(18);
+    margin-top: 10px;
+    border-bottom: 1px solid;
+    display: inline-block;
+    cursor: pointer;
+    @include animate(0.25);
+    &:hover {
+      color: $color-teal;
+    }
+  }
+  &__rating {
+    margin-top: 25px;
+  }
+}
+
+
+.header-block-extra {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 25px 0;
+
+  & > [class*=side-]{
+
+  }
+
+  button + button {
+    margin-left: 23px;
+  }
+}

@@ -1,0 +1,55 @@
+<div class="settings" id="settings">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="text-header-bigger">
+        Личные данные
+      </div>
+      <form class="settings-private" action="" method="post">
+        <label class="load-photo form-control settings-control" for="load_photo">
+          <span class="load-photo-img vcenter"><img src="svg/photo_user.svg" alt=""></span>
+          <span class="load-photo-text vcenter">
+            <span class="load-photo-text-header">Загрузить фото</span>
+            <span class="load-photo-text-main text-small">В данное окно можно перетащить фото</span>
+          </span>
+          <input type="file" name="load_photo" id="load_photo" accept="image/*">
+        </label>
+
+        <input required type="text" name="name" placeholder="Имя*"
+               class="form-control settings-control">
+        <input required type="text" name="surname" placeholder="Фамилия*"
+               class="form-control settings-control">
+        <input required type="email" name="email" placeholder="e-mail*"
+               class="form-control settings-control">
+        <input required type="tel" name="tel" placeholder="Телефон*"
+               class="form-control settings-control">
+        <div class="settings-private-header text-big">Должность</div>
+
+        <label for="form-control-city" class="form-control-city">
+          <select required name="city" id="form-control-city" class="form-control">
+            <option value="Киев" selected>Продавец</option>
+            <option value="Харьков">Менеджер</option>
+          </select>
+          <svg class='icon icon-arrow-down'>
+            <use xlink:href='svg/svg.svg#icon-arrow'></use>
+          </svg>
+        </label>
+
+        <input type="submit" value="Сохранить" class="btn-primary">
+      </form>
+    </div>
+    <div class="col-md-6">
+      <div class="text-header-bigger">
+        Пароль
+      </div>
+      <form class="settings-change-pass" action="" method="post">
+        <input required type="password" name="old_path" placeholder="Текущий пароль"
+               class="form-control settings-control">
+        <input required type="password" name="pass" placeholder="Новый пароль"
+               class="form-control settings-control">
+        <input required type="password" name="pass-confirm" placeholder="Повторить пароль"
+               class="form-control settings-control">
+        <input type="submit" value="Изменить" class="btn-primary">
+      </form>
+    </div>
+  </div>
+</div>

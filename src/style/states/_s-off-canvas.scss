@@ -1,0 +1,33 @@
+//comments - legacy code
+.fixed-menu-off-logo {
+  @include media(min, md) {
+    + .off-canvas {
+      visibility: hidden;
+      transform: scaleY(0);
+      transform-origin: 0 0;
+      .top-menu-item {
+        @include animate(0.3);
+        opacity: 0;
+      }
+      &:hover {
+        visibility: visible;
+        transform: scaleY(1);
+        .top-menu-item {
+          @include animate(0.2, 0.25);
+          opacity: 1;
+        }
+      }
+    }
+    &:hover {
+      + .off-canvas {
+        visibility: visible;
+        transform: scaleY(1);
+        .top-menu-item {
+          @include animate(0.2, 0.25);
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+

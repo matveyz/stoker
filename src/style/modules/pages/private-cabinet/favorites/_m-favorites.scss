@@ -1,0 +1,51 @@
+.favorites {
+  .single-filter {
+    .sort {
+      &-wrapper {
+        margin-bottom: 20px;
+      }
+      &-btn {
+        border-radius: 4px 4px 0 0;
+        span {
+          vertical-align: middle;
+        }
+        .icon {
+          margin-left: 10px;
+          vertical-align: middle;
+          @include size(10);
+          stroke-width: 1px;
+        }
+      }
+      &-extend {
+        transform: translateX(-35%);
+      }
+    }
+    @include media(max, sm) {
+      .sort {
+        &-wrapper {
+          margin-bottom: 50px;
+        }
+        .sort {
+          &-btn {
+            border-radius: 4px;
+            position: static;
+            max-height: inherit;
+            opacity: 1;
+            visibility: visible;
+          }
+          &-extend {
+            @include off-canvas-maker(right);
+            form {
+              height: 100%;
+              .row {
+                height: 100%;
+                overflow-y: auto;
+                overflow-x: hidden;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

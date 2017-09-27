@@ -1,0 +1,15 @@
+.search-results {
+  &-main {
+    &-block {
+      opacity: 0;
+      @include animate(0.4,false, opacity);
+      height: 0;
+      overflow: hidden;
+      &.is-active {
+        opacity: 1;
+        height: auto;
+        overflow: visible;
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+.extra {
+  float: right;
+  @include font-size(14);
+  @include font(medium);
+  > span {
+    padding-left: 10px;
+  }
+  .icon {
+    + span {
+      padding-left: 5px;
+      vertical-align: middle;
+    }
+    vertical-align: middle;
+    @include svg-full-color($color-text-main);
+    &-heart {
+      @include size(20);
+    }
+    &-eye {
+      @include size(22);
+    }
+  }
+}

@@ -1,0 +1,201 @@
+.article {
+  &-img-top {
+    text-align: center;
+    padding-left: 0.6em;
+  }
+  &-header {
+  }
+  &-extra {
+    padding: 30px 0;
+    @include clearfix();
+    .date, .back-to-all-news {
+      float: left;
+      text-transform: uppercase;
+    }
+    .date {
+      line-height: 55px;
+    }
+    button {
+      //padding:13px 25px;
+      @include font(bold);
+      position: relative;
+      @include font-size(14);
+      .icon-arrow-left {
+        margin: auto;
+        position: absolute;
+        top: 1px;
+        left: 15px;
+        bottom: 0;
+        vertical-align: middle;
+        fill: $color-text-main;
+        + span {
+          margin-left: 15px;
+          vertical-align: middle;
+        }
+      }
+      &.share {
+        margin-left: 10px;
+        .icon {
+          @include size(28);
+          margin-top: -10px;
+        }
+      }
+    }
+  }
+  &-img {
+    width: 100vw;
+    height: 280px;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    background-color: $color-gray;
+    padding: 0 50px;
+    img {
+      display: block;
+      width: 100%;
+      height: 280px;
+    }
+  }
+  &-main {
+    * {
+      line-height: 1.5;
+    }
+    &-wrapper {
+      margin-top: 50px;
+    }
+    p {
+      letter-spacing: 0.5px;
+      text-align: left;
+      text-indent: 0;
+      font-size: 14px;
+      letter-spacing: 0.5px;
+      color: #373b3c;
+      &:first-of-type {
+        margin-top: 0;
+      }
+    }
+  }
+
+  &-header {
+    line-height: 3.5rem;
+    @include clearfix();
+    padding-bottom: 10px;
+  }
+
+  &-more-items {
+    .news-category-item {
+      margin: 25px;
+    }
+    .owl-stage-outer {
+      width: 1150px;
+      @include media(max, md) {
+        width: 870px;
+      }
+      @include media(max, sm) {
+        width: 590px;
+      }
+      @include media(max, xs) {
+        width: 300px;
+      }
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+    .owl-item {
+      width: 265px !important;
+      > div {
+        width: 100%;
+        padding: 0;
+      }
+    }
+    .owl-nav {
+      width: 100%;
+      > * {
+        background-color: $color-text-comments;
+        .icon {
+          fill: $color-text-main;
+          stroke: none;
+        }
+      }
+    }
+  }
+}
+
+.list-of-brands {
+  padding-bottom: 2em;
+  .main-list-of-brands {
+    div:first-child {
+      ul {
+        margin-top: -0.4em;
+        li {
+          padding-top: 1.3em;
+          a {
+            font-size: 16px;
+            letter-spacing: 0.3px;
+            color: #49c7e7;
+            text-decoration: none;
+            white-space: nowrap;
+          }
+        }
+      }
+    }
+    div:last-child {
+      ul {
+        float: right;
+        li {
+          padding-top: 0.91em;
+          svg {
+            width: 11.5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.share-icon {
+  width: 30px;
+  height: 30px;
+}
+
+.button-of-brand {
+  display: flex;
+  flex-direction: row;
+  div:first-child {
+    padding-right: 1.3em;
+    width: 20px;
+    border: none;
+    img {
+      height: 20px;
+    }
+  }
+  div:last-child {
+    padding-left: 2.5em;
+    padding-right: 2em;
+  }
+}
+
+.button-of-brand1 {
+  padding: 0 3em;
+}
+
+.button-of-brand2 {
+  display: flex;
+  flex-direction: row;
+  div:first-child {
+    padding-left: 0.5em;
+    padding-right: 0.6em;
+  }
+  div:last-child {
+    padding-top: 0.4em;
+    padding-right: 0.5em;
+    padding-left: 0.5em;
+  }
+  &:hover {
+    .social-button-share {
+      visibility: visible;
+      @include animate(0.5);
+    }
+  }
+}

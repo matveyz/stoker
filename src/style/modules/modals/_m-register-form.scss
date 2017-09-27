@@ -1,0 +1,61 @@
+.register-form {
+  max-width: 520px;
+  .form-control {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .modal {
+
+    &-content {
+      padding: 35px;
+    }
+    &-preheader {
+      button {
+        float: left;
+        padding: 35px 0;
+        &:first-of-type {
+          width: 40%;
+        }
+        &:last-of-type {
+          width: 60%;
+        }
+      }
+    }
+
+    &-desc {
+      margin-bottom: 30px;
+    }
+    &-required-msg {
+      margin-bottom: 30px;
+    }
+    &-btn {
+      + * {
+        margin-left: 20px;
+      }
+      + a {
+        display: inline-block;
+      }
+    }
+  }
+  @include media(max,xs){
+    .modal {
+
+      &-content {
+        padding: 35px;
+      }
+      &-preheader {
+        button {
+          padding: 15px 0;
+        }
+      }
+      &-bottom {
+        text-align: center;
+      }
+      &-btn {
+        + * {
+          margin: 10px auto 5em;
+        }
+      }
+    }
+  }
+}

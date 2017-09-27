@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Скидки и Акции в супермаркетах Украины - Stocker</title>
+  <link rel="stylesheet" href="css/main.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+</head>
+<body>
+<div class="body-overflow"></div>
+<header id="header">
+  @@include('templates/modules/fixed-menu.html')
+  <div class="container-fluid hidden-sm hidden-xs">
+    <div class="row">
+      <div class="col-md-10">
+        @@include('templates/modules/top-menu.html')
+      </div>
+      <div class="col-md-1">
+        @@include('templates/modules/user.html')
+      </div>
+      <div class="col-md-1">
+        @@include('templates/modules/languages.html')
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 no-padding">
+        <a href="/app">
+          <span class="icon icon-logo-full-slogan logo">
+          @@include("svg/extra/icon-logo-full-slogan.svg")
+        </span>
+        </a>
+        <div class="main-img hidden-sm hidden-xs"></div>
+      </div>
+      <div class="col-md-12 hidden-sm hidden-xs">
+        @@include('templates/modules/main-menu.html')
+      </div>
+    </div>
+  </div>
+
+</header>
+
+<main role="main" class="main">
+  <section class="main-content">
+    <div class="container container-xl">
+      <div class="row">
+
+        <div class="content-attention">
+          <div class="col-lg-12">
+            <div class="header-block">Самые популярные</div>
+          </div>
+          <div class="col-lg-5 center">
+            @@include('templates/modules/content-attention.html')
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="discounts">
+            <div class="row">
+              @@for (var i = 0; i < 8; i++) {
+               @@include('templates/modules/discounts.html')
+              }
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="secondary-content">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h1>Акции и скидки, взрывные распродажи – все, что Вы ищете, уже здесь!</h1>
+          <div class="text">
+            <p>Stocker – новый взгляд на коммуникацию ВСЕХ, кто:</p>
+            <ul>
+              <li>хочет продавать больше;</li>
+              <li>любит акции и скидки в супермаркетах, торговых центрах, распродажи в интернет-магазинах.</li>
+            </ul>
+            <div class="read-more-text">
+              <p>
+                Мы переосмыслили привычные методы и разработали простую и эффективную торговую концепцию. Теперь продавать
+                проще и эффективнее, а покупать – легче и выгоднее!
+              </p>
+              <p>Больше платить не надо!<br>
+                Почему? Потому что теперь можно платить меньше! :)<br>
+                За что? Да за все! Продукты питания, одежда, аксессуары, товары для спорта, отдыха, туризма, электроника,
+                бытовая техника, товары для детей, финансовые услуги, развлечения и отдых – малая часть того, что Вы
+                найдете
+                на Stocker.
+              </p>
+              <p>Если у Вас расширяются зрачки, когда Вы видите слова дисконт, скидка и распродажа, а акции в
+                супермаркетах
+                Вы ждете как “любовник молодой минуты верного свиданья”, то Stocker станет Вашей полезной привычкой!
+                :)</p>
+              <p>Акции и скидки, невероятные распродажи – все, что Вы ищете, собрано здесь. Не нужно ждать особых поводов
+                –
+                черная пятница, киберпонедельник или сезонные распродажи. На Stocker Вы ежедневно можете пользоваться
+                самыми
+                горячими и выгодными предложениями. Беспрецедентные акции и скидки в супермаркетах, магазинах одежды,
+                сфере
+                развлечений и всевозможных услуг собраны в удобном формате. А скидки в магазинах достигают 90%.</p>
+              <p>Отныне никаких купонов, сертификатов и промокодов! Все выгодные предложения Украины предоставляются Вам
+                совершенно бесплатно! Привыкайте! Больше платить не надо!</p>
+              <p>Хотите привлечь клиентов на свои акции и скидки?<br>
+                Регистрируйтесь на Stocker, размещайте акционные каталоги Вашей компании. Все Ваши акции (Украина) и супер
+                скидки увидят тысячи покупателей. Получайте лояльных клиентов, ориентированных на покупку именно Вашего
+                товара/услуги. Продвигайте каталоги с помощью дополнительного функционала и увеличивайте продажи.
+              </p>
+              <p class="text-center">STOCKER – ВСЕ РАСПРОДАЖИ В УКРАИНЕ НА ОДНОМ САЙТЕ. БОЛЬШЕ ПЛАТИТЬ НЕ НАДО!</p>
+            </div>
+            <a class="read-more">Читать дальше</a>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+@@include('templates/modules/news/news.html')
+
+@@include('templates/modules/partners.html')
+
+
+@@include('templates/template-footer.html')

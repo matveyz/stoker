@@ -1,0 +1,52 @@
+.filter-type {
+  z-index:$z-index-menu + 2;
+  position: absolute;
+  top: 50px;
+  @include clearfix();
+  width: 1010px;
+
+  &-abc {
+    background-color: black;
+    padding: 20px 25px;
+    @include clearfix();
+    &-item {
+      color: $color-white;
+      cursor: pointer;
+
+      float: left;
+      width: 3.57%;
+      text-align: center;
+      text-transform: uppercase;
+      @include font-size(22);
+      div {
+        padding-top: 2px;
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+
+      }
+    }
+  }
+
+  //Category
+  &-category {
+    .filter-type-abc {
+      text-align: center;
+      .filter-reset {
+        color: $color-white;
+        .icon {
+          stroke: $color-white;
+          fill: none;
+          &-inside {
+            top: 9px;
+          }
+        }
+      }
+    }
+
+    &_teal {
+    }
+  }
+}
+
+@import "m-filter-type-items";

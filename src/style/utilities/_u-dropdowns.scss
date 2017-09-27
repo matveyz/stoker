@@ -1,0 +1,139 @@
+$dropdown-height: 50px;
+.dropdown {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  cursor: pointer;
+
+  &__btn {
+    padding: 20px 46px 20px 23px;
+    vertical-align: middle;
+    height: $dropdown-height;
+    position: relative;
+    z-index: 2;
+    .active & {
+      border-radius: 4px 4px 0 0 !important;
+    }
+  }
+
+  &__name {
+    @include font-size(18);
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  &__icon {
+    @include animate(.25);
+    position: absolute;
+    right: 23px;
+    top: 50%;
+    transform: translateY(-50%);
+    .active & {
+      transform: translateY(-50%) rotate(180deg);
+    }
+  }
+  &-wrapper {
+
+  }
+  &__list {
+    @include font(bold);
+    @include font-size(12);
+    @include animate(.75);
+    transform: translateY(-20%) scaleY(0);
+
+    padding: 20px 23px 0;
+    text-transform: uppercase;
+
+    overflow: hidden;
+    position: absolute;
+    background-color: #fff;
+    width: 100%;
+    z-index: 1;
+
+
+    .active & {
+      padding: 20px 23px 20px 23px;
+      display: block;
+      transform: translateY(0);
+      //box-shadow: 0 0 15px 0 $color-darkGray;
+      box-shadow: 0 10px 30px 5px rgba(0, 0, 0, 0.12);
+    }
+  }
+  &__item {
+    display: inline-block;
+    vertical-align: middle;
+    @include animate(.5);
+    transform: translateY(-500%);
+    position: relative;
+    top:0;
+    opacity: 0;
+    &:not(:last-child){
+      padding-bottom: 15px;
+    }
+    svg {
+      @include animate(.25);
+      display: inline-block;
+      vertical-align: middle;
+      width: 28px;
+      height: 28px;
+      margin-right: 7px;
+    }
+    &:hover{
+      @include animate(.25);
+      color: $color-red;
+      svg {
+
+      }
+    }
+
+    .active & {
+      position: relative;
+      opacity: 1;
+      @include animate(.5);
+      transform: translateY(0);
+    }
+  }
+
+  &_primary{
+    position: relative;
+    @include font(bold);
+    @include font-size(14);
+    @include btn-make($color-teal, false, false);
+    @include animate(0.25);
+    .icon {
+      @include animate(0.25);
+      @include svg-full-color($color-text-main);
+    }
+    a {
+      margin: -16px -30px;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+    &:hover {
+      color: $color-white;
+      .icon {
+        @include animate(0.25);
+        @include svg-full-color($color-white);
+      }
+    }
+
+  }
+  &_secondary-bg {
+    @include font(bold);
+    .dropdown__btn {
+      @include dropdown-make($color-red, false, true, 4);
+      @include animate(0.25);
+      color: $color-white;
+    }
+  }
+}
+
+
+.drop-enter-active, .drop-leave-active {
+  @include animate(.5);
+}
+.drop-enter, .drop-leave-to /* .list-leave-active для <2.1.8 */ {
+  opacity: 0;
+  transform: translateY(30px);
+}

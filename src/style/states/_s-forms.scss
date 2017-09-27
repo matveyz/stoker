@@ -1,0 +1,9 @@
+.is-error {
+  &.form-control {
+    border: 1px solid $color-red;
+  }
+  &.required-msg {
+    color: $color-red;
+  }
+}
+

@@ -1,0 +1,13 @@
+<div class="accordion-item">
+  <button class="accordion-title">
+    <span class="pull-left">@@title</span>
+    <span class="pull-right"><svg class="icon icon-arrow-down">
+      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="svg/svg.svg#icon-arrow"></use>
+    </svg></span>
+  </button>
+  <div class="accordion-content text">
+    @@for (var i = 0; i < text.length; i++) {
+    <p>`+text[i]+`</p>
+    }
+  </div>
+</div>

@@ -1,0 +1,16 @@
+.cities-streets-search {
+  .search {
+    &-block {
+      margin-top: 20px;
+      margin-bottom: 0;
+      &:last-of-type {
+        //margin-bottom: 20px;
+      }
+    }
+    &-products-list {
+      &:not(:nth-last-of-type(1)) {
+        margin-bottom: 40px;
+      }
+    }
+  }
+}

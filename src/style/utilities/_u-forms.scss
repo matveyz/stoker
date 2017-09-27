@@ -1,0 +1,25 @@
+.form {
+  &-control {
+    @include font-size(22);
+    padding: 10px 15px;
+    line-height: 1;
+    color: $color-midGray;
+    border: 1px solid $color-grayBorder;
+    border-radius:4px;
+    background-color: $color-lightGray;
+    @include animate(0.25);
+    &::placeholder {
+      color: $color-gray;
+    }
+    &:hover,&:focus {
+      border-color: $color-teal;
+    }
+    textarea {
+      border-radius:0;
+      resize: vertical;
+    }
+    @media (max-width:$screen-xs-max) {
+      @include font-size($main-text-size);
+    }
+  }
+}

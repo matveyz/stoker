@@ -1,0 +1,56 @@
+.news {
+  &-slider {
+    color: $color-white;
+    background-color: #000;
+
+  }
+
+  &-slide {
+    .container {
+      position: relative; //TODO this part sucks
+    }
+    &-wrapper {
+      &:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-image: url("#{$img-path}/slide1-1.png");
+        background-repeat: no-repeat;
+        background-position: right 0;
+        background-size: contain;
+      }
+    }
+    img {
+      position: absolute;
+      z-index: -1;
+    }
+    &-inner {
+      padding: 30px;
+    }
+    &-title {
+      margin-bottom: rem(30);
+      @include font-size(30);
+      text-transform: uppercase;
+    }
+    &-desc {
+      margin-bottom: rem(30);
+    }
+    &-more {
+      margin-bottom: rem(30);
+      color: $color-white;
+      padding: 10px 25px;
+      @include font();
+      @include font-size(16);
+      text-transform: uppercase;
+      @extend %radius-25px;
+      border: 2px solid $color-teal;
+    }
+    .date {
+      margin-bottom: rem(30);
+    }
+  }
+}

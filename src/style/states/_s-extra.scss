@@ -1,0 +1,24 @@
+.back-top {
+  @include animate(0.25);
+  visibility: hidden;
+  opacity: 0;
+  svg {
+    @include animate(0.25);
+  }
+  &.is-visible {
+    visibility: visible;
+    opacity: 1;
+  }
+  &.is-turned {
+    svg {
+      transform: rotate(90deg);
+    }
+  }
+  &.fade-out { /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
+    opacity: .5;
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+}

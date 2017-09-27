@@ -1,0 +1,49 @@
+.confirm-delete {
+  width: 480px;
+  &.modal {
+    &-content {
+      text-align: center;
+      border-top: 5px solid $color-red;
+      border-radius: 4px;
+    }
+  }
+  .modal {
+    &-desc {
+      padding-bottom: 40px;
+    }
+    &-body {
+      button {
+        @include font-size(14);
+        @include font(bold);
+        &:last-of-type {
+          margin: 0 0 0 30px;
+        }
+      }
+    }
+  }
+
+  @include media(max, 479) {
+    .modal {
+      &-desc {
+        padding-bottom: 10px;
+      }
+      &-body {
+        button {
+          display: block;
+          margin: 0 auto;
+          &:last-of-type {
+            margin: 10px auto 0;
+          }
+        }
+      }
+    }
+  }
+
+  &.in-future {
+    .modal-body {
+      button {
+        margin: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,128 @@
+.discounts {
+  &-item {
+    @include media(min, md) {
+      &:not(.times-up) {
+        &:hover {
+          z-index: $z-index-content;
+          .countdown {
+            @include forHide(false, false);
+          }
+          .discounts-item {
+            &_zoom {
+              transform: scale(1.1, 1.4);
+              box-shadow: 0 0 15px 10px rgba(0, 0, 0, .09);
+            }
+            &-info-more, &-info-extra, &-info-desc {
+              @include forHide(true, true);
+            }
+          }
+        }
+      }
+      @include media(max, md) {
+        &-inner {
+          padding: 0;
+          img {
+            height: 280px;
+            margin: 0;
+            padding: 20px;
+          }
+        }
+        &-img {
+          position: absolute;
+          &:before {
+            width: 168px;
+            position: absolute;
+            content: '';
+            height: 20px;
+            bottom: 24px;
+            left: 20px;
+            border-radius: 50% / 20px;
+            box-shadow: rgba(0, 0, 0, .3) 0 5px 7px;
+            clip: rect(20px, auto, 50px, 0);
+          }
+        }
+      }
+    }
+    @include media(max, sm) {
+      &.times-up {
+        .countdown {
+          button {
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+      }
+    }
+    @include media(min, sm) {
+      &.times-up {
+        .discounts-item-img {
+          &:before {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 0;
+            clip: inherit;
+            height: 17px;
+            box-shadow: rgba(0, 0, 0, .08) 0 5px 7px;
+          }
+        }
+      }
+    }
+    @include media(max, xs) {
+      max-width: 290px;
+      min-height: 400px;
+      margin-left: auto;
+      margin-right: auto;
+      &-img {
+        text-align: center;
+        &:after {
+          background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 25%);
+          content: '';
+          display: block;
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          left: 0;
+          height: rem($main-text-size*6);
+        }
+      }
+      &-info {
+        margin: 0;
+        &-inner {
+          position: relative;
+          text-align: center;
+          width: 210px;
+          margin: 0 auto;
+        }
+        .countdown {
+          top: -70px;
+          position: absolute;
+          &-title {
+            display: none;
+          }
+        }
+      }
+      &.times-up {
+        .discounts-item {
+          &-img {
+            &:after {
+              left: 4px;
+            }
+          }
+          &-info-inner {
+            position: static;
+          }
+        }
+        .countdown {
+          width: 100%;
+          &-title {
+            display: block;
+          }
+          &-dash {
+            display: inline-block;
+            float: none;
+          }
+        }
+      }
+    }
+
+  }
+}

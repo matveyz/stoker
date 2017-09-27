@@ -1,0 +1,52 @@
+.footer {
+  @media (max-width: $screen-md-max) {
+    &-bottom {
+      @include font-size(14);
+      > * {
+      }
+    }
+  }
+  @media (max-width: $screen-sm-max) {
+    &-social {
+      text-align: center;
+      float: none;
+      margin-bottom: 20px;
+      svg {
+        margin: 12px;
+      }
+    }
+    &-text {
+      margin-bottom: 20px;
+      padding: 0;
+    }
+  }
+  @media (max-width: $screen-xs-max) {
+    &-inner {
+      padding: 15px;
+    }
+    &-bottom {
+      line-height:rem($main-text-size*2);
+      margin-top:25px;
+      text-align: center;
+      > * {
+        margin-right: 0;
+      }
+      .icon-logo-full {
+        float: none;
+      }
+      &-copyright {
+        width: 100%;
+        float: none;
+      }
+      &-designBy svg {
+        @include font-size(12);
+      }
+      @media (max-width: 425px) {
+        &-madeBy, &-designBy {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+}

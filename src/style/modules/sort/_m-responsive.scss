@@ -1,0 +1,47 @@
+@include media (max, sm) {
+  .sort-extend {
+    width: 260px;
+    height: 100vh;
+  }
+}
+
+@include media(max, sm) {
+  .sort {
+    &-wrapper {
+      .sort {
+        box-shadow: none;
+        height: 40px;
+        position: relative;
+        > .icon {
+          right: 10px;
+          position: absolute;
+          top: 14px;
+          z-index: $z-index-content;
+          stroke-width: 0;
+        }
+        &-btn {
+          display: block;
+          max-height: 40px;
+          width: 200px;
+          &:not(.is-active) {
+            border: 1px solid $color-text-comments;
+            border-top: 0;
+            border-radius: 0;
+            position: relative;
+            top: 40px;
+          }
+          &.is-active {
+            border: 0;
+            top: 0;
+            position: absolute;
+            border-radius: 4px;
+          }
+        }
+      }
+      a.sort-btn {
+        line-height: 40px;
+      }
+    }
+  }
+}
+

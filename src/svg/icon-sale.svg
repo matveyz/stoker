@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="71" height="71" viewBox="0 0 71 71">
+    <defs>
+        <filter id="a" width="170.1%" height="101.7%" x="-1.2%" y="-.8%" filterUnits="objectBoundingBox">
+            <feOffset dy="1" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="1"/>
+            <feColorMatrix in="shadowBlurOuter1" result="shadowMatrixOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+    </defs>
+    <g fill="none" fill-rule="evenodd" filter="url(#a)" transform="translate(-195 -162)">
+        <path fill="#49C7E7" d="M203.7 163c-3.685 0-6.7 3.015-6.7 6.7V230l13.4-13.4h46.9c3.685 0 6.7-3.015 6.7-6.7v-40.2c0-3.685-3.015-6.7-6.7-6.7h-53.6z"/>
+        <g fill="#FFF" stroke="#FFF">
+            <path d="M254.064 195.054c-.395.382-.934.62-1.53.62a2.184 2.184 0 0 1-2.194-2.174 2.189 2.189 0 1 1 3.602-1.655l.868-1.02a3.538 3.538 0 0 0-2.276-.825c-1.952 0-3.534 1.567-3.534 3.5s1.582 3.5 3.534 3.5c.96 0 1.828-.38 2.466-.996l-.936-.95zM243.944 194l-.944-.807 8.056-9.193.944.807zM242.5 186.674a2.174 2.174 0 1 1 0-4.348 2.174 2.174 0 0 1 0 4.348m0-5.674a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7"/>
+        </g>
+        <text fill="#FFF" font-family="Exo2-ExtraBold, Exo 2" font-size="20" font-weight="600" transform="translate(197 163)">
+            <tspan x="7" y="33">-30</tspan>
+        </text>
+    </g>
+</svg>

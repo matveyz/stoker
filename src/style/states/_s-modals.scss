@@ -1,0 +1,60 @@
+.mfp-bg {
+  opacity: 0;
+  @include animate(0.25);
+}
+/* overlay animate in */
+.mfp-bg.mfp-ready {
+  opacity: 0.8;
+}
+/* overlay animate out */
+.mfp-bg.mfp-removing {
+  opacity: 0;
+}
+
+/* content at start */
+.mfp-wrap .mfp-content {
+  opacity: 0;
+  @include animate(0.25);
+}
+/* content animate it */
+.mfp-wrap.mfp-ready .mfp-content {
+  opacity: 1;
+}
+/* content animate out */
+.mfp-wrap.mfp-removing .mfp-content {
+  opacity: 0;
+}
+
+.modal {
+  &-preheader {
+    button {
+      @include animate(0.25);
+      background-color: lighten($color-gray, 40);
+      box-shadow: inset 0 0 1px $color-gray;
+      &:first-of-type {
+        border-bottom-right-radius: 4px;
+      }
+      &:last-of-type {
+        border-bottom-left-radius: 4px;
+      }
+      &.is-active {
+        background-color: transparent;
+        box-shadow: none;
+      }
+    }
+  }
+
+  .tabs-item-content {
+    @include animate(0.25);
+    opacity: 0;
+    height: 0;
+    visibility: hidden;
+    overflow: hidden;
+    &.is-active {
+      opacity: 1;
+      height: auto;
+      visibility: visible;
+    }
+  }
+}
+

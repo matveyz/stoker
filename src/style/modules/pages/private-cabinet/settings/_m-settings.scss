@@ -1,0 +1,30 @@
+.settings {
+  &-control {
+    margin-top: 20px;
+  }
+  .form-control {
+    width: 450px;
+    max-width: 100%;
+    &-day {
+      width: 80px;
+    }
+    &-month {
+      margin-left: 15px;
+      margin-right: 15px;
+      width: 225px;
+    }
+    &-year {
+      width: 110px;
+    }
+    &-city {
+      width: 450px;
+    }
+  }
+  &-private-header {
+    color: $color-text-comments;
+    margin: 20px 0;
+  }
+  .btn-primary {
+    margin-top: 30px;
+  }
+}

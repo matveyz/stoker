@@ -1,0 +1,15 @@
+.about-us {
+  @extend %betweenBlocksPadding;
+  .header-block {
+    text-align: center;
+  }
+  .text {
+    text-align: justify;
+    line-height: 1.5;
+    p {
+      &:not(:last-child) {
+        padding-bottom: 20px;
+      }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+.search-products-list {
+  &-block {
+    background-color: $color-white;
+    @extend %radius-4px;
+  }
+}

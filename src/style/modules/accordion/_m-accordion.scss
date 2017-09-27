@@ -1,0 +1,52 @@
+.accordion {
+  margin: 20px 0;
+  &-item {
+    background-color: $color-creamy-light;
+    margin-bottom: 5px;
+    border-radius: 4px;
+    overflow: hidden;
+    border-left: 5px solid $color-creamy-light;
+  }
+  &-title {
+    width: 100%;
+    padding: 35px 40px;
+    text-align: left;
+    @include font-size(25);
+    @include font(medium);
+
+    span {
+      display: inline-block;
+      line-height: 30px;
+      vertical-align: middle;
+    }
+    .icon {
+      vertical-align: middle;
+      fill: $color-text-main;
+      line-height: 30px;
+    }
+  }
+  &-content {
+
+    opacity: 0;
+    visibility: hidden;
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 40px;
+    p {
+      text-align: justify;
+      line-height: 1.5;
+      margin-top: 0;
+      margin-bottom: 40px;
+    }
+  }
+
+  @include media(max, xs) {
+    &-title {
+      padding: 20px;
+      @include font-size(20);
+      .pull-left {
+        width: 90%;
+      }
+    }
+  }
+}

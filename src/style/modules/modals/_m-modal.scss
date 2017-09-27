@@ -1,0 +1,303 @@
+.modal {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: left;
+  color: $color-text-main;
+  max-width: 100%;
+  z-index: 1045;
+  @extend %radius-4px;
+  width: auto;
+  margin: 20px auto;
+  position: relative;
+  background: #FFF;
+  &-preheader {
+    @include clearfix();
+  }
+  &-content {
+    max-width: 100%;
+  }
+  &-btn {
+    font-family: $font-bold;
+    @include font-size(14);
+  }
+  &-required-msg {
+    color: $color-text-disabled;
+    font-family: $font-light;
+    letter-spacing: 1px;
+    @include font-size(12);
+  }
+  .modal-body {
+    &-block {
+      background-color: $color-lightTeal;
+      @extend %radius-4px;
+      margin-bottom: 15px;
+      padding: 35px;
+    }
+  }
+  @include media(max, xs) {
+    .modal-body {
+      &-block {
+        padding: 15px;
+      }
+    }
+    &-content {
+      padding: 20px;
+    }
+    &-required-msg {
+      text-align: center;
+    }
+    &-btn {
+      @include font-size(12);
+      margin: 0 auto;
+      display: block;
+    }
+  }
+  @include media(max, sm) {
+    max-width: calc(100% - 30px);
+  }
+
+  //mfp logic
+  &-close {
+    width: 44px;
+    line-height: 44px;
+    opacity: 1;
+    font-size: 2.75rem;
+    font-family: Arial, Baskerville, monospace;
+    -webkit-appearance: none;
+    outline: none;
+    z-index: 1046;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    position: absolute;
+    top: -12px;
+    right: -20px;
+    color: $color-text-secondary;
+    background-color: $color-white;
+    border-radius: 50%;
+    &:hover, &:focus {
+      background-color: $color-text-secondary;
+      color: $color-white;
+      //box-shadow: 0 0 15px 0 $color-white;
+    }
+  }
+
+  // Transluscent overlay
+  &-mask {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1040;
+    overflow: hidden;
+    position: fixed;
+    background: rgba(#0b0b0b, 0.8);
+  }
+  // Root container
+  &-container {
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: all .3s ease;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    padding: 0 8px;
+    // Vertical centerer helper
+    &:before {
+      content: '';
+      display: inline-block;
+      height: 100%;
+      vertical-align: middle;
+    }
+    // Scale navigation arrows and reduce padding from sides
+    @media (max-width: 900px) {
+      padding-left: 6px;
+      padding-right: 6px;
+    }
+  }
+  //vue logic
+  &-enter {
+    opacity: 0;
+    transition: opacity .25s ease;
+  }
+
+  &-leave-active {
+    opacity: 0;
+    transition: opacity .25s ease;
+  }
+}
+
+//TODO vue transitions in other files...
+.modal-enter .modal-container,
+.modal-leave-active .modal-container {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s
+}
+
+.fade-enter, .fade-leave-active {
+  opacity: 0
+}
+
+.list-complete-item {
+  transition: all 1s;
+}
+
+.list-complete-enter, .list-complete-leave-to {
+  opacity: 0;
+  transform: translateX(-100px);
+}
+
+.list-complete-leave-active {
+  position: absolute;
+}
+
+.modal-rss-button-save {
+  padding: 0 2em 2.5em 2em;
+}
+
+.modal-time-control {
+  padding: 1em 0;
+  select {
+    width: 120px !important;
+  }
+}
+
+
+.new-modal-window {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  color: $color-text-main;
+  max-width: 100%;
+  z-index: 1045;
+  @extend %radius-4px;
+  width: auto;
+  padding: 1em 3em;
+  position: relative;
+  background: #FFF;
+  margin-top: -10em;
+  div.new-block {
+    padding-top: 1.4em;
+  }
+  div.like-or-dislike-modal {
+    margin-top: 1.5em;
+    .like-button {
+      position: relative;
+      font-size: .875rem;
+      border: 2px solid #49c7e7;
+      float: none;
+      display: inline-block;
+      vertical-align: middle;
+      font-size: 14px;
+      font-size: .875rem;
+      padding: 0 20px;
+      height: 50px;
+      color: #403d3a;
+      margin-right: -0.5em;
+      border-bottom-left-radius: 45%;
+      border-top-left-radius: 45%;
+      svg {
+        @include svg-full-color($color-text-main);
+        height: 30px;
+        width: 23px;
+      }
+      &:hover {
+        background: #49c7e7;
+        color: #fff;
+        box-shadow: 0 0 15px 0 #49c7e7;
+        @include animate(0.2);
+        svg {
+          fill: white;
+        }
+      }
+      &:focus {
+        background: #49c7e7;
+        color: #fff;
+        box-shadow: 0 0 15px 0 #49c7e7;
+        @include animate(0.2);
+        svg {
+          fill: white;
+        }
+      }
+    }
+    .dislike-button {
+      position: relative;
+      font-size: .875rem;
+      border: 2px solid #49c7e7;
+      float: none;
+      display: inline-block;
+      vertical-align: middle;
+      font-size: 14px;
+      font-size: .875rem;
+      padding: 0 20px;
+      height: 50px;
+      color: #403d3a;
+      border-bottom-right-radius: 45%;
+      border-top-right-radius: 45%;
+      svg {
+        @include svg-full-color($color-text-main);
+        height: 30px;
+        width: 23px;
+      }
+      &:hover {
+        background: #49c7e7;
+        color: #fff;
+        box-shadow: 0 0 15px 0 #49c7e7;
+        @include animate(0.2);
+        svg {
+          fill: white;
+        }
+      }
+      &:focus {
+        background: #49c7e7;
+        color: #fff;
+        box-shadow: 0 0 15px 0 #49c7e7;
+        @include animate(0.2);
+        svg {
+          fill: white;
+        }
+      }
+    }
+    .comment-textarea-block {
+      padding: 1em;
+    }
+  }
+  .button-send-comment {
+    margin-top: 2em;
+    button {
+      padding: 0 3em
+    }
+  }
+
+  @include media(max, sm) {
+      margin-top: 0 ;
+  }
+
+  @include media(max, xs) {
+      margin-top: 0 ;
+      height:auto;
+      .comment-textarea-block {
+        width: 145%;
+        margin-left: -2.5em;
+        margin-top: 3em;
+      }
+      .modal-title {
+        margin-left: -0.8em;
+        margin-top: 1em;
+      }
+      .modal-desc {
+        width: 200px;
+        margin-left: -0.8em;
+      }
+      button.modal-close {
+        left: 18.5em;
+        top: 0.1em;
+      }
+  }
+}

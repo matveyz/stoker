@@ -1,0 +1,39 @@
+.languages-menu {
+  position: absolute;
+  box-shadow: 0 20px 30px 0 rgba(0, 0, 0, .3);
+  left: 0;
+  width: 100%;
+  top: 50px;
+  text-align: left;
+  overflow: hidden;
+  background-color: $color-lightGray;
+  &-main {
+    padding: 20px 0;
+  }
+  &-item {
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+    a {
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+      padding: 10px 0;
+      font-size: 18px;
+      color: #403d3a;
+      text-decoration: none;
+      &:hover {
+        color: $color-teal;
+      }
+    }
+    &.is-active {
+      a {
+        &:hover {
+          color: $color-teal;
+        }
+      }
+    }
+  }
+}

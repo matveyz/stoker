@@ -1,0 +1,140 @@
+//TODO сделать мейн файлом и подключать сюда
+//разбить все что связанно с классами сюда по файлам (как офф канва или сорт сделан!!)
+.is-nav-up {
+  //top: -51px;
+  transform: translateY(-100%);
+  opacity: 0;
+  overflow: hidden;
+}
+
+.vis-hidden {
+  visibility: hidden;
+}
+
+.is-visible {
+  visibility: visible !important;
+}
+
+.is-transp {
+  opacity: 0;
+}
+
+.is-no-transp {
+  opacity: 1;
+}
+
+.is-active {
+
+
+  &.fixed-menu {
+    &-mobile {
+      &-wrapper {
+        max-height: 100vh;
+        border-top: 4px solid $color-red;
+        height: 48px;
+      }
+      &-searchbtn {
+        background-color: $color-red;
+        svg {
+          @include svg-full-color($color-white);
+        }
+      }
+    }
+  }
+  &.big-button {
+    background-color: $color-teal;
+    &:hover {
+      box-shadow: 0 0 15px 0 $color-teal;
+    }
+  }
+  &.how-main-block {
+    &-photo, &-text {
+      opacity: 1;
+      display: block;
+      height: auto;
+    }
+  }
+  @media (min-width: $screen-md-min) {
+    &.fixed-menu {
+      &-search {
+        margin-left: 484px;
+      }
+      &-filter {
+        width: 420px;
+        &-inner {
+          width: 420px;
+          .filter {
+            top: -50px;
+            opacity: 1;
+          }
+        }
+        &-btn {
+          opacity: 0;
+        }
+      }
+    }
+  }
+
+  &.top-menu-item {
+    > a {
+      color: $color-teal;
+    }
+  }
+
+}
+
+@media (max-width: $screen-sm-max) {
+
+  .is-open {
+    &.fixed-menu {
+      &-mobile {
+        &-wrapper {
+          height: 100vh;
+        }
+      }
+    }
+  }
+
+  .is-hidden {
+    &.filter {
+      &-item {
+        display: none;
+      }
+    }
+  }
+
+  .is-active {
+    &.fixed-menu {
+      &-filter {
+        &-inner {
+          width: 239px;
+          .filter {
+            height: 44px;
+            opacity: 1;
+            top: -44px;
+          }
+        }
+        &-btn {
+          opacity: 0;
+        }
+      }
+    }
+
+    &.filter-type {
+      width: 100vw;
+      max-height: 100vh;
+      &-items {
+        max-height: 100vh;
+        overflow: auto;
+        &-inner {
+
+        }
+      }
+    }
+
+  }
+  body.is-hidden {
+    overflow: hidden;
+  }
+}
+
